@@ -1,0 +1,864 @@
+<data><head>Actus Primus. Scoena Prima.</head>
+<stage>Enter Flauius, Murellus, and certaine Commoners<part><br/></part>ouer the Stage.</stage>
+<speaker capital="H" center="true" name="Flauius."><part>Ence: home you idle Creatures, get you home:</part>
+<part><br/></part><part>Is this a Holiday? What, know you not</part>
+<part><br/></part><part>(Being Mechanicall) you ought not walke</part>
+<part><br/></part><part>Vpon a labouring day, without the signe</part>
+<part><br/></part><part>Of your Profession? Speake, what Trade art thou?</part>
+</speaker>
+<speaker name="Car."><part>Why Sir, a Carpenter.</part>
+</speaker>
+<speaker name="Mur."><part>Where is thy Leather Apron, and thy Rule?</part>
+<part><br/></part><part>What dost thou with thy best Apparrell on?</part>
+<part><br/></part><part>You sir, what Trade are you?</part>
+</speaker>
+<speaker name="Cobl."><part>Truely Sir, in respect of a fine Workman, I am</part>
+<part><br/></part><part>but as you would say, a Cobler.</part>
+</speaker>
+<speaker name="Mur."><part>But what Trade art thou? Answer me directly.</part>
+</speaker>
+<speaker name="Cob."><part>A Trade Sir, that I hope I may vse, with a safe</part>
+<part><br/></part><part>Conscience, which is indeed Sir, a Mender of bad soules.</part>
+</speaker>
+<speaker name="Fla."><part>What Trade thou knaue? Thou naughty knaue,</part>
+<part><br/></part><part>what Trade?</part>
+</speaker>
+<speaker name="Cobl."><part>Nay I beseech you Sir, be not out with me: yet</part>
+<part><br/></part><part>if you be out Sir, I can mend you.</part>
+</speaker>
+<speaker name="Mur."><part>What mean'st thou by that? Mend mee, thou</part>
+<part><br/></part><part>sawcy Fellow?</part>
+</speaker>
+<speaker name="Cob."><part>Why sir, Cobble you.</part>
+</speaker>
+<speaker name="Fla."><part>Thou art a Cobler, art thou?</part>
+</speaker>
+<speaker name="Cob."><part>Truly sir, all that I liue by, is with the Aule: I</part>
+<part><br/></part><part>meddle with no Tradesmans matters, nor womens mat-</part>
+<part><br/></part><part>ters; but withal I am indeed Sir, a Surgeon to old shooes:</part>
+<part><br/></part><part>when they are in great danger, I recouer them. As pro-</part>
+<part><br/></part><part>per men as euer trod vpon Neats Leather, haue gone vp-</part>
+<part><br/></part><part>on my handy-worke.</part>
+</speaker>
+<speaker name="Fla."><part>But wherefore art not in thy Shop to day?</part>
+<part><br/></part><part>Why do'st thou leade these men about the streets?</part>
+</speaker>
+<speaker name="Cob."><part>Truly sir, to weare out their shooes, to get my</part>
+<part><br/></part><part>selfe into more worke. But indeede sir, we make Holy-</part>
+<part><br/></part><part>day to see </part>
+<part type="italic">Caesar,</part><part> and to reioyce in his Triumph.</part>
+</speaker>
+<speaker name="Mur."><part>Wherefore reioyce?</part>
+<part><br/></part><part>What Conquest brings he home?</part>
+<part><br/></part><part>What Tributaries follow him to Rome,</part>
+<part><br/></part><part>To grace in Captiue bonds his Chariot Wheeles?</part>
+<part><br/></part><part>You Blockes, you stones, you worse then senslesse things:</part>
+<part><br/></part><part>O you hard hearts, you cruell men of Rome,</part>
+<part><br/></part><part>Knew you not </part>
+<part type="italic">Pompey</part><part> many a time and oft?</part>
+<part><br/></part><part>Haue you climb'd vp to Walles and Battlements,</part>
+<part><br/></part><part>To Towres and Windowes? Yea, to Chimney tops,</part>
+<part><br/></part><part>Your Infants in your Armes, and there haue sate</part>
+<part><br/></part><part>The liue-long day, with patient expectation,</part>
+<part><br/></part><part>To see great </part>
+<part type="italic">Pompey</part><part> passe the streets of Rome:</part>
+<part><br/></part><part>And when you saw his Chariot but appeare,</part>
+<part><br/></part><part>Haue you not made an Vniuersall shout,</part>
+<part><br/></part><part>That Tyber trembled vnderneath her bankes</part>
+<part><br/></part><part>To heare the replication of your sounds,</part>
+<part><br/></part><part>Made in her Concaue Shores?</part>
+<part><br/></part><part>And do you now put on your best attyre?</part>
+<part><br/></part><part>And do you now cull out a Holyday?</part>
+<part><br/></part><part>And do you now strew Flowers in his way,</part>
+<part><br/></part><part>That comes in Triumph ouer </part>
+<part type="italic">Pompeyes</part><part> blood?</part>
+<part><br/></part><part>Be gone,</part>
+<part><br/></part><part>Runne to your houses, fall vpon your knees,</part>
+<part><br/></part><part>Pray to the Gods to intermit the plague</part>
+<part><br/></part><part>That needs must light on this Ingratitude.</part>
+</speaker>
+<speaker name="Fla."><part>Go, go, good Countrymen, and for this fault</part>
+<part><br/></part><part>Assemble all the poore men of your sort;</part>
+<part><br/></part><part>Draw them to Tyber bankes, and weepe your teares</part>
+<part><br/></part><part>Into the Channell, till the lowest streame</part>
+<part><br/></part><part>Do kisse the most exalted Shores of all.</part>
+<part><br/></part><part type="stage">Exeunt all the Commoners.</part>
+<part><br/></part><part>See where their basest mettle be not mou'd,</part>
+<part><br/></part><part>They vanish tongue-tyed in their guiltinesse:</part>
+<part><br/></part><part>Go you downe that way towards the Capitoll,</part>
+<part><br/></part><part>This way will I: Disrobe the Images,</part>
+<part><br/></part><part>If you do finde them deckt with Ceremonies.</part>
+</speaker>
+<speaker name="Mur."><part>May we do so?</part>
+<part><br/></part><part>You know it is the Feast of Lupercall.</part>
+</speaker>
+<speaker name="Fla."><part>It is no matter, let no Images</part>
+<part><br/></part><part>Be hung with </part>
+<part type="italic">Caesars</part><part> Trophees: Ile about,</part>
+<part><br/></part><part>And driue away the Vulgar from the streets;</part>
+<part><br/></part><part>So do you too, where you perceiue them thicke.</part>
+<part><br/></part><part>These growing Feathers, pluckt from </part>
+<part type="italic">Caesars</part><part> wing,</part>
+<part><br/></part><part>Will make him flye an ordinary pitch,</part>
+<part><br/></part><part>Who else would soare aboue the view of men,</part>
+<part><br/></part><part>And keepe vs all in seruile fearefulnesse.  </part>
+<part type="stage">Exeunt</part>
+<part><br/></part></speaker>
+<stage>Enter Caesar, Antony for the Course, Calphurnia, Portia, De-<part><br/></part>cius, Cicero, Brutus, Cassius, Caska, a Soothsayer: af-<part><br/></part>ter them Murellus and Flauius.</stage>
+<speaker name="Caes."><part type="italic">Calphurnia.</part></speaker>
+<speaker name="Cask."><part>Peace ho, </part>
+<part type="italic">Caesar</part><part> speakes.</part>
+</speaker>
+<speaker name="Caes."><part type="italic">Calphurnia.</part></speaker>
+<speaker name="Calp."><part>Heere my Lord.</part>
+</speaker>
+<speaker name="Caes."><part>Stand you directly in </part>
+<part type="italic">Antonio's</part><part> way,</part>
+<part><br/></part><part>When he doth run his course. </part>
+<part type="italic">Antonio.</part></speaker>
+<speaker name="Ant."><part type="italic">Caesar,</part><part> my Lord.</part>
+</speaker>
+<speaker name="Caes."><part>Forget not in your speed </part>
+<part type="italic">Antonio,</part><part><br/></part><part>To touch </part>
+<part type="italic">Calphurnia:</part><part> for our Elders say,
+      </part>
+<part><br/></part><part>The Barren touched in this holy chace,</part>
+<part><br/></part><part>Shake off their sterrile curse.</part>
+</speaker>
+<speaker name="Ant."><part>I shall remember,</part>
+<part><br/></part><part>When </part>
+<part type="italic">Caesar</part><part> sayes, Do this; it is perform'd.</part>
+</speaker>
+<speaker name="Caes."><part>Set on, and leaue no Ceremony out.</part>
+</speaker>
+<speaker name="Sooth."><part type="italic">Caesar.</part></speaker>
+<speaker name="Caes."><part>Ha? Who calles?</part>
+</speaker>
+<speaker name="Cask."><part>Bid euery noyse be still: peace yet againe.</part>
+</speaker>
+<speaker name="Caes."><part>Who is it in the presse, that calles on me?</part>
+<part><br/></part><part>I heare a Tongue shriller then all the Musicke</part>
+<part><br/></part><part>Cry, </part>
+<part type="italic">Caesar:</part><part> Speake, </part>
+<part type="italic">Caesar</part><part> is turn'd to heare.</part>
+</speaker>
+<speaker name="Sooth."><part>Beware the Ides of March.</part>
+</speaker>
+<speaker name="Caes."><part>What man is that?</part>
+</speaker>
+<speaker name="Br."><part>A Sooth-sayer bids you beware the Ides of March</part>
+</speaker>
+<speaker name="Caes."><part>Set him before me, let me see his face.</part>
+</speaker>
+<speaker name="Cassi."><part>Fellow, come from the throng, look vpon </part>
+<part type="italic">Caesar.</part></speaker>
+<speaker name="Caes."><part>What sayst thou to me now? Speak once againe,</part>
+</speaker>
+<speaker name="Sooth."><part>Beware the Ides of March.</part>
+</speaker>
+<speaker name="Caes."><part>He is a Dreamer, let vs leaue him: Passe.</part>
+<part><br/></part><part type="stage">Sennet</part>
+<part>.  </part>
+<part type="stage">Exeunt. Manet Brut. &amp; Cass.</part>
+</speaker>
+<speaker name="Cassi."><part>Will you go see the order of the course?</part>
+</speaker>
+<speaker name="Brut."><part>Not I.</part>
+</speaker>
+<speaker name="Cassi."><part>I pray you do.</part>
+</speaker>
+<speaker name="Brut."><part>I am not Gamesom: I do lacke some part</part>
+<part><br/></part><part>Of that quicke Spirit that is in </part>
+<part type="italic">Antony:</part><part><br/></part><part>Let me not hinder </part>
+<part type="italic">Cassius</part><part> your desires;</part>
+<part><br/></part><part>Ile leaue you.</part>
+</speaker>
+<speaker name="Cassi."><part type="italic">Brutus,</part><part> I do obserue you now of late:</part>
+<part><br/></part><part>I haue not from your eyes, that gentlenesse</part>
+<part><br/></part><part>And shew of Loue, as I was wont to haue:</part>
+<part><br/></part><part>You beare too stubborne, and too strange a hand</part>
+<part><br/></part><part>Ouer your Friend, that loues you.</part>
+</speaker>
+<speaker name="Bru."><part type="italic">Cassius,</part><part><br/></part><part>Be not deceiu'd: If I haue veyl'd my looke,</part>
+<part><br/></part><part>I turne the trouble of my Countenance</part>
+<part><br/></part><part>Meerely vpon my selfe. Vexed I am</part>
+<part><br/></part><part>Of late, with passions of some difference,</part>
+<part><br/></part><part>Conceptions onely proper to my selfe,</part>
+<part><br/></part><part>Which giue some soyle (perhaps) to my Behauiours:</part>
+<part><br/></part><part>But let not therefore my good Friends be greeu'd</part>
+<part><br/></part><part>(Among which number </part>
+<part type="italic">Cassius</part><part> be you one)</part>
+<part><br/></part><part>Nor construe any further my neglect,</part>
+<part><br/></part><part>Then that poore </part>
+<part type="italic">Brutus</part><part> with himselfe at warre,</part>
+<part><br/></part><part>Forgets the shewes of Loue to other men.</part>
+</speaker>
+<speaker name="Cassi."><part>Then </part>
+<part type="italic">Brutus,</part><part> I haue much mistook your passion,</part>
+<part><br/></part><part>By meanes whereof, this Brest of mine hath buried</part>
+<part><br/></part><part>Thoughts of great value, worthy Cogitations.</part>
+<part><br/></part><part>Tell me good </part>
+<part type="italic">Brutus,</part><part> Can you see your face?</part>
+</speaker>
+<speaker name="Brutus."><part>No </part>
+<part type="italic">Cassius:</part><part><br/></part><part>For the eye sees not it selfe but by reflection,</part>
+<part><br/></part><part>By some other things.</part>
+</speaker>
+<speaker name="Cassius."><part>'Tis iust,</part>
+<part><br/></part><part>And it is very much lamented </part>
+<part type="italic">Brutus,</part><part><br/></part><part>That you haue no such Mirrors, as will turne</part>
+<part><br/></part><part>Your hidden worthinesse into your eye,</part>
+<part><br/></part><part>That you might see your shadow:</part>
+<part><br/></part><part>I haue heard,</part>
+<part><br/></part><part>Where many of the best respect in Rome,</part>
+<part><br/></part><part>(Except immortall </part>
+<part type="italic">Caesar</part><part>) speaking of </part>
+<part type="italic">Brutus,</part><part><br/></part><part>And groaning vnderneath this Ages yoake,</part>
+<part><br/></part><part>Haue wish'd, that Noble </part>
+<part type="italic">Brutus</part><part> had his eyes.</part>
+</speaker>
+<speaker name="Bru."><part>Into what dangers, would you</part>
+<part><br/></part><part>Leade me </part>
+<part type="italic">Cassius</part><part>?</part>
+<part><br/></part><part>That you would haue me seeke into my selfe,</part>
+<part><br/></part><part>For that which is not in me?</part>
+</speaker>
+<speaker name="Cas."><part>Therefore good </part>
+<part type="italic">Brutus,</part><part> be prepar'd to heare:</part>
+<part><br/></part><part>And since you know, you cannot see your selfe</part>
+<part><br/></part><part>So well as by Reflection; I your Glasse,</part>
+<part><br/></part><part>Will modestly discouer to your selfe</part>
+<part><br/></part><part>That of your selfe, which you yet know not of.</part>
+<part><br/></part><part>And be not iealous on me, gentle </part>
+<part type="italic">Brutus:</part><part><br/></part><part>Were I a common Laughter, or did vse</part>
+<part><br/></part><part>To stale with ordinary Oathes my loue</part>
+<part><br/></part><part>To euery new Protester: if you know,</part>
+<part><br/></part><part>That I do fawne on men, and hugge them hard,</part>
+<part><br/></part><part>And after scandall them: Or if you know,</part>
+<part><br/></part><part>That I professe my selfe in Banquetting</part>
+<part><br/></part><part>To all the Rout, then hold me dangerous.</part>
+<part><br/></part><part type="stage">Flourish, and Shout.</part>
+</speaker>
+<speaker name="Bru."><part>What meanes this Showting?</part>
+<part><br/></part><part>I do feare, the People choose </part>
+<part type="italic">Caesar</part><part><br/></part><part>For their King.</part>
+</speaker>
+<speaker name="Cassi.">I<part>, do you feare it?</part>
+<part><br/></part><part>Then must I thinke you would not haue it so.</part>
+</speaker>
+<speaker name="Bru."><part>I would not </part>
+<part type="italic">Cassius,</part><part> yet I loue him well:</part>
+<part><br/></part><part>But wherefore do you hold me heere so long?</part>
+<part><br/></part><part>What is it, that you would impart to me?</part>
+<part><br/></part><part>If it be ought toward the generall good,</part>
+<part><br/></part><part>Set Honor in one eye, and Death i'th other,</part>
+<part><br/></part><part>And I will looke on both indifferently:</part>
+<part><br/></part><part>For let the Gods so speed mee, as I loue</part>
+<part><br/></part><part>The name of Honor, more then I feare death.</part>
+</speaker>
+<speaker name="Cassi."><part>I know that vertue to be in you </part>
+<part type="italic">Brutus,</part><part><br/></part><part>As well as I do know your outward fauour.</part>
+<part><br/></part><part>Well, Honor is the subiect of my Story:</part>
+<part><br/></part><part>I cannot tell, what you and other men</part>
+<part><br/></part><part>Thinke of this life: But for my single selfe,</part>
+<part><br/></part><part>I had as liefe not be, as liue to be</part>
+<part><br/></part><part>In awe of such a Thing, as I my selfe.</part>
+<part><br/></part><part>I was borne free as </part>
+<part type="italic">Caesar,</part><part> so were you,</part>
+<part><br/></part><part>We both haue fed as well, and we can both</part>
+<part><br/></part><part>Endure the Winters cold, as well as hee.</part>
+<part><br/></part><part>For once, vpon a Rawe and Gustie day,</part>
+<part><br/></part><part>The troubled Tyber, chafing with her Shores,</part>
+<part><br/></part><part type="italic">
+                     Caesar
+                  </part><part> saide to me, Dar'st thou </part>
+<part type="italic">Cassius</part><part> now</part>
+<part><br/></part><part>Leape in with me into this angry Flood,</part>
+<part><br/></part><part>And swim to yonder Point? Vpon the word,</part>
+<part><br/></part><part>Accoutred as I was, I plunged in,</part>
+<part><br/></part><part>And bad him follow: so indeed he did.</part>
+<part><br/></part><part>The Torrent roar'd, and we did buffet it</part>
+<part><br/></part><part>With lusty Sinewes, throwing it aside,</part>
+<part><br/></part><part>And stemming it with hearts of Controuersie.</part>
+<part><br/></part><part>But ere we could arriue the Point propos'd,</part>
+<part><br/></part><part type="italic">
+                     Caesar
+                  </part><part> cride, Helpe me </part>
+<part type="italic">Cassius,</part><part> or I sinke.</part>
+<part><br/></part><part>I (as </part>
+<part type="italic">Aeneas,</part><part> our great Ancestor,</part>
+<part><br/></part><part>Did from the Flames of Troy, vpon his shoulder</part>
+<part><br/></part><part>The old </part>
+<part type="italic">Anchyses</part><part> beare) so, from the waues of Tyber</part>
+<part><br/></part><part>Did I the tyred </part>
+<part type="italic">Caesar:</part><part> And this Man,</part>
+<part><br/></part><part>Is now become a God, and </part>
+<part type="italic">Cassius</part><part> is</part>
+<part><br/></part><part>A wretched Creature, and must bend his body,</part>
+<part><br/></part><part>If </part>
+<part type="italic">Caesar</part><part> carelesly but nod on him.</part>
+<part><br/></part><part>He had a Feauer when he was in Spaine,</part>
+<part><br/></part><part>And when the Fit was on him, I did marke</part>
+<part><br/></part><part>How he did shake: Tis true, this God did shake,</part>
+<part><br/></part><part>His Coward lippes did from their colour flye,</part>
+<part><br/></part><part>And that same Eye, whose bend doth awe the World,</part>
+<part><br/></part><part>Did loose his Lustre: I did heare him grone:</part>
+<part><br/></part>I<part>, and that Tongue of his, that bad the Romans</part>
+<part><br/></part><part>Marke him, and write his Speeches in their Bookes,</part>
+<part><br/></part><part>Alas, it cried, Giue me some drinke </part>
+<part type="italic">Titinius,</part><part><br/></part><part>As a sicke Girle: Ye Gods, it doth amaze me,</part>
+<part><br/></part><part>A man of such a feeble temper should</part>
+<part><br/></part><part>So get the start of the Maiesticke world,</part>
+<part><br/></part><part>And beare the Palme alone.</part>
+<part><br/></part><part type="stage">Shout.  Flourish.</part>
+</speaker>
+<speaker name="Bru."><part>Another generall shout?</part>
+<part><br/></part><part>I do beleeue, that these applauses are</part>
+<part><br/></part><part>For some new Honors, that are heap'd on </part>
+<part type="italic">Caesar.</part></speaker>
+<speaker name="Cassi."><part>Why man, he doth bestride the narrow world</part>
+<part><br/></part><part>Like a Colossus, and we petty men</part>
+<part><br/></part><part>Walke vnder his huge legges, and peepe about</part>
+<part><br/></part><part>To finde our selues dishonourable Graues.</part>
+<part><br/></part><part>Men at sometime, are Masters of their Fates.</part>
+<part><br/></part><part>The fault (deere </part>
+<part type="italic">Brutus</part><part>)  is not in our Starres,</part>
+<part><br/></part><part>But in our Selues, that we are vnderlings.</part>
+<part><br/></part><part type="italic">
+                     Brutus
+                  </part><part> and </part>
+<part type="italic">Caesar:</part><part> What should be in that </part>
+<part type="italic">Caesar</part><part>?</part>
+<part><br/></part><part>Why should that name be sounded more then yours</part>
+<part><br/></part><part>Write them together: Yours, is as faire a Name:</part>
+<part><br/></part><part>Sound them, it doth become the mouth aswell:</part>
+<part><br/></part><part>Weigh them, it is as heauy: Coniure with 'em,</part>
+<part><br/></part><part type="italic">
+                     Brutus
+                  </part><part> will start a Spirit as soone as </part>
+<part type="italic">Caesar.</part><part><br/></part><part>Now in the names of all the Gods at once,</part>
+<part><br/></part><part>Vpon what meate doth this our </part>
+<part type="italic">Caesar</part><part> feede,</part>
+<part><br/></part><part>That he is growne so great? Age, thou art sham'd.</part>
+<part><br/></part><part>Rome, thou hast lost the breed of Noble Bloods.</part>
+<part><br/></part><part>When went there by an Age, since the great Flood,</part>
+<part><br/></part><part>But it was fam'd with more then with one man?</part>
+<part><br/></part><part>When could they say (till now) that talk'd of Rome,</part>
+<part><br/></part><part>That her wide Walkes incompast but one man?</part>
+<part><br/></part><part>Now is it Rome indeed, and Roome enough</part>
+<part><br/></part><part>When there is in it but one onely man.</part>
+<part><br/></part><part>O! you and I, haue heard our Fathers say,</part>
+<part><br/></part><part>There was a </part>
+<part type="italic">Brutus</part><part> once, that would haue brook'd</part>
+<part><br/></part><part>Th' eternall Diuell to keepe his State in Rome,</part>
+<part><br/></part><part>As easily as a King.</part>
+</speaker>
+<speaker name="Bru."><part>That you do loue me, I am nothing iealous:</part>
+<part><br/></part><part>What you would worke me </part>
+too<part>, I haue some ayme:</part>
+<part><br/></part><part>How I haue thought of this, and of these times</part>
+<part><br/></part><part>I shall recount heereafter. For this present,</part>
+<part><br/></part><part>I would not so (with loue I might intreat you)</part>
+<part><br/></part><part>Be any further moou'd: What you haue said,</part>
+<part><br/></part><part>I will consider: what you haue to say</part>
+<part><br/></part><part>I will with patience heare, and finde a time</part>
+<part><br/></part><part>Both meete to heare, and answer such high things.</part>
+<part><br/></part><part>Till then, my Noble Friend, chew vpon this:</part>
+<part><br/></part><part type="italic">
+                     Brutus
+                  </part><part> had rather be a Villager,</part>
+<part><br/></part><part>Then to repute himselfe a Sonne of Rome</part>
+<part><br/></part><part>Vnder these hard Conditions, as this time</part>
+<part><br/></part><part>Is like to lay vpon vs.</part>
+</speaker>
+<speaker name="Cassi."><part>I am glad that my weake words</part>
+<part><br/></part><part>Haue strucke but thus much shew of fire from </part>
+<part type="italic">Brutus,</part><part><br/></part><part type="stage">Enter Caesar and his Traine.</part>
+</speaker>
+<speaker name="Bru."><part>The Games are done,</part>
+<part><br/></part><part>And </part>
+<part type="italic">Caesar</part><part> is returning.</part>
+</speaker>
+<speaker name="Cassi."><part>As they passe by,</part>
+<part><br/></part><part>Plucke </part>
+<part type="italic">Caska</part><part> by the Sleeue,</part>
+<part><br/></part><part>And he will (after his sowre fashion) tell you</part>
+<part><br/></part><part>What hath proceeded worthy note to day.</part>
+</speaker>
+<speaker name="Bru."><part>I will do so: but looke you </part>
+<part type="italic">Cassius,</part><part><br/></part><part>The angry spot doth glow on </part>
+<part type="italic">Caesars</part><part> brow,</part>
+<part><br/></part><part>And all the rest, looke like a chidden Traine;</part>
+<part><br/></part><part type="italic">Calphurnia's</part><part> Cheeke is pale, and </part>
+<part type="italic">Cicero</part><part><br/></part><part>Lookes with such Ferret, and such fiery eyes</part>
+<part><br/></part><part>As we haue seene him in the Capitoll</part>
+<part><br/></part><part>Being crost in Conference, by some Senators.</part>
+</speaker>
+<speaker name="Cassi."><part type="italic">Caska</part><part> will tell vs what the matter is.</part>
+</speaker>
+<speaker name="Caes."><part type="italic">Antonio.</part></speaker>
+<speaker name="Ant."><part type="italic">Caesar.</part></speaker>
+<speaker name="Caes."><part>Let me haue men about me, that are fat,</part>
+<part><br/></part><part>Sleeke-headed men, and such as sleepe a-nights:</part>
+<part><br/></part><part>Yond </part>
+<part type="italic">Cassius</part><part> has a leane and hungry looke,</part>
+<part><br/></part><part>He thinkes too much: such men are dangerous.</part>
+</speaker>
+<speaker name="Ant."><part>Feare him not </part>
+<part type="italic">Caesar,</part><part> he's not dangerous,</part>
+<part><br/></part><part>He is a Noble Roman, and well giuen.</part>
+</speaker>
+<speaker name="Caes."><part>Would he were fatter; But I feare him not:</part>
+<part><br/></part><part>Yet if my name were lyable to feare,</part>
+<part><br/></part><part>I do not know the man I should auoyd</part>
+<part><br/></part><part>So soone as that spare </part>
+<part type="italic">Cassius.</part><part> He reades much,</part>
+<part><br/></part><part>He is a great Obseruer, and he lookes</part>
+<part><br/></part><part>Quite through the Deeds of men. He loues no Playes,</part>
+<part><br/></part><part>As thou dost </part>
+<part type="italic">Antony:</part><part> he heares no Musicke;</part>
+<part><br/></part><part>Seldome he smiles, and smiles in such a sort</part>
+<part><br/></part><part>As if he mock'd himselfe, and scorn'd his spirit</part>
+<part><br/></part><part>That could be mou'd to smile at any thing.</part>
+<part><br/></part><part>Such men as he, be neuer at hearts ease,</part>
+<part><br/></part><part>Whiles they behold a greater then themselues,</part>
+<part><br/></part><part>And therefore are they very dangerous.</part>
+<part><br/></part><part>I rather tell thee what is to be fear'd,</part>
+<part><br/></part><part>Then what I feare: for alwayes I am </part>
+<part type="italic">Caesar.</part><part><br/></part><part>Come on my right hand, for this eare is deafe,</part>
+<part><br/></part><part>And tell me truely, what thou think'st of him.  </part>
+<part type="stage">Sennit.</part>
+<part><br/></part><part type="stage">Exeunt Caesar and his Traine.</part>
+</speaker>
+<speaker name="Cask."><part>You pul'd me by the cloake, would you speake</part>
+<part><br/></part><part>with me?</part>
+</speaker>
+<speaker name="Bru.">I<part type="italic">Caska,</part><part> tell vs what hath chanc'd to day</part>
+<part><br/></part><part>That </part>
+<part type="italic">Caesar</part><part> lookes so sad.</part>
+</speaker>
+<speaker name="Cask."><part>Why you were with him, were you not?</part>
+</speaker>
+<speaker name="Bru."><part>I should not then aske </part>
+<part type="italic">Caska</part><part> what had chanc'd.</part>
+</speaker>
+<speaker name="Cask."><part>Why there was a Crowne offer'd him; &amp; being</part>
+<part><br/></part><part>offer'd him, he put it by with the backe of his hand thus,</part>
+<part><br/></part><part>and then the people fell </part>
+a<part> shouting.</part>
+</speaker>
+<speaker name="Bru."><part>What was the second noyse for?</part>
+</speaker>
+<speaker name="Cask."><part>Why for that too.</part>
+</speaker>
+<speaker name="Cassi."><part>They shouted thrice: what was the last cry for?</part>
+</speaker>
+<speaker name="Cask."><part>Why for that too.</part>
+</speaker>
+<speaker name="Bru."><part>Was the Crowne offer'd him thrice?</part>
+</speaker>
+<speaker name="Cask.">I<part> marry </part>
+was<part>'t, and hee put it by thrice, euerie</part>
+<part><br/></part><part>time gentler then other; and at euery putting by, mine</part>
+<part><br/></part><part>honest Neighbors showted.</part>
+</speaker>
+<speaker name="Cassi."><part>Who offer'd him the Crowne?</part>
+</speaker>
+<speaker name="Cask."><part>Why </part>
+<part type="italic">Antony.</part></speaker>
+<speaker name="Bru."><part>Tell vs the manner of it, gentle </part>
+<part type="italic">Caska.</part></speaker>
+<speaker name="Caska."><part>I can as well bee hang'd as tell the manner of</part>
+<part><br/></part><part>it: It was meere Foolerie, I did not marke it. I sawe</part>
+<part><br/></part><part type="italic">Marke Antony</part><part> offer him a Crowne, yet 'twas not a</part>
+<part><br/></part><part>Crowne neyther, 'twas one of these Coronets: and as I</part>
+<part><br/></part><part>told you, hee put it by once: but for all that, to my thin-</part>
+<part><br/></part><part>king, he would faine haue had it. Then hee offered it to</part>
+<part><br/></part><part>him againe: then hee put it by againe: but to my think-</part>
+<part><br/></part><part>ing, he was very loath to lay his fingers off it. And then</part>
+<part><br/></part><part>he offered it the third time; hee put it the third time by,</part>
+<part><br/></part><part>and still as hee refus'd it, the rabblement howted, and</part>
+<part><br/></part><part>clapp'd their chopt hands, and threw vppe their sweatie</part>
+<part><br/></part><part>Night-cappes, and vttered such a deale of stinking</part>
+<part><br/></part><part>breath, because </part>
+<part type="italic">Caesar</part><part> refus'd the Crowne, that it had</part>
+<part><br/></part><part>(almost) choaked </part>
+<part type="italic">Caesar:</part><part> for hee swoonded, and fell</part>
+<part><br/></part><part>downe at it: And for mine owne part, I durst not laugh,</part>
+<part><br/></part><part>for feare of opening my Lippes, and receyuing the bad</part>
+<part><br/></part><part>Ayre.
+      </part>
+</speaker>
+<speaker name="Cassi."><part>But soft I pray you: what, did </part>
+<part type="italic">Caesar</part><part> swound?</part>
+</speaker>
+<speaker name="Cask."><part>He fell downe in the Market-place, and foam'd</part>
+<part><br/></part><part>at mouth, and was speechlesse.</part>
+</speaker>
+<speaker name="Brut."><part>'Tis very like he hath the Falling sicknesse.</part>
+</speaker>
+<speaker name="Cassi."><part>No, </part>
+<part type="italic">Caesar</part><part> hath it not: but you, and I,</part>
+<part><br/></part><part>And honest </part>
+<part type="italic">Caska,</part><part> we haue the Falling sicknesse.</part>
+</speaker>
+<speaker name="Cask."><part>I know not what you meane by that, but I am</part>
+<part><br/></part><part>sure </part>
+<part type="italic">Caesar</part><part> fell downe. If the tag-ragge people did not</part>
+<part><br/></part><part>clap him, and hisse him, according as he pleas'd, and dis-pleas'd</part>
+<part><br/></part><part>them, as they vse to doe the Players in the Thea-</part>
+<part><br/></part><part>tre, I am no true man.</part>
+</speaker>
+<speaker name="Brut."><part>What said he, when he came vnto himselfe?</part>
+</speaker>
+<speaker name="Cask."><part>Marry, before he fell downe, when he perceiu'd</part>
+<part><br/></part><part>the common Heard was glad he refus'd the Crowne, he</part>
+<part><br/></part><part>pluckt me ope his Doublet, and offer'd them his Throat</part>
+<part><br/></part><part>to cut: and I had beene a man of any Occupation, if I</part>
+<part><br/></part><part>would not haue taken him at a word, I would I might</part>
+<part><br/></part><part>goe to </part>
+Hell<part> among the Rogues, and so hee fell. When</part>
+<part><br/></part><part>he came to himselfe againe, hee said, If hee had done, or</part>
+<part><br/></part><part>said any thing amisse, he desir'd their Worships to thinke</part>
+<part><br/></part><part>it was his infirmitie. Three or foure Wenches where I</part>
+<part><br/></part><part>stood, cryed, Alasse good Soule, and forgaue him with</part>
+<part><br/></part><part>all their hearts: But there's no heed to be taken of them;</part>
+<part><br/></part><part>if </part>
+<part type="italic">Caesar</part><part> had stab'd their Mothers, they would haue done</part>
+<part><br/></part><part>no lesse.</part>
+</speaker>
+<speaker name="Brut."><part>And after that, he came thus sad away.</part>
+</speaker>
+<speaker name="Cask.">I<part>.</part>
+</speaker>
+<speaker name="Cassi."><part>Did </part>
+<part type="italic">Cicero</part><part> say any thing?</part>
+</speaker>
+<speaker name="Cask.">I<part>, he spoke Greeke.</part>
+</speaker>
+<speaker name="Cassi."><part>To what effect?</part>
+</speaker>
+<speaker name="Cask."><part>Nay, </part>
+and<part> I tell you that, Ile ne're looke you</part>
+<part><br/></part><part>i'th' face againe. But those that vnderstood him, smil'd</part>
+<part><br/></part><part>at one another, and shooke their heads: but for mine</part>
+<part><br/></part><part>owne part, it was Greeke to me. I could tell you more</part>
+<part><br/></part><part>newes too: </part>
+<part type="italic">Murrellus</part><part> and </part>
+<part type="italic">Flauius,</part><part> for pulling Scarffes</part>
+<part><br/></part><part>off </part>
+<part type="italic">Caesars</part><part> Images, are put to silence. Fare you well.</part>
+<part><br/></part><part>There was more Foolerie yet, if I could remem-</part>
+<part><br/></part><part>ber it.</part>
+</speaker>
+<speaker name="Cassi."><part>Will you suppe with me to Night, </part>
+<part type="italic">Caska</part><part>?</part>
+</speaker>
+<speaker name="Cask."><part>No, I am promis'd forth.</part>
+</speaker>
+<speaker name="Cassi."><part>Will you Dine with me to morrow?</part>
+</speaker>
+<speaker name="Cask.">I<part>, if I be aliue, and your minde hold, and your</part>
+<part><br/></part><part>Dinner worth the eating.</part>
+</speaker>
+<speaker name="Cassi."><part>Good, I will expect you.</part>
+</speaker>
+<speaker name="Cask."><part>Doe so: farewell both.  </part>
+<part type="stage">Exit.</part>
+</speaker>
+<speaker name="Brut."><part>What a blunt fellow is this growne to be?</part>
+<part><br/></part><part>He was quick Mettle, when he went to Schoole.</part>
+</speaker>
+<speaker name="Cassi."><part>So is he now, in execution</part>
+<part><br/></part><part>Of any bold, or Noble Enterprize,</part>
+<part><br/></part><part>How-euer he puts on this tardie forme:</part>
+<part><br/></part><part>This Rudenesse is a Sawce to his good Wit,</part>
+<part><br/></part><part>Which giues men stomacke to disgest his words</part>
+<part><br/></part><part>With better Appetite.</part>
+</speaker>
+<speaker name="Brut."><part>And so it is:</part>
+<part><br/></part><part>For this time I will leaue you:</part>
+<part><br/></part><part>To morrow, if you please to speake with me,</part>
+<part><br/></part><part>I will come home to you: or if you will,</part>
+<part><br/></part><part>Come home to me, and I will wait for you.</part>
+</speaker>
+<speaker name="Cassi."><part>I will doe so: till then, thinke of the World.</part>
+<part><br/></part><part type="stage">Exit Brutus.</part>
+<part><br/></part><part>Well </part>
+<part type="italic">Brutus,</part><part> thou art Noble: yet I see,</part>
+<part><br/></part><part>Thy Honorable Mettle may be wrought</part>
+<part><br/></part><part>From that it is dispos'd: therefore it is meet,</part>
+<part><br/></part><part>That Noble mindes keepe euer with their likes:</part>
+<part><br/></part><part>For who so firme, that cannot be seduc'd?</part>
+<part><br/></part><part type="italic">
+                     Caesar
+                  </part><part> doth beare me hard, but he loues </part>
+<part type="italic">Brutus.</part><part><br/></part><part>If I were </part>
+<part type="italic">Brutus</part><part> now, and he were </part>
+<part type="italic">Cassius,</part><part><br/></part><part>He should not humor me. I will this Night,</part>
+<part><br/></part><part>In seuerall Hands, in at his Windowes throw,</part>
+<part><br/></part><part>As if they came from seuerall Citizens,</part>
+<part><br/></part><part>Writings, all tending to the great opinion</part>
+<part><br/></part><part>That Rome holds of his Name: wherein obscurely</part>
+<part><br/></part><part type="italic">Caesars</part><part> Ambition shall be glanced at.</part>
+<part><br/></part><part>And after this, let </part>
+<part type="italic">Caesar</part><part> seat him sure,</part>
+<part><br/></part><part>For wee will shake him, or worse dayes endure.</part>
+<part><br/></part><part type="stage">Exit.</part>
+<part><br/></part><part type="stage">Thunder, and Lightning. Enter Caska,and Cicero.</part>
+</speaker>
+<speaker name="Cic."><part>Good euen, </part>
+<part type="italic">Caska:</part><part> brought you </part>
+<part type="italic">Caesar</part><part> home?</part>
+<part><br/></part><part>Why are you breathlesse, and why stare you so?</part>
+</speaker>
+<speaker name="Cask."><part>Are not you mou'd, when all the sway of Earth</part>
+<part><br/></part><part>Shakes, like a thing vnfirme? O </part>
+<part type="italic">Cicero,</part><part><br/></part><part>I haue seene Tempests, when the scolding Winds</part>
+<part><br/></part><part>Haue riu'd the knottie Oakes, and I haue seene</part>
+<part><br/></part><part>Th' ambitious Ocean swell, and rage, and foame,</part>
+<part><br/></part><part>To be exalted with the threatning Clouds:</part>
+<part><br/></part><part>But neuer till to Night, neuer till now,</part>
+<part><br/></part><part>Did I goe through a Tempest-dropping-fire.</part>
+<part><br/></part><part>Eyther there is a Ciuill strife in Heauen,</part>
+<part><br/></part><part>Or else the World, too sawcie with the Gods,</part>
+<part><br/></part><part>Incenses them to send destruction.</part>
+</speaker>
+<speaker name="Cic."><part>Why, saw you any thing more wonderfull?</part>
+</speaker>
+<speaker name="Cask."><part>A common slaue, you know him well by sight,</part>
+<part><br/></part><part>Held vp his left Hand, which did flame and burne</part>
+<part><br/></part><part>Like twentie Torches ioyn'd; and yet his Hand,</part>
+<part><br/></part><part>Not sensible of fire, remain'd vnscorch'd.</part>
+<part><br/></part><part>Besides, I </part>
+ha<part>' not since put vp my Sword,</part>
+<part><br/></part><part>Against the Capitoll I met a Lyon,</part>
+<part><br/></part><part>Who glaz'd vpon me, and went surly by,</part>
+<part><br/></part><part>Without annoying me. And there were drawne</part>
+<part><br/></part><part>Vpon a heape, a hundred gastly Women,</part>
+<part><br/></part><part>Transformed with their feare, who swore, they saw</part>
+<part><br/></part><part>Men, all in fire, walke vp and downe the streetes.</part>
+<part><br/></part><part>And yesterday, the Bird of Night did sit,</part>
+<part><br/></part><part>Euen at Noone-day, vpon the Market place,</part>
+<part><br/></part><part>Howting, and shreeking. When these Prodigies</part>
+<part><br/></part><part>Doe so conioyntly meet, let not men say,</part>
+<part><br/></part><part>These are their Reasons, they are Naturall:</part>
+<part><br/></part><part>For I beleeue, they are portentous things</part>
+<part><br/></part><part>Vnto the Clymate, that they point vpon.</part>
+</speaker>
+<speaker name="Cic."><part>Indeed, it is a strange disposed time:</part>
+<part><br/></part><part>But men may construe things after their fashion,</part>
+<part><br/></part><part>Cleane from the purpose of the things themselues.</part>
+<part><br/></part><part>Comes </part>
+<part type="italic">Caesar</part><part> to the Capitoll to morrow?</part>
+</speaker>
+<speaker name="Cask."><part>He doth: for he did bid </part>
+<part type="italic">Antonio</part><part><br/></part><part>Send word to you, he would be there to morrow.</part>
+</speaker>
+<speaker name="Cic."><part>Good-night then, </part>
+<part type="italic">Caska:</part><part><br/></part><part>This disturbed Skie is not to walke in.</part>
+</speaker>
+<speaker name="Cask."><part>Farewell </part>
+<part type="italic">Cicero.</part><part type="stage">Exit Cicero.</part>
+<part><br/></part><part type="stage">Enter Cassius.</part>
+</speaker>
+<speaker name="Cassi."><part>Who's there?</part>
+</speaker>
+<speaker name="Cask."><part>A Romane.</part>
+</speaker>
+<speaker name="Cassi."><part type="italic">Caska,</part><part> by your Voyce.</part>
+</speaker>
+<speaker name="Cask."><part>Your Eare is good.</part>
+<part><br/></part><part type="italic">
+                     Cassius,</part><part> what Night is this?</part>
+</speaker>
+<speaker name="Cassi."><part>A very pleasing Night to honest men.</part>
+</speaker>
+<speaker name="Cask."><part>Who euer knew the Heauens menace so?</part>
+</speaker>
+<speaker name="Cassi."><part>Those that haue knowne the Earth so full of</part>
+<part><br/></part><part>faults.
+      </part>
+<part><br/></part><part>For my part, I haue walk'd about the streets,</part>
+<part><br/></part><part>Submitting me vnto the perillous Night;</part>
+<part><br/></part><part>And thus vnbraced, </part>
+<part type="italic">Caska,</part><part> as you see,</part>
+<part><br/></part><part>Haue bar'd my Bosome to the Thunder-stone:</part>
+<part><br/></part><part>And when the crosse blew Lightning seem'd to open</part>
+<part><br/></part><part>The Brest of Heauen, I did present my selfe</part>
+<part><br/></part><part>Euen in the ayme, and very flash of it.</part>
+</speaker>
+<speaker name="Cask."><part>But wherefore did you so much tempt the Hea-</part>
+uens?<part><br/></part><part>It is the part of men, to feare and tremble,</part>
+<part><br/></part><part>When the most mightie Gods, by tokens send</part>
+<part><br/></part><part>Such dreadfull Heraulds, to astonish vs.</part>
+</speaker>
+<speaker name="Cassi."><part>You are dull, </part>
+<part type="italic">Caska:</part><part><br/></part><part>And those sparkes of Life, that should be in a Roman,</part>
+<part><br/></part><part>You doe want, or else you vse not.</part>
+<part><br/></part><part>You looke pale, and gaze, and put on feare,</part>
+<part><br/></part><part>And cast your selfe in wonder,</part>
+<part><br/></part><part>To see the strange impatience of the Heauens:</part>
+<part><br/></part><part>But if you would consider the true cause,</part>
+<part><br/></part><part>Why all these Fires, why all these gliding Ghosts,</part>
+<part><br/></part><part>Why Birds and Beasts, from qualitie and kinde,</part>
+<part><br/></part><part>Why Old men, Fooles, and Children calculate,</part>
+<part><br/></part><part>Why all these things change from their Ordinance,</part>
+<part><br/></part><part>Their Natures, and pre-formed Faculties,</part>
+<part><br/></part><part>To monstrous qualitie; why you shall finde,</part>
+<part><br/></part><part>That Heauen hath infus'd them with these Spirits,</part>
+<part><br/></part><part>To make them Instruments of feare, and warning,</part>
+<part><br/></part><part>Vnto some monstrous State.</part>
+<part><br/></part><part>Now could I (</part>
+<part type="italic">Caska</part><part>) name to thee a man,</part>
+<part><br/></part><part>Most like this dreadfull Night,</part>
+<part><br/></part><part>That Thunders, Lightens, opens Graues, and roares,</part>
+<part><br/></part><part>As doth the Lyon in the Capitoll:</part>
+<part><br/></part><part>A man no mightier then thy selfe, or me,</part>
+<part><br/></part><part>In personall action; yet prodigious growne,</part>
+<part><br/></part><part>And fearefull, as these strange eruptions are.</part>
+</speaker>
+<speaker name="Cask."><part>'Tis </part>
+<part type="italic">Caesar</part><part> that you meane:</part>
+<part><br/></part><part>Is it not, </part>
+<part type="italic">Cassius</part><part>?</part>
+</speaker>
+<speaker name="Cassi."><part>Let it be who it is: for Romans now</part>
+<part><br/></part><part>Haue Thewes, and Limbes, like to their Ancestors;</part>
+<part><br/></part><part>But woe the while, our Fathers mindes are dead,</part>
+<part><br/></part><part>And we are gouern'd with our Mothers spirits,</part>
+<part><br/></part><part>Our yoake, and sufferance, shew vs Womanish.</part>
+</speaker>
+<speaker name="Cask."><part>Indeed, they say, the Senators to morrow</part>
+<part><br/></part><part>Meane to establish </part>
+<part type="italic">Caesar</part><part> as a King:</part>
+<part><br/></part><part>And he shall weare his Crowne by Sea, and Land,</part>
+<part><br/></part><part>In euery place, saue here in Italy.</part>
+</speaker>
+<speaker name="Cassi."><part>I know where I will weare this Dagger then;</part>
+<part><br/></part><part type="italic">
+                     Cassius
+                  </part><part> from Bondage will deliuer </part>
+<part type="italic">
+                     Cassius:</part><part><br/></part><part>Therein, yee Gods, you make the weake most strong;</part>
+<part><br/></part><part>Therein, yee Gods, you Tyrants doe defeat.</part>
+<part><br/></part><part>Nor Stonie Tower, nor Walls of beaten Brasse,</part>
+<part><br/></part><part>Nor ayre-lesse Dungeon, nor strong Linkes of Iron,</part>
+<part><br/></part><part>Can be retentiue to the strength of spirit:</part>
+<part><br/></part><part>But Life being wearie of these worldly Barres,</part>
+<part><br/></part><part>Neuer lacks power to dismisse it selfe.</part>
+<part><br/></part><part>If I know this, know all the World besides,</part>
+<part><br/></part><part>That part of Tyrannie that I doe beare,</part>
+<part><br/></part><part>I can shake off at pleasure.  </part>
+<part type="stage">Thunder still.</part>
+</speaker>
+<speaker name="Cask."><part>So can I:</part>
+<part><br/></part><part>So euery Bond-man in his owne hand beares</part>
+<part><br/></part><part>The power to cancell his Captiuitie.</part>
+</speaker>
+<speaker name="Cassi."><part>And why should </part>
+<part type="italic">Caesar</part><part> be a Tyrant then?</part>
+<part><br/></part><part>Poore man, I know he would not be a Wolfe,</part>
+<part><br/></part><part>But that he sees the Romans are but Sheepe:</part>
+<part><br/></part><part>He were no Lyon, were not Romans Hindes.</part>
+<part><br/></part><part>Those that with haste will make a mightie fire,</part>
+<part><br/></part><part>Begin it with weake Strawes. What trash is Rome?</part>
+<part><br/></part><part>What Rubbish, and what Offall? when it serues</part>
+<part><br/></part><part>For the base matter, to illuminate</part>
+<part><br/></part><part>So vile a thing as </part>
+<part type="italic">Caesar.</part><part> But oh Griefe,</part>
+<part><br/></part><part>Where hast thou led me? I (perhaps) speake this</part>
+<part><br/></part><part>Before a willing Bond-man: then I know</part>
+<part><br/></part><part>My answere must be made. But I am arm'd,</part>
+<part><br/></part><part>And dangers are to me indifferent.</part>
+</speaker>
+<speaker name="Cask."><part>You speake to </part>
+<part type="italic">Caska,</part><part> and to such a man,</part>
+<part><br/></part><part>That is no flearing Tell-tale. Hold, my Hand:</part>
+<part><br/></part><part>Be factious for redresse of all these Griefes,</part>
+<part><br/></part><part>And I will set this foot of mine as farre,</part>
+<part><br/></part><part>As who goes farthest.</part>
+</speaker>
+<speaker name="Cassi."><part>There's a Bargaine made.</part>
+<part><br/></part><part>Now know you, </part>
+<part type="italic">Caska,</part><part> I haue mou'd already</part>
+<part><br/></part><part>Some certaine of the Noblest minded Romans</part>
+<part><br/></part><part>To vnder-goe, with me, an Enterprize,</part>
+<part><br/></part><part>Of Honorable dangerous consequence;</part>
+<part><br/></part><part>And I doe know by this, they stay for me</part>
+<part><br/></part><part>In </part>
+<part type="italic">Pompeyes</part><part> Porch: for now this fearefull Night,</part>
+<part><br/></part><part>There is no stirre, or walking in the streetes;</part>
+<part><br/></part><part>And the Complexion of the Element</part>
+<part><br/></part><part>Is Fauors, like the Worke we haue in hand,</part>
+<part><br/></part><part>Most bloodie, fierie, and most terrible.</part>
+<part><br/></part><part type="stage">Enter Cinna.</part>
+</speaker>
+<speaker name="Caska."><part>Stand close </part>
+a<part> while, for heere comes one in</part>
+<part><br/></part><part>haste.</part>
+</speaker>
+<speaker name="Cassi."><part>'Tis </part>
+<part type="italic">Cinna,</part><part> I doe know him by his Gate,</part>
+<part><br/></part><part>He is a friend. </part>
+<part type="italic">Cinna,</part><part> where haste you so?</part>
+</speaker>
+<speaker name="Cinna."><part>To finde out you: Who's that, </part>
+<part type="italic">MetellusCymber</part><part>?</part>
+</speaker>
+<speaker name="Cassi."><part>No, it is </part>
+<part type="italic">Caska,</part><part> one incorporate</part>
+<part><br/></part><part>To our Attempts. Am I not stay'd for, </part>
+<part type="italic">Cinna</part><part>?</part>
+</speaker>
+<speaker name="Cinna."><part>I am glad on't.</part>
+<part><br/></part><part>What a fearefull Night is this?</part>
+<part><br/></part><part>There's two or three of vs haue seene strange sights.</part>
+</speaker>
+<speaker name="Cassi."><part>Am I not stay'd for? tell me.</part>
+</speaker>
+<speaker name="Cinna."><part>Yes, you are. O </part>
+<part type="italic">Cassius,</part><part><br/></part><part>If you could but winne the Noble </part>
+<part type="italic">Brutus</part><part><br/></part><part>To our party——</part>
+</speaker>
+<speaker name="Cassi."><part>Be you content. Good </part>
+<part type="italic">Cinna,</part><part> take this Paper,</part>
+<part><br/></part><part>And looke you lay it in the Pretors Chayre,</part>
+<part><br/></part><part>Where </part>
+<part type="italic">Brutus</part><part> may but finde it: and throw this</part>
+<part><br/></part><part>In at his Window; set this vp with Waxe</part>
+<part><br/></part><part>Vpon old </part>
+<part type="italic">Brutus</part><part> Statue: all this done,</part>
+<part><br/></part><part>Repaire to </part>
+<part type="italic">Pompeyes</part><part> Porch, where you shall finde vs.</part>
+<part><br/></part><part>Is </part>
+<part type="italic">Decius Brutus</part><part> and </part>
+<part type="italic">Trebonius</part><part> there?</part>
+</speaker>
+<speaker name="Cinna."><part>All, but </part>
+<part type="italic">Metellus Cymber,</part><part> and hee's gone</part>
+<part><br/></part><part>To seeke you at your house. Well, I will hie,</part>
+<part><br/></part><part>And so bestow these Papers as you bad me.</part>
+</speaker>
+<speaker name="Cassi."><part>That done, repayre to </part>
+<part type="italic">Pompeyes</part><part> Theater.</part>
+<part><br/></part><part type="stage">Exit Cinna.</part>
+<part><br/></part><part>Come </part>
+<part type="italic">Caska,</part><part> you and I will yet, ere day,</part>
+<part><br/></part><part>See </part>
+<part type="italic">Brutus</part><part> at his house: three parts of him</part>
+<part><br/></part><part>Is ours alreadie, and the man entire</part>
+<part><br/></part><part>Vpon the next encounter, yeelds him ours.</part>
+</speaker>
+<speaker name="Cask."><part>O, he sits high in all the Peoples hearts:</part>
+<part><br/></part><part>And that which would appeare Offence in vs,</part>
+<part><br/></part><part>His Countenance, like richest Alchymie,</part>
+<part><br/></part><part>Will change to Vertue, and to Worthinesse.</part>
+</speaker>
+<speaker name="Cassi."><part>Him, and his worth, and our great need of him,</part>
+<part><br/></part><part>You haue right well conceited: let vs goe,</part>
+<part><br/></part><part>For it is after Mid-night, and ere day,</part>
+<part><br/></part><part>We will awake him, and be sure of him.</part>
+<part><br/></part><part type="stage">Exeunt.</part>
+</speaker>
+</data>
