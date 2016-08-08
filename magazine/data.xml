@@ -12,7 +12,7 @@
     <images>
         <img
             caption="The Berardo Collection Museum is a museum that houses modern and contemporary art, together with modern, temporary exhibits. The permanent collection of the museum consist of the Berardo Collection"
-            filename="CentroCulturaldeBelem.jpg" width="22" x="12" y="1" caption_x="26"/>
+            filename="CentroCulturaldeBelem.jpg" width="21" x="12" y="1" caption_x="25"/>
         <img
             caption="The Jerónimos Monastery replaced the church formerly existing in the same place, which was dedicated to Santa Maria de Belém and where the monks of the military-religious Order of Christ provided assistance to seafarers in transit. The harbour of Praia do Restelo was an advantageous spot for mariners, with a safe anchorage and protection from the winds, sought after by ships entering the mouth of the Tagus."
             filename="HieronymusKlosterSuedportal_Lisbon.jpg" width="10" x="23" y="26"
@@ -47,6 +47,6 @@
             as many "Lisboetas" commute daily on these historical trams. Tickets cost €1.05 if paid
             by "Viva Viagem" card and €2.85 if purchased on-board or at a vending machine (note that
             these machines do not accept notes, and are sometime even out of change, so make sure
-            you have the correct change!). From start ... </par>
+            you have the correct change!). From start  to finish the ride takes around 30 minutes.</par>
     </text>
 </data>

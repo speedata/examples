@@ -28,7 +28,7 @@
         <PositioningArea name="img">
             <PositioningFrame width="10" height="{sd:number-of-rows() - 3}" row="1" column="23"/>
         </PositioningArea>
-        <Grid nx="33" height="12pt"/>
+        <Grid nx="32" height="12pt"/>
         <AtPageShipout>
             <PlaceObject row="{sd:number-of-rows()}" column="1">
                 <Table stretch="max">
