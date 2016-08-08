@@ -1,0 +1,36 @@
+<data>
+    <group name="Alpine">
+        <class name="Men">
+            <article number="1022" name="Florence" selling="120" price="102000"/>
+            <article number="1026" name="Sunfit" selling="180" price="70560" />
+            <article number="1148" name="Outlook" selling="140" price="90400" />
+        </class>
+        <class name="Women">
+            <article number="1323" name="Falcon" selling="310" price="120000"/>
+            <article number="1356" name="Fred Fox" selling="180" price="100000" />
+            <article number="1148" name="Orion" selling="50" price="76000" />
+        </class>
+    </group>
+    <group name="Nordic">
+        <class name="Men">
+            <article number="987" name="Kevlar" selling="110" price="23000"/>
+            <article number="677" name="Sunny" selling="30" price="16500" />
+            <article number="788" name="Racer" selling="350" price="75000" />
+            <article number="789" name="Wintertime" selling="140" price="87000" />
+        </class>
+        <class name="Women">
+            <article number="598" name="Winner" selling="500" price="35000"/>
+            <article number="1405" name="Futura" selling="350" price="110000" />
+        </class>
+        <class name="Junior">
+            <article number="2458" name="Kid" selling="80" price="7800" />
+            <article number="2467" name="Dixie" selling="65" price="6500" />
+        </class>    
+    </group>
+    <group name="Snowboard">
+        <class>
+            <article number="7048" name="Crazy Elk" selling="30" price="15700" />
+            <article number="7060" name="Performer" selling="65" price="45000" />
+        </class>
+    </group>
+</data>

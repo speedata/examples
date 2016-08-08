@@ -1,0 +1,196 @@
+<Layout
+    xmlns="urn:speedata.de:2009/publisher/en"
+    xmlns:sd="urn:speedata:2009/publisher/functions/en">
+    <Pageformat width="160mm" height="380mm" />
+
+    <!-- fira sans is a free font by mozilla: https://www.mozilla.org/en-US/styleguide/products/firefox-os/typeface/ -->
+    <LoadFontfile name="FiraSans-Regular" filename="FiraSans-Regular.otf" />
+    <LoadFontfile name="FiraSansCondensed-Light" filename="firasanscondensed-light.otf" />
+    <LoadFontfile name="FiraSansCondensed-LightItalic" filename="firasanscondensed-lightitalic.otf" />
+
+    <DefineFontfamily name="title" fontsize="22" leading="26">
+        <Regular fontface="FiraSans-Regular"/>
+    </DefineFontfamily>
+    <DefineFontfamily name="text" fontsize="10" leading="12">
+        <Regular fontface="FiraSansCondensed-Light"/>
+        <Italic fontface="FiraSansCondensed-LightItalic"/>
+    </DefineFontfamily>
+
+    <Record element="data">
+        <PlaceObject>
+            <Textblock>
+                <Paragraph fontface="title">
+                    <Value>Budget 2016</Value>
+                </Paragraph>
+            </Textblock>
+        </PlaceObject>
+        <PlaceObject>
+            <Table stretch="max" padding="2pt" width="14">
+                <Columns>
+                    <Column width="1*"/>
+                    <Column width="1*"/>
+                    <Column width="1*"/>
+                    <Column width="1*"/>
+                    <Column width="1*"/>
+                    <Column width="1*"/>
+                </Columns>
+                <Tablehead>
+                    <Tablerule/>
+                    <Tr valign="top">
+                        <Td><Paragraph><I><Value>Group</Value></I></Paragraph></Td>
+                        <Td><Paragraph><I><Value></Value></I></Paragraph></Td>
+                        <Td><Paragraph><I><Value>Article-<br/>number</Value></I></Paragraph></Td>
+                        <Td><Paragraph><I><Value>Article-<br/>name</Value></I></Paragraph></Td>
+                        <Td padding-left="12pt"><Paragraph><I><Value>Selling goal<br/>in pieces</Value></I></Paragraph></Td>
+                        <Td align="left" padding-left="25pt"><Paragraph><I><Value>Budget<br/>in USD</Value></I></Paragraph></Td>
+                    </Tr>
+                </Tablehead>
+                <ForAll select="group">
+                    <SetVariable variable="groupname" select="@name"/>
+                    <ForAll select="class">
+                        <SetVariable variable="classpos" select="position()"/>
+                        <SetVariable variable="classname" select="@name"></SetVariable>
+                        <ForAll select="article">
+                            <Switch>
+                                <Case test="$classpos = 1 and position() = 1">
+                                    <Tablerule/>
+                                </Case>
+                            </Switch>
+                            <Tr>
+                                <Td><Paragraph><Value select="$groupname"></Value></Paragraph></Td>
+                                <Td><Paragraph><Value select="$classname"></Value></Paragraph></Td>
+                                <Td align="right" padding-right="46pt" ><Paragraph><Value select="@number"></Value></Paragraph></Td>
+                                <Td><Paragraph><Value select="@name"></Value></Paragraph></Td>
+                                <Td padding-right="40pt" align="right"><Paragraph><Value select="@selling"></Value></Paragraph></Td>
+                                <Td align="right"><Paragraph><Value select="sd:format-number(@price,' ',',')"/><Value>,—</Value></Paragraph></Td>
+                            </Tr>
+                            <SetVariable variable="groupname" select=""/>
+                            <SetVariable variable="classname" select=""/>
+                        </ForAll>
+                    </ForAll>
+                </ForAll>
+                <Tablerule/>
+            </Table>
+        </PlaceObject>
+
+        <!-- second version -->
+        <PlaceObject>
+            <Textblock>
+                <Paragraph fontface="title">
+                    <Value>Budget 2016</Value>
+                </Paragraph>
+            </Textblock>
+        </PlaceObject>
+        <PlaceObject>
+            <Table stretch="max" padding="2pt" width="14">
+                <Columns>
+                    <Column width="1*"/>
+                    <Column width="1*"/>
+                    <Column width="1*"/>
+                    <Column width="1*"/>
+                    <Column width="1*"/>
+                    <Column width="1*"/>
+                </Columns>
+                <Tablehead>
+                    <Tablerule rulewidth="1pt"/>
+                    <Tr valign="top">
+                        <Td><Paragraph><I><Value>Group</Value></I></Paragraph></Td>
+                        <Td><Paragraph><I><Value></Value></I></Paragraph></Td>
+                        <Td align="right" padding-right="30pt"><Paragraph><I><Value>Article-<br/>number</Value></I></Paragraph></Td>
+                        <Td><Paragraph><I><Value>Article-<br/>name</Value></I></Paragraph></Td>
+                        <Td padding-right="10pt" align="right"><Paragraph><I><Value>Selling goal<br/>in pieces</Value></I></Paragraph></Td>
+                        <Td align="center" padding-left="25pt"><Paragraph><I><Value>Budget<br/>in USD</Value></I></Paragraph></Td>
+                    </Tr>
+                    <Tablerule rulewidth="1pt"/>
+                </Tablehead>
+                <ForAll select="group">
+                    <SetVariable variable="grouppos" select="position()"/>
+                    <SetVariable variable="groupname" select="@name"/>
+                    <ForAll select="class">
+                        <SetVariable variable="classpos" select="position()"/>
+                        <SetVariable variable="classname" select="@name"></SetVariable>
+                        <ForAll select="article">
+                            <Switch>
+                                <Case test="$classpos = 1 and $grouppos > 1 and position() = 1">
+                                    <Tablerule/>
+                                </Case>
+                                <Case test="$classpos > 1 and position() = 1" >
+                                    <Tablerule start="2"/>
+                                </Case>
+                            </Switch>
+                            <Tr>
+                                <Td><Paragraph><Value select="$groupname"></Value></Paragraph></Td>
+                                <Td><Paragraph><Value select="$classname"></Value></Paragraph></Td>
+                                <Td align="right" padding-right="30pt" ><Paragraph><Value select="@number"></Value></Paragraph></Td>
+                                <Td><Paragraph><Value select="@name"></Value></Paragraph></Td>
+                                <Td padding-right="10pt" align="right"><Paragraph><Value select="@selling"></Value></Paragraph></Td>
+                                <Td align="right"><Paragraph><Value select="sd:format-number(@price,' ',',')"/><Value>,—</Value></Paragraph></Td>
+                            </Tr>
+                            <SetVariable variable="groupname" select=""/>
+                            <SetVariable variable="classname" select=""/>
+                        </ForAll>
+                    </ForAll>
+                </ForAll>
+                <Tablerule rulewidth="1pt"/>
+            </Table>
+        </PlaceObject>
+
+        <!-- and a third version with colors -->
+        <PlaceObject>
+            <Textblock>
+                <Paragraph fontface="title">
+                    <Value>Budget 2016</Value>
+                </Paragraph>
+            </Textblock>
+        </PlaceObject>
+        <DefineColor name="bg" value="#DDD"/>
+        <PlaceObject>
+            <Table stretch="max" padding="2pt" width="14">
+                <Columns>
+                    <Column width="1*" backgroundcolor="bg"/>
+                    <Column width="1*" backgroundcolor="bg"/>
+                    <Column width="1*" backgroundcolor="bg"/>
+                    <Column width="1*" backgroundcolor="bg"/>
+                    <Column width="1*"/>
+                    <Column width="1*"/>
+                </Columns>
+                <Tablehead>
+                    <Tr align="center" backgroundcolor="black" valign="top">
+                        <Td padding-left="3pt" align="left"><Paragraph color="white"><I><Value>Group</Value></I></Paragraph></Td>
+                        <Td border-right="1pt" border-right-color="white"><Paragraph color="white"><I><Value></Value></I></Paragraph></Td>
+                        <Td><Paragraph color="white"><I><Value>Article-<br/>number</Value></I></Paragraph></Td>
+                        <Td><Paragraph color="white"><I><Value>Article-<br/>name</Value></I></Paragraph></Td>
+                        <Td><Paragraph color="white"><I><Value>Selling goal<br/>in pieces</Value></I></Paragraph></Td>
+                        <Td><Paragraph color="white"><I><Value>Budget<br/>in USD</Value></I></Paragraph></Td>
+                    </Tr>
+                </Tablehead>
+                <ForAll select="group">
+                    <SetVariable variable="grouppos" select="position()"/>
+                    <SetVariable variable="groupname" select="@name"/>
+                    <ForAll select="class">
+                        <SetVariable variable="classpos" select="position()"/>
+                        <SetVariable variable="classname" select="@name"></SetVariable>
+                        <ForAll select="article">
+                            <Switch>
+                                <Case test="$classpos = 1 and $grouppos > 1 and position() = 1">
+                                    <Tablerule color="white" rulewidth="2pt"/>
+                                </Case>
+                            </Switch>
+                            <Tr>
+                                <Td border-right="1pt" border-right-color="white"><Paragraph><Value select="$groupname"></Value></Paragraph></Td>
+                                <Td border-right="1pt" border-right-color="white"><Paragraph><Value select="$classname"></Value></Paragraph></Td>
+                                <Td align="right" padding-right="30pt" ><Paragraph><Value select="@number"></Value></Paragraph></Td>
+                                <Td><Paragraph><Value select="@name"></Value></Paragraph></Td>
+                                <Td padding-right="10pt" align="right"><Paragraph><Value select="@selling"></Value></Paragraph></Td>
+                                <Td align="right"><Paragraph><Value select="sd:format-number(@price,' ',',')"/><Value>,—</Value></Paragraph></Td>
+                            </Tr>
+                            <SetVariable variable="groupname" select=""/>
+                            <SetVariable variable="classname" select=""/>
+                        </ForAll>
+                    </ForAll>
+                </ForAll>
+
+            </Table>
+        </PlaceObject>
+    </Record>
+</Layout>

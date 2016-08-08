@@ -68,7 +68,9 @@
     </AtPageShipout>
   </Pagetype>
 
+  <!-- Processing starts here, as data is the root element in the data.xml file -->
   <Record element="data">
+
     <!-- The title image and the head -->
     <PlaceObject column="2">
       <Table stretch="max" width="{sd:number-of-columns() - 3}" padding="5pt">
@@ -88,6 +90,9 @@
       </Table>
     </PlaceObject>
     <NextRow area="text"/>
+
+    <!-- The vertical rule should start here, right after the head. It gets drawn in
+         the page master "main" -->
     <SetVariable variable="firstrow" select="sd:current-row('text')"/>
     <ProcessNode select="*"/>
   </Record>
