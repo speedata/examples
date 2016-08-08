@@ -1,0 +1,162 @@
+<Layout
+    xmlns="urn:speedata.de:2009/publisher/en"
+    xmlns:sd="urn:speedata:2009/publisher/functions/en">
+    <Options ignoreeol="yes"/>
+
+    <SetGrid height="10pt" nx="20"/>
+    <Pagetype name="title" test="sd:current-page() = 1">
+        <Margin left="1cm" right="1cm" top="1cm" bottom="1cm"></Margin>
+        <AtPageShipout>
+            <PlaceObject row="{sd:number-of-rows()}" column="1">
+                <Table stretch="max">
+                    <Tr>
+                        <Td align="left">
+                            <Paragraph><Value select="sd:current-page()"/><Value> – Sample journal</Value></Paragraph>
+                        </Td>
+                    </Tr>
+                </Table>
+            </PlaceObject>
+        </AtPageShipout>
+    </Pagetype>
+
+    <Pagetype name="text" test="sd:current-page() > 1">
+        <Margin left="1cm" right="1cm" top="1cm" bottom="1cm"></Margin>
+        <PositioningArea name="text">
+            <PositioningFrame width="10" height="{sd:number-of-rows() - 3}" row="1" column="1"/>
+            <PositioningFrame width="10" height="{sd:number-of-rows() - 3}" row="1" column="12"/>
+        </PositioningArea>
+        <PositioningArea name="img">
+            <PositioningFrame width="10" height="{sd:number-of-rows() - 3}" row="1" column="23"/>
+        </PositioningArea>
+        <Grid nx="33" height="12pt"/>
+        <AtPageShipout>
+            <PlaceObject row="{sd:number-of-rows()}" column="1">
+                <Table stretch="max">
+                    <Tr>
+                        <Switch>
+                            <Case test="sd:odd(sd:current-page()">
+                                <Td align="left">
+                                    <Paragraph><Value select="sd:current-page()"/><Value> – Sample journal</Value></Paragraph>
+                                </Td>
+                            </Case>
+                            <Otherwise>
+                                <Td align="right">
+                                    <Paragraph><Value>Sample journal – </Value><Value select="sd:current-page()"/></Paragraph>
+                                </Td>
+                            </Otherwise>
+                        </Switch>
+
+                    </Tr>
+                </Table>
+            </PlaceObject>
+        </AtPageShipout>
+    </Pagetype>
+
+    <DefineTextformat name="right" alignment="rightaligned"/>
+    <DefineTextformat name="left" alignment="leftaligned"/>
+    <DefineTextformat name="partitle" alignment="leftaligned" padding-top="15pt" margin-bottom="8pt"/>
+
+
+    <LoadFontfile name="B" filename="FiraSans-Bold.otf" />
+    <LoadFontfile name="R" filename="FiraSans-Regular.otf" />
+
+    <DefineFontfamily name="initial" fontsize="23" leading="23">
+        <Regular fontface="B"/>
+    </DefineFontfamily>
+
+    <DefineFontfamily name="BigHeading" fontsize="25" leading="34">
+        <Regular fontface="B"/>
+    </DefineFontfamily>
+    <DefineFontfamily name="intro" fontsize="12" leading="16">
+        <Regular fontface="R"/>
+        <Bold fontface="B"/>
+    </DefineFontfamily>
+    <DefineFontfamily name="text" fontsize="10" leading="12">
+        <Regular fontface="R"/>
+        <Bold fontface="B"/>
+    </DefineFontfamily>
+    <DefineFontfamily name="caption" fontsize="8" leading="10">
+        <Regular fontface="B"/>
+    </DefineFontfamily>
+
+    <Record element="data">
+        <PlaceObject column="1" row="1">
+            <Image file="{@titleimage}"  width="{sd:number-of-columns()}"/>
+        </PlaceObject>
+        <NextRow/>
+        <PlaceObject column="{sd:number-of-columns()}" hreference="right" row="{sd:current-row()}">
+            <Textblock width="10" textformat="right"><Paragraph><Value select="titleimage/@title"></Value></Paragraph></Textblock>
+        </PlaceObject>
+        <NextRow rows="2"/>
+        <PlaceObject>
+            <Table padding="2pt">
+                <Tr backgroundcolor="black">
+                    <Td><Paragraph color="white"><Value select="@author"></Value></Paragraph></Td>
+                </Tr>
+            </Table>
+        </PlaceObject>
+        <NextRow rows="2"/>
+        <PlaceObject column="1">
+            <Textblock fontface="BigHeading" textformat="left" width="{sd:number-of-columns() - 6}">
+                <Paragraph>
+                    <Value select="@title"/>
+                </Paragraph>
+            </Textblock>
+        </PlaceObject>
+        <NextRow rows="3"/>
+        <PlaceObject column="9">
+            <Textblock fontface="intro" textformat="left" width="{sd:number-of-columns() - 8}">
+                <Paragraph><B><Value select="string(intro)"></Value></B></Paragraph>
+            </Textblock>
+        </PlaceObject>
+        <NewPage/>
+        <ForAll select="images/img">
+            <PlaceObject row="{@y}" column="{@x}">
+                <Image width="{@width}" file="{@filename}"/>
+            </PlaceObject>
+            <NextRow/>
+            <PlaceObject column="{@caption_x}">
+                <Textblock width="8" textformat="left"><Paragraph fontface="caption"><Value select="@caption"/></Paragraph></Textblock>
+            </PlaceObject>
+        </ForAll>
+
+        <PlaceObject row="{sd:number-of-rows('text')}" vreference="bottom" column="1" valign="bottom" keepposition="yes">
+            <!-- http://wikitravel.org/en/File:1220084-Bel_m-Lisbon.jpg -->
+            <Image width="21" file="1220084-Bel_m-Lisbon.jpg"/>
+        </PlaceObject>
+
+        <SetVariable variable="currentrow" select="1"/>
+        <NextRow row="1" area="text"/>
+        <ForAll select="text/par">
+            <NextRow area="text"/>
+
+            <SetVariable variable="currentrow" select="sd:current-row('text')"/>
+            <Switch>
+                <Case test="not(empty(@title))">
+                    <PlaceObject area="text">
+                        <Textblock textformat="partitle">
+                            <Paragraph>
+                                <B><Value select="@title"/></B>
+                            </Paragraph>
+                        </Textblock>
+                    </PlaceObject>
+            </Case>
+            </Switch>
+            <Switch>
+                <Case test="not(empty(@initial))">
+                    <PlaceObject area="text" column="1" row="{$currentrow}">
+                        <Table fontface="initial">
+                            <Tr>
+                                <Td padding-top="1pt"><Paragraph><Value select="@initial"/></Paragraph></Td>
+                            </Tr>
+                        </Table>
+                    </PlaceObject>
+                </Case>
+
+            </Switch>
+            <Output area="text" row="{$currentrow}" allocate="auto">
+                <Text><Paragraph><Value select="."/></Paragraph></Text>
+            </Output>
+        </ForAll>
+    </Record>
+</Layout>

@@ -1,0 +1,52 @@
+<!-- source: http://wikitravel.org/en/Lisbon -->
+<data author="From Wikitravel" titleimage="Downtown_Lisbon.jpg"
+    title="The Lisbon Experience: capital of monuments">
+    <titleimage title="Downtown (Baixa)"/>
+    <intro>The capital of Portugal, Lisbon has experienced a renaissance in recent years, with a
+        contemporary culture that is alive and thriving and making its mark in today's Europe.
+        Perched on the edge of the Atlantic Ocean, Lisbon is one of the rare Western European cities
+        that faces the ocean and uses water as an element that defines the city. Lisbon enchants
+        travelers with its white-bleached limestone buildings, intimate alleyways, and an easy-going
+        charm that makes it a popular year-round destination. Lisbon enjoys a warm climate with mild
+        winters and very warm summers.</intro>
+    <images>
+        <img
+            caption="The Berardo Collection Museum is a museum that houses modern and contemporary art, together with modern, temporary exhibits. The permanent collection of the museum consist of the Berardo Collection"
+            filename="CentroCulturaldeBelem.jpg" width="22" x="12" y="1" caption_x="26"/>
+        <img
+            caption="The Jerónimos Monastery replaced the church formerly existing in the same place, which was dedicated to Santa Maria de Belém and where the monks of the military-religious Order of Christ provided assistance to seafarers in transit. The harbour of Praia do Restelo was an advantageous spot for mariners, with a safe anchorage and protection from the winds, sought after by ships entering the mouth of the Tagus."
+            filename="HieronymusKlosterSuedportal_Lisbon.jpg" width="10" x="23" y="26"
+            caption_x="23"/>
+    </images>
+    <text>
+        <par initial="T">he city stretches along the northern bank of the river Tejo as it flows
+            into the Atlantic Ocean. As the terrain rises north away from the water, steep streets
+            and stairways form the old tangled districts or give way to green parks in the western
+            suburbs.</par>
+        <par title="Getting there">In general, if you are arriving by plane in Lisbon and it is
+            still day time, it is almost always better to use public transport - buses or the metro
+            system - to your hotel or final destination. The airport information desk at Lisbon
+            airport can provide you with all the required information. Taxi drivers at the taxi
+            stand at Lisbon are infamous for their dishonesty and unreliability and if they can rip
+            you off, they will. If you do not speak Portuguese or if you don't know the shortest way
+            to your destination, avoid using a taxi unless there is no other option. If your final
+            destination is less than 1 mile from the airport, taxi drivers will refuse to take you
+            although they are not allowed to refuse destinations. If you are not carrying too much
+            luggage and it is not late in the night, you are better off simply getting a bus or the
+            metro to city center.</par>
+        <par title="Tram 28">Instead of paying for a ride on one of the costly tourist trams, try
+            Tram 28. Tram (or "Eléctrico" in the Portuguese) Line 28 is one of only three
+            traditional tram lines that still operate in Lisbon. These trams, which until the
+            late-1980's ran all through-out Lisbon, were manufactured between 1936 and 1947. Tram 28
+            winds its way through the "Old Town" of Lisbon (dating from the 17th century) beginning
+            in Graça then down to the Alfama and to the Baixa then up through Chiado to Bairro Alto
+            and then down to Campo Ourique, taking you by many of Lisbon's most famous and
+            interesting sites including monuments, churches and gardens. The trip is hilly, noisy
+            and hectic but it affords many beautiful glimpses of the city. And, although the tram
+            can sometimes be overrun with tourists, you will definitely get a flavour of the locals,
+            as many "Lisboetas" commute daily on these historical trams. Tickets cost €1.05 if paid
+            by "Viva Viagem" card and €2.85 if purchased on-board or at a vending machine (note that
+            these machines do not accept notes, and are sometime even out of change, so make sure
+            you have the correct change!). From start ... </par>
+    </text>
+</data>
