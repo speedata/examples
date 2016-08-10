@@ -13,7 +13,7 @@
 
     <Record element="data">
         <PlaceObject column="8" row="1">
-            <Box width="3" height="5" backgroundcolor="thistle" padding-left="2mm"
+            <Box width="3" height="7" backgroundcolor="thistle" padding-left="2mm"
                 padding-bottom="2mm"/>
         </PlaceObject>
 
