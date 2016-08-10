@@ -1,6 +1,6 @@
 This repository contains examples for the [speedata Publisher](https://github.com/speedata/publisher).
 
-
+More technical examples are in the directory [technical](technical).
 
 Description  | Preview
 ------------ | -------------
