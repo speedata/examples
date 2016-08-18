@@ -1,0 +1,261 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+    xmlns:sd="urn:speedata:2009/publisher/functions/en">
+
+    <Options mainlanguage="English (USA)" ignoreeol="yes" show-grid="no" show-gridallocation="no "
+        trace="no"/>
+
+    <LoadFontfile name="medium" filename="FiraSans-Regular.otf"/>
+    <LoadFontfile name="regular" filename="firasanscondensed-light.otf"/>
+    <LoadFontfile name="italic" filename="firasanscondensed-lightitalic.otf"/>
+
+
+    <Pageformat width="302.5mm" height="455mm"/>
+
+    <DefineFontfamily name="text" fontsize="8" leading="10">
+        <Regular fontface="regular"/>
+        <Bold fontface="medium"/>
+    </DefineFontfamily>
+    <DefineFontfamily name="NonsenseNews" fontsize="12" leading="12">
+        <Regular fontface="medium"/>
+        <Italic fontface="italic"/>
+    </DefineFontfamily>
+
+    <DefineTextformat name="text" indentation="10pt" widow="yes" orphan="yes"/>
+    <DefineTextformat name="caption" indentation="0pt"/>
+
+    <DefineTextformat name="h1" alignment="leftaligned"/>
+    <DefineTextformat name="h2" alignment="leftaligned"/>
+
+
+    <SetGrid width="45mm" height="10pt" dx="2.5mm"/>
+
+    <Record element="collection">
+        <SetVariable variable="dy" select="4"/>
+        <Pagetype name="page" test="true()">
+            <Margin left="10mm" right="10mm" top="12.7mm" bottom="12.7mm"/>
+            <ForAll select="article">
+                <!--  Each article gets its own area
+                    a more general area for the title and images and one area for each column  -->
+                <PositioningArea name="{concat('article',position(),'-complete')}">
+                    <PositioningFrame width="{@width}" height="{@height}" row="{@y + $dy}"
+                        column="{@x}"/>
+                </PositioningArea>
+
+                <PositioningArea name="article{position()}">
+                    <Loop select="@width" variable="i">
+                        <PositioningFrame width="1" height="{@height}" row="{@y + $dy}"
+                            column="{@x + $i - 1 }"/>
+                    </Loop>
+                </PositioningArea>
+            </ForAll>
+            <AtPageCreation>
+                <PlaceObject column="1" row="1">
+                    <Table stretch="max" fontface="NonsenseNews">
+                        <Columns>
+                            <Column width="1*"/>
+                            <Column width="1*"/>
+                            <Column width="1*"/>
+                        </Columns>
+                        <Tr>
+                            <Td align="left">
+                                <Paragraph>
+                                    <Value>Page 2</Value>
+                                </Paragraph>
+                            </Td>
+                            <Td align="center">
+                                <Paragraph>
+                                    <I>
+                                        <Value>Nonsense News</Value>
+                                    </I>
+                                </Paragraph>
+                            </Td>
+                            <Td align="right">
+                                <Paragraph>
+                                    <Value>Wednesday, May 35. 2016</Value>
+                                </Paragraph>
+                            </Td>
+                        </Tr>
+                        <Tablerule/>
+                    </Table>
+                </PlaceObject>
+            </AtPageCreation>
+        </Pagetype>
+        <ProcessNode select="advertisement"/>
+        <ProcessNode select="article"/>
+    </Record>
+
+    <Record element="advertisement">
+        <PlaceObject row="{@y + $dy}" column="{@x}">
+            <Image file="{@img}" width="{@width}" height="{@height}"/>
+        </PlaceObject>
+    </Record>
+
+    <Record element="article">
+        <Message select="concat('Article name: ',string(title))"/>
+        <SetVariable variable="bereich" select="concat('article',position())"/>
+        <SetVariable variable="wholearea" select="concat('article',position(),'-complete')"/>
+        <Switch>
+            <Case test="@width = 1">
+                <!--  Small  -->
+                <DefineFontfamily name="h1" fontsize="18" leading="18">
+                    <Regular fontface="medium"/>
+                </DefineFontfamily>
+            </Case>
+            <Case test="@width = 2 and @height &lt; 20">
+                <DefineFontfamily name="h1" fontsize="22" leading="26">
+                    <Regular fontface="medium"/>
+                </DefineFontfamily>
+            </Case>
+            <Case test="@width = 2">
+                <DefineFontfamily name="h1" fontsize="26" leading="26">
+                    <Regular fontface="medium"/>
+                </DefineFontfamily>
+
+                <DefineFontfamily name="h2" fontsize="13" leading="13">
+                    <Regular fontface="regular"/>
+                </DefineFontfamily>
+            </Case>
+            <Case test="@width = 3 and @height &lt; 30">
+                <DefineFontfamily name="h1" fontsize="24" leading="24">
+                    <Regular fontface="medium"/>
+                </DefineFontfamily>
+            </Case>
+            <Case test="@width = 3">
+                <DefineFontfamily name="h1" fontsize="30" leading="30">
+                    <Regular fontface="medium"/>
+                </DefineFontfamily>
+
+                <DefineFontfamily name="h2" fontsize="15" leading="15">
+                    <Regular fontface="regular"/>
+                </DefineFontfamily>
+            </Case>
+            <Case test="@width = 4">
+                <DefineFontfamily name="h1" fontsize="38" leading="38">
+                    <Regular fontface="medium"/>
+                </DefineFontfamily>
+                <DefineFontfamily name="h2" fontsize="16" leading="22">
+                    <Regular fontface="regular"/>
+                </DefineFontfamily>
+            </Case>
+            <Otherwise>
+                <DefineFontfamily name="h1" fontsize="43" leading="43">
+                    <Regular fontface="medium"/>
+                </DefineFontfamily>
+                <DefineFontfamily name="h2" fontsize="16" leading="20">
+                    <Regular fontface="regular"/>
+                </DefineFontfamily>
+            </Otherwise>
+        </Switch>
+
+        <SetVariable variable="articleheight" select="@height"/>
+        <Switch>
+            <Case test="@type = 'info'">
+                <PlaceObject row="1" column="1" area="{$wholearea}">
+                    <Image width="{@width}" file="{@head}"/>
+                </PlaceObject>
+            </Case>
+        </Switch>
+
+        <Switch>
+            <Case test="string(title) != ''">
+                <PlaceObject row="1" column="1" area="{$wholearea}">
+                    <Textblock width="{@width}">
+                        <Paragraph fontface="h1" textformat="h1">
+                            <Value select="string(title)"/>
+                        </Paragraph>
+                    </Textblock>
+                </PlaceObject>
+            </Case>
+        </Switch>
+        <Switch>
+            <Case test="string(subtitle) != ''">
+                <PlaceObject column="1" area="{$wholearea}">
+                    <Textblock width="{@width}">
+                        <Paragraph fontface="h2" textformat="h2">
+                            <Value select="string(subtitle)"/>
+                        </Paragraph>
+                    </Textblock>
+                </PlaceObject>
+            </Case>
+        </Switch>
+
+        <NextRow area="{$bereich}"/>
+        <SetVariable variable="firstrow" select="sd:current-row($bereich)"/>
+        <ProcessNode select="image"/>
+
+        <Switch>
+            <Case test="not(empty(text))">
+                <Output area="{$bereich}" allocate="yes">
+                    <Text>
+                        <ForAll select="text/p">
+                            <Paragraph fontface="text">
+                                <Value select="."/>
+                            </Paragraph>
+                        </ForAll>
+                    </Text>
+                </Output>
+            </Case>
+        </Switch>
+
+    </Record>
+
+    <Record element="image">
+        <Group name="img">
+            <Contents>
+                <Switch>
+                    <Case test="@row != 'top'">
+                        <PlaceObject column="1">
+                            <Box width="{@width}" height="1" backgroundcolor="white"/>
+                        </PlaceObject>
+                    </Case>
+                </Switch>
+
+                <PlaceObject frame="solid" column="1">
+                    <Switch>
+                        <Case test="empty(@height)">
+                            <Image file="{@filename}" width="{@width}"/>
+                        </Case>
+                        <Otherwise>
+                            <Image file="{@filename}" width="{@width}" height="{@height}" clip="yes"
+                            />
+                        </Otherwise>
+                    </Switch>
+                </PlaceObject>
+                <Switch>
+                    <Case test="not(empty(@caption))">
+                        <PlaceObject column="1">
+                            <Textblock width="{@width}" textformat="caption">
+                                <Paragraph>
+                                    <B>
+                                        <Value select="@caption"/>
+                                    </B>
+                                </Paragraph>
+                            </Textblock>
+                        </PlaceObject>
+                    </Case>
+                </Switch>
+                <Switch>
+                    <Case test="@row != 'bottom'">
+                        <PlaceObject column="1">
+                            <Box width="{@width}" height="1" backgroundcolor="white"/>
+                        </PlaceObject>
+                    </Case>
+                </Switch>
+            </Contents>
+        </Group>
+        <Switch>
+            <Case test="@row = 'bottom'">
+                <PlaceObject column="{@column}" row="{$articleheight}" keepposition="yes"
+                    groupname="img" vreference="bottom" valign="bottom" area="{$wholearea}"/>
+            </Case>
+            <Case test="@row = 'top'">
+                <PlaceObject column="{@column}" row="{$firstrow}" keepposition="yes" groupname="img"
+                    area="{$wholearea}"/>
+            </Case>
+            <Otherwise>
+                <PlaceObject column="{@column}" row="{@row + $firstrow}" keepposition="yes"
+                    groupname="img" area="{$wholearea}"/>
+            </Otherwise>
+        </Switch>
+    </Record>
+</Layout>
