@@ -20,7 +20,7 @@
         <Italic fontface="italic"/>
     </DefineFontfamily>
 
-    <DefineTextformat name="textindent" indentation="10pt" widow="10pt" orphan="yes"/>
+    <DefineTextformat name="textindent" indentation="10pt" widow="yes" orphan="yes"/>
     <DefineTextformat name="text" widow="yes" orphan="yes"/>
     <DefineTextformat name="caption" indentation="0pt"/>
 
