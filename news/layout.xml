@@ -20,7 +20,8 @@
         <Italic fontface="italic"/>
     </DefineFontfamily>
 
-    <DefineTextformat name="text" indentation="10pt" widow="yes" orphan="yes"/>
+    <DefineTextformat name="textindent" indentation="10pt" widow="10pt" orphan="yes"/>
+    <DefineTextformat name="text" widow="yes" orphan="yes"/>
     <DefineTextformat name="caption" indentation="0pt"/>
 
     <DefineTextformat name="h1" alignment="leftaligned"/>
@@ -92,7 +93,7 @@
 
     <Record element="article">
         <Message select="concat('Article name: ',string(title))"/>
-        <SetVariable variable="bereich" select="concat('article',position())"/>
+        <SetVariable variable="area" select="concat('article',position())"/>
         <SetVariable variable="wholearea" select="concat('article',position(),'-complete')"/>
         <Switch>
             <Case test="@width = 1">
@@ -179,16 +180,16 @@
             </Case>
         </Switch>
 
-        <NextRow area="{$bereich}"/>
-        <SetVariable variable="firstrow" select="sd:current-row($bereich)"/>
+        <NextRow area="{$area}"/>
+        <SetVariable variable="firstrow" select="sd:current-row($area)"/>
         <ProcessNode select="image"/>
 
         <Switch>
             <Case test="not(empty(text))">
-                <Output area="{$bereich}" allocate="yes">
+                <Output area="{$area}" allocate="yes">
                     <Text>
                         <ForAll select="text/p">
-                            <Paragraph fontface="text">
+                            <Paragraph fontface="text" textformat="{if (position() = 1) then 'text' else 'textindent'}">
                                 <Value select="."/>
                             </Paragraph>
                         </ForAll>
