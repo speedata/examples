@@ -1,4 +1,4 @@
-This repository contains examples for the [speedata Publisher](https://github.com/speedata/publisher).
+This repository contains examples for the [speedata Publisher](https://github.com/speedata/publisher), an OpenSource database publishing system (make PDF from XML data).
 
 More technical examples are in the directory [technical](technical).
 
