@@ -9,4 +9,5 @@ Description  | Preview
 [TEI text typesetting](shakespeare) | <a href="shakespeare"><img src="shakespeare/firstpage.png" width="200"></a>
 [Tables](tables) | <a href="tables"><img src="tables/firstpage.png" width="200"></a>
 [Typesetting on a grid](grid) | <a href="grid"><img src="grid/firstpage.png" width="200"></a>
+[Typography example](aesopgnatbull) | <a href="aesopgnatbull"><img src="aesopgnatbull/firstpage.png" width="200"></a>
 
