@@ -3,7 +3,7 @@
     xmlns:sd="urn:speedata:2009/publisher/functions/en">
     <LoadFontfile name="PlayfairDisplay-Regular" filename="PlayfairDisplay-Regular.ttf" />
     <LoadFontfile name="FaunaOne" filename="FaunaOne-Regular.ttf" />
-    
+
     <DefineFontfamily name="heading" fontsize="40" leading="48">
         <Regular fontface="PlayfairDisplay-Regular"/>
     </DefineFontfamily>
@@ -14,9 +14,9 @@
 
     <DefineTextformat name="left" alignment="leftaligned"/>
     <DefineTextformat name="text" alignment="leftaligned" margin-bottom="10pt"/>
-    
+
     <Pageformat width="210mm" height="140mm"/>
-    
+
     <Record element="data">
         <PlaceObject column="0mm" row="0mm">
             <Image width="210mm" file="forest.jpg"/>
@@ -37,7 +37,7 @@
                 <ForAll select="p">
                     <Paragraph>
                         <Value select="."/>
-                    </Paragraph>    
+                    </Paragraph>
                 </ForAll>
             </Textblock>
         </PlaceObject>
