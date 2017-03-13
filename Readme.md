@@ -6,6 +6,7 @@ Description  | Preview
 ------------ | -------------
 [Newspaper layout](news) | <a href="news"><img src="news/firstpage.png" width="200"></a>
 [Magazine layout](magazine) | <a href="magazine"><img src="magazine/firstpage.png" width="200"></a>
+[Image shape](imageshape) | <a href="imageshape"><img src="imageshape/firstpage.png" width="200"></a>
 [TEI text typesetting](shakespeare) | <a href="shakespeare"><img src="shakespeare/firstpage.png" width="200"></a>
 [Tables](tables) | <a href="tables"><img src="tables/firstpage.png" width="200"></a>
 [Typesetting on a grid](grid) | <a href="grid"><img src="grid/firstpage.png" width="200"></a>
