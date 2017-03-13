@@ -1,45 +1,49 @@
 <Layout
-    xmlns="urn:speedata.de:2009/publisher/en"
-    xmlns:sd="urn:speedata:2009/publisher/functions/en">
-    <LoadFontfile name="PlayfairDisplay-Regular" filename="PlayfairDisplay-Regular.ttf" />
-    <LoadFontfile name="FaunaOne" filename="FaunaOne-Regular.ttf" />
+  xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+  <LoadFontfile name="PlayfairDisplay-Regular" filename="PlayfairDisplay-Regular.ttf" />
+  <LoadFontfile name="FaunaOne" filename="FaunaOne-Regular.ttf" />
 
-    <DefineFontfamily name="heading" fontsize="40" leading="48">
-        <Regular fontface="PlayfairDisplay-Regular"/>
-    </DefineFontfamily>
-    <DefineFontfamily name="text" fontsize="9" leading="14">
-        <Regular fontface="FaunaOne"/>
-    </DefineFontfamily>
+  <DefineFontfamily name="heading" fontsize="40" leading="48">
+    <Regular fontface="PlayfairDisplay-Regular"/>
+  </DefineFontfamily>
+  <DefineFontfamily name="text" fontsize="9" leading="14">
+    <Regular fontface="FaunaOne"/>
+  </DefineFontfamily>
 
 
-    <DefineTextformat name="left" alignment="leftaligned"/>
-    <DefineTextformat name="text" alignment="leftaligned" margin-bottom="10pt"/>
+  <DefineTextformat name="left" alignment="leftaligned"/>
+  <DefineTextformat name="text" alignment="leftaligned" margin-bottom="10pt"/>
 
-    <Pageformat width="210mm" height="140mm"/>
+  <Pageformat width="210mm" height="140mm"/>
 
-    <Record element="data">
-        <PlaceObject column="0mm" row="0mm">
-            <Image width="210mm" file="forest.jpg"/>
-        </PlaceObject>
-        <ProcessNode select="story"/>
-    </Record>
+  <Pagetype name="first" test="sd:current-page() = 1" defaultcolor="white">
+    <Margin left="1cm" right="1cm" top="1cm" bottom="1cm"/>
+    <AtPageCreation>
+      <PlaceObject column="0mm" row="0mm">
+        <Image width="210mm" file="forest.jpg"/>
+      </PlaceObject>
+    </AtPageCreation>
+  </Pagetype>
 
-    <Record element="story">
-        <PlaceObject row="2" column="3">
-            <Textblock width="8">
-                <Paragraph color="white" fontface="heading" textformat="left">
-                    <Value select="upper-case(@title)"/>
-                </Paragraph>
-            </Textblock>
-        </PlaceObject>
-        <PlaceObject column="3">
-            <Textblock width="10" color="white">
-                <ForAll select="p">
-                    <Paragraph>
-                        <Value select="."/>
-                    </Paragraph>
-                </ForAll>
-            </Textblock>
-        </PlaceObject>
-    </Record>
+  <Record element="data">
+    <PlaceObject row="2" column="3">
+      <Textblock width="8">
+        <Paragraph fontface="heading" textformat="left">
+          <Value select="upper-case(story/@title)"/>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <Loop select="3">
+      <PlaceObject column="3">
+        <Textblock width="10">
+          <ForAll select="story/p">
+            <Paragraph>
+              <Value select="."/>
+            </Paragraph>
+          </ForAll>
+        </Textblock>
+      </PlaceObject>
+    </Loop>
+  </Record>
 </Layout>
