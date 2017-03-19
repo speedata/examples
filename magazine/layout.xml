@@ -83,11 +83,10 @@
         <PlaceObject column="1" row="1">
             <Image file="{@titleimage}"  width="{sd:number-of-columns()}"/>
         </PlaceObject>
-        <NextRow/>
         <PlaceObject column="{sd:number-of-columns()}" hreference="right" row="{sd:current-row()}">
             <Textblock width="10" textformat="right"><Paragraph><Value select="titleimage/@title"></Value></Paragraph></Textblock>
         </PlaceObject>
-        <NextRow rows="2"/>
+        <NextRow rows="1"/>
         <PlaceObject>
             <Table padding="2pt">
                 <Tr backgroundcolor="black">
@@ -95,7 +94,7 @@
                 </Tr>
             </Table>
         </PlaceObject>
-        <NextRow rows="2"/>
+        <NextRow rows="1"/>
         <PlaceObject column="1">
             <Textblock fontface="BigHeading" textformat="left" width="{sd:number-of-columns() - 6}">
                 <Paragraph>
@@ -103,7 +102,7 @@
                 </Paragraph>
             </Textblock>
         </PlaceObject>
-        <NextRow rows="3"/>
+        <NextRow rows="2"/>
         <PlaceObject column="9">
             <Textblock fontface="intro" textformat="left" width="{sd:number-of-columns() - 8}">
                 <Paragraph><B><Value select="string(intro)"></Value></B></Paragraph>
@@ -114,7 +113,6 @@
             <PlaceObject row="{@y}" column="{@x}">
                 <Image width="{@width}" file="{@filename}"/>
             </PlaceObject>
-            <NextRow/>
             <PlaceObject column="{@caption_x}">
                 <Textblock width="8" textformat="left"><Paragraph fontface="caption"><Value select="@caption"/></Paragraph></Textblock>
             </PlaceObject>
@@ -126,9 +124,7 @@
         </PlaceObject>
 
         <SetVariable variable="currentrow" select="1"/>
-        <NextRow row="1" area="text"/>
         <ForAll select="text/par">
-            <NextRow area="text"/>
 
             <SetVariable variable="currentrow" select="sd:current-row('text')"/>
             <Switch>
