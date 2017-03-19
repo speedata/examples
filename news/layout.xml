@@ -1,8 +1,7 @@
 <Layout xmlns="urn:speedata.de:2009/publisher/en"
     xmlns:sd="urn:speedata:2009/publisher/functions/en">
-
-    <Options mainlanguage="English (USA)" ignoreeol="yes" show-grid="no" show-gridallocation="no "
-        trace="no"/>
+    <Trace objects="no" grid="no" gridallocation="no"/>
+    <Options mainlanguage="English (USA)" ignoreeol="yes" />
 
     <LoadFontfile name="medium" filename="FiraSans-Regular.otf"/>
     <LoadFontfile name="regular" filename="firasanscondensed-light.otf"/>
@@ -179,8 +178,8 @@
                 </PlaceObject>
             </Case>
         </Switch>
+        <NextRow row="{sd:current-row($wholearea)}" area="{$area}"/>
 
-        <NextRow area="{$area}"/>
         <SetVariable variable="firstrow" select="sd:current-row($area)"/>
         <ProcessNode select="image"/>
 
