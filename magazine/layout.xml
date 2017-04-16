@@ -1,6 +1,7 @@
 <Layout
     xmlns="urn:speedata.de:2009/publisher/en"
-    xmlns:sd="urn:speedata:2009/publisher/functions/en">
+    xmlns:sd="urn:speedata:2009/publisher/functions/en"
+    version="2.9.7">
     <Options ignoreeol="yes"/>
 
     <SetGrid height="10pt" nx="20"/>
@@ -138,20 +139,16 @@
                     </PlaceObject>
             </Case>
             </Switch>
-            <Switch>
-                <Case test="not(empty(@initial))">
-                    <PlaceObject area="text" column="1" row="{$currentrow}">
-                        <Table fontface="initial">
-                            <Tr>
-                                <Td padding-top="1pt"><Paragraph><Value select="@initial"/></Paragraph></Td>
-                            </Tr>
-                        </Table>
-                    </PlaceObject>
-                </Case>
-
-            </Switch>
             <Output area="text" row="{$currentrow}" allocate="auto">
-                <Text><Paragraph><Value select="."/></Paragraph></Text>
+                <Text>
+                  <Paragraph>
+                    <Switch>
+                      <Case test="not(empty(@initial))">
+                        <Initial fontface="initial" padding-right="2pt"><Value select="@initial"/></Initial>
+                      </Case>
+                    </Switch>
+                    <Value select="."/></Paragraph>
+                </Text>
             </Output>
         </ForAll>
     </Record>
