@@ -20,8 +20,13 @@
 -- </root>
 
 
--- You can select the order of the columns
-ok, ret = csv.decode("us-500.csv",{columns = {2,1,4,7,8,5}})
+-- You can set the order of the columns
+-- The parameter columns is optional. If present, it contains the order
+-- of the columns that are taken from the CSV file. For example. 3,2,1
+-- outputs the first three columns in reverse order.
+-- For more options see the manual at https://speedata.github.io/publisher/manual/description-en/luafilter.html
+-- You can set the character set (if your data is in Latin-1) and the separator (if it is not a comma)
+ok, ret = csv.decode("us-500.csv",{columns = {1,2,3}})
 if not ok then
     print(ret)
     os.exit(-1)
