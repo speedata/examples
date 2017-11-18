@@ -6,4 +6,5 @@ Description  | Preview
 [Text-wrapping around objects](wraparoundobjects) | <a href="wraparoundobjects"><img src="wraparoundobjects/firstpage.png" width="200"></a>
 [Image size and clipping](images) | <a href="images"><img src="images/firstpage.png" width="200"></a>
 [A generic CSV to XML converter](csvreader) | <a href="images"><img src="csvreader/firstpage.png" width="200"></a>
+[Create PDF from Excel files](xlsxreader) | <a href="images"><img src="xlsxreader/firstpage.png" width="200"></a>
 

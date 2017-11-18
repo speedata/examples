@@ -1,0 +1,41 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en"
+  version="3.1.10">
+
+  <SetVariable variable="hashead" select="true()"/>
+
+  <Record element="data">
+    <PlaceObject>
+      <Table padding="2pt">
+        <ForAll select="row">
+          <Switch>
+            <Case test="position() = 1 and $hashead">
+              <Tablehead>
+                <Tr valign="top" backgroundcolor="#333">
+                  <ForAll select="cell">
+                    <Td>
+                      <Paragraph color="white">
+                        <Value select="."/>
+                      </Paragraph>
+                    </Td>
+                  </ForAll>
+                </Tr>
+              </Tablehead>
+            </Case>
+            <Otherwise>
+              <Tr valign="top" backgroundcolor="{ sd:alternating('tab','#fff','#ddd') }">
+                <ForAll select="cell">
+                  <Td>
+                    <Paragraph>
+                      <Value select="."/>
+                    </Paragraph>
+                  </Td>
+                </ForAll>
+              </Tr>
+            </Otherwise>
+          </Switch>
+        </ForAll>
+      </Table>
+    </PlaceObject>
+  </Record>
+</Layout>
