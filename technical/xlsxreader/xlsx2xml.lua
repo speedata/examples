@@ -5,7 +5,7 @@ if not spreadsheet then
     os.exit(-1)
 end
 
--- get the number of spreadsheets with the # operator (#spreadsheets)
+-- get the number of spreadsheets with the # operator (#spreadsheet)
 ws = spreadsheet[1]
 if not ws then
     os.exit(-1)
