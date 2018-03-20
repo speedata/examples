@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+  <Trace grid="no" gridallocation="no" objects="no"/>
+
+  <LoadFontfile name="CrimsonText-Bold" filename="CrimsonText-Bold.ttf" />
+  <LoadFontfile name="CrimsonText-Regular" filename="CrimsonText-Regular.ttf" marginprotrusion="100" />
+  <DefineFontalias existing="CrimsonText-Regular" alias="regular"/>
+  <DefineFontalias existing="CrimsonText-Bold" alias="bold"/>
+
+
+  <DefineFontfamily name="Title" fontsize="12" leading="16">
+    <Regular fontface="regular"/>
+    <Bold fontface="bold" />
+  </DefineFontfamily>
+
+  <DefineFontfamily name="text" fontsize="12" leading="13">
+    <Regular fontface="regular" />
+    <Bold fontface="bold" />
+  </DefineFontfamily>
+
+  <Pageformat width="150mm" height="200mm"/>
+  <SetGrid width="4mm" height="14pt"/>
+
+  <Pagetype name="right page" test="sd:odd( sd:current-page() )">
+    <Margin left="2cm" right="1cm" top="1cm" bottom="1cm" />
+    <AtPageShipout>
+      <PlaceObject column="1" row="{ sd:number-of-rows() - 1}">
+        <Textblock>
+          <Paragraph textformat="right"><Value select="concat('Page ',sd:current-page(), ' of ',$maxpage)"/></Paragraph>
+        </Textblock>
+      </PlaceObject>
+    </AtPageShipout>
+  </Pagetype>
+
+  <Pagetype name="left page" test="sd:even( sd:current-page() )">
+    <Margin left="1cm" right="2cm" top="1cm" bottom="1cm" />
+    <AtPageShipout>
+      <PlaceObject column="1" row="{ sd:number-of-rows() - 1}">
+        <Textblock>
+          <Paragraph textformat="left"><Value select="concat('Page ',sd:current-page(), ' of ',$maxpage)"/></Paragraph>
+        </Textblock>
+      </PlaceObject>
+    </AtPageShipout>
+  </Pagetype>
+
+
+  <Record element="tableofcontents">
+    <PlaceObject column="3">
+      <Textblock fontface="Title">
+        <Paragraph>
+          <Value>Contents</Value>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <NextRow/>
+    <PlaceObject column="3">
+      <Textblock width="20">
+        <ForAll select="planetlisting">
+          <Paragraph>
+            <Value select="@name" />
+            <Value>, page </Value>
+            <Value select="@pagenumber" />
+          </Paragraph>
+        </ForAll>
+      </Textblock>
+    </PlaceObject>
+
+    <!-- this works because the last planat starts on the last page -->
+    <ForAll select="planetlisting">
+      <SetVariable variable="maxpage" select="@pagenumber"/>
+    </ForAll>
+  </Record>
+
+  <!-- Root element -->
+  <Record element="planets">
+    <SetVariable variable="column" select="2" />
+    <SetVariable variable="maxpage" select="0"/>
+
+    <!-- this calls 'tableofcontents' if the file is found on the harddrive (second run)  -->
+    <LoadDataset name="toc"/>
+
+    <SetVariable variable="contents"/>
+    <NewPage/>
+    <ProcessNode select="planet" />
+
+    <SaveDataset filename="toc" elementname="tableofcontents" select="$contents" />
+    <!--
+      this is the structure written to the harddrive:
+
+      <tableofcontents>
+        <planetlisting pagenumber="2" name="Mercury"/>
+        <planetlisting pagenumber="3" name="Venus"/>
+        <planetlisting pagenumber="4" name="Earth"/>
+        <planetlisting pagenumber="5" name="Mars"/>
+        <planetlisting pagenumber="6" name="Jupiter"/>
+        <planetlisting pagenumber="7" name="Saturn"/>
+        <planetlisting pagenumber="8" name="Uranus"/>
+        <planetlisting pagenumber="9" name="Neptune"/>
+      </tableofcontents>
+
+    -->
+  </Record>
+
+  <Record element="planet">
+    <!-- Save the name and the page number for later use -->
+    <SetVariable variable="contents">
+      <Copy-of select="$contents" />
+      <Element name="planetlisting">
+        <Attribute name="name" select=" @name " />
+        <Attribute name="pagenumber" select=" sd:current-page()" />
+      </Element>
+    </SetVariable>
+
+    <PlaceObject column="1">
+      <Textblock>
+        <Bookmark select="@name" level="1"/>
+        <Paragraph>
+          <Value select="@name" />
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+
+    <ProcessNode select="image" />
+    <ProcessNode select="moons" />
+    <ProcessNode select="description" />
+
+    <NewPage />
+  </Record>
+
+  <Record element="url">
+    <PlaceObject column="{ $column }">
+      <Textblock width="29" fontface="Title">
+        <Paragraph>
+          <Value>URL: </Value>
+          <A href="{ string(.) }"><Value select="string(.)" /></A>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+
+  </Record>
+
+  <Record element="image">
+    <NextRow rows="2" />
+    <PlaceObject column="{ $column }">
+      <Image width="10" file="{.}" />
+    </PlaceObject>
+  </Record>
+
+  <Record element="moons">
+    <PlaceObject column="18">
+      <Textblock width="7">
+        <Paragraph>
+          <B><Value>Moons</Value></B>
+        </Paragraph>
+        <Ul>
+          <ForAll select="moon">
+            <Li><Value select="."/></Li>
+          </ForAll>
+        </Ul>
+      </Textblock>
+    </PlaceObject>
+    <NextRow rows="2" />
+  </Record>
+
+  <Record element="description">
+    <PlaceObject column="{ $column }">
+      <Textblock>
+        <Paragraph>
+          <Value select="normalize-space(string(.))" />
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+  </Record>
+
+</Layout>

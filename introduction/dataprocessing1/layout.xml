@@ -1,0 +1,15 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en" >
+  <Options crop="3mm"/>
+
+  <!-- This example uses "ProcessNode" to visit each child node -->
+  <Record element="root">
+    <ProcessNode select="child"/>
+  </Record>
+
+  <Record element="child">
+    <PlaceObject>
+      <Barcode select="string(.)" type="Code128" width="4"/>
+    </PlaceObject>
+    <NextRow/>
+  </Record>
+</Layout>

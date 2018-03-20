@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout
+  xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+  <Options ignoreeol="yes" crop="3mm"/>
+
+  <LoadFontfile name="CrimsonText-Regular" filename="CrimsonText-Regular.ttf" />
+  <LoadFontfile name="CrimsonText-Bold" filename="CrimsonText-Bold.ttf" />
+  <LoadFontfile name="CrimsonText-Italic" filename="CrimsonText-Italic.ttf" />
+
+  <DefineFontalias existing="CrimsonText-Regular" alias="regular"/>
+  <DefineFontalias existing="CrimsonText-Italic" alias="italic"/>
+  <DefineFontalias existing="CrimsonText-Bold" alias="bold"/>
+
+
+  <!-- text is the default font face -->
+  <DefineFontfamily name="text" fontsize="10" leading="12">
+    <Regular fontface="regular"/>
+    <Italic fontface="italic"/>
+    <Bold fontface="bold"/>
+  </DefineFontfamily>
+
+  <DefineFontfamily name="title" fontsize="14" leading="16">
+    <Regular fontface="bold"/>
+  </DefineFontfamily>
+
+  <Record element="data">
+    <PlaceObject>
+      <Textblock>
+        <Paragraph fontface="title">
+          <Value>Text and markup from the CDATA section:</Value>
+        </Paragraph>
+        <Paragraph><Value select="sd:decode-html(html)"/></Paragraph>
+      </Textblock>
+    </PlaceObject>
+
+    <PlaceObject>
+      <Textblock>
+        <Paragraph fontface="title">
+          <Value>Text and markup from the data file:</Value>
+        </Paragraph>
+        <ForAll select="text">
+          <Paragraph><Value select="."/></Paragraph>
+        </ForAll>
+      </Textblock>
+    </PlaceObject>
+
+    <PlaceObject>
+      <Textblock>
+        <Paragraph fontface="title">
+          <Value>Text and markup from the layout file:</Value>
+        </Paragraph>
+        <Paragraph><Value>A </Value><I><Value>wonderful</Value></I><Value> serenity has </Value><B><Value>taken possession</Value></B><Value> of my entire soul,</Value></Paragraph>
+        <Ul>
+          <Li><Value>like these</Value></Li>
+          <Li><Value>of spring</Value></Li>
+          <Li><Value>which I enjoy</Value></Li>
+        </Ul>
+        <Paragraph>
+          <Value>&amp; # \ { } %</Value>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+  </Record>
+</Layout>
