@@ -1,3 +1,6 @@
+xlsx = require("xlsx")
+xml = require("xml")
+
 spreadsheet, err = xlsx.open("us-500.xlsx")
 
 if not spreadsheet then

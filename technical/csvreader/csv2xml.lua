@@ -26,9 +26,12 @@
 -- outputs the first three columns in reverse order.
 -- For more options see the manual at https://speedata.github.io/publisher/manual/description-en/luafilter.html
 -- You can set the character set (if your data is in Latin-1) and the separator (if it is not a comma)
-ok, ret = csv.decode("us-500.csv",{columns = {1,2,3}})
-if not ok then
-    print(ret)
+csv = require("csv")
+xml = require("xml")
+
+csvtab, msg = csv.decode("us-500.csv",{columns = {1,2,3}})
+if not csvtab then
+    print(msg)
     os.exit(-1)
 end
 
@@ -38,20 +41,20 @@ end
 
 
 -- The root element
-ret._name = "data"
+csvtab._name = "data"
 
-for i=1,#ret do
+for i=1,#csvtab do
     -- level 1
-	ret[i]._name = "row"
-	for j=1,#ret[i] do
+	csvtab[i]._name = "row"
+	for j=1,#csvtab[i] do
         -- level 2
-		local val = ret[i][j]
-		ret[i][j] = { _name = "cell", val }
+		local val = csvtab[i][j]
+		csvtab[i][j] = { _name = "cell", val }
 	end
 end
 
 -- Create a file named `data.xml`.
-ok, err = xml.encode_table(ret)
+ok, err = xml.encode_table(csvtab)
 if not ok then
     os.exit(-1)
 end
