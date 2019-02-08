@@ -1,0 +1,49 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+
+  <Pageformat height="6cm" width="13cm"/>
+  <Trace grid="yes"/>
+
+  <!-- data is the root element -->
+  <Record element="data">
+    <!-- isOK == true when the goal is reached -->
+    <SetVariable variable="isOK" select="false()"/>
+
+    <!-- Let's reduce the font size until the text is at most three grids high -->
+    <SetVariable variable="fontsize" select="14"/>
+
+    <While test="not($isOK)">
+      <DefineFontfamily name="tmp" fontsize="{$fontsize}" leading="{$fontsize * 1.2}">
+        <Regular fontface="sans"/>
+      </DefineFontfamily>
+
+      <!-- a group is a virtual area, which grows as needed -->
+      <Group name="tmp">
+        <Contents>
+          <PlaceObject>
+            <Textblock width="10">
+              <Paragraph fontface="tmp">
+                <Value select="sd:dummytext()"/>
+              </Paragraph>
+            </Textblock>
+          </PlaceObject>
+        </Contents>
+      </Group>
+
+      <!-- break if text is <= 3
+          ( the < is not allowed in XML inside quotes, so this is written as &lt;
+      -->
+      <Switch>
+        <Case test="sd:group-height('tmp') &lt; 3">
+          <SetVariable variable="isOK" select="true()"/>
+        </Case>
+        <Otherwise>
+          <SetVariable variable="fontsize" select="$fontsize * 0.9"/>
+        </Otherwise>
+      </Switch>
+    </While>
+    <!-- nothing has been placed in the PDF yet, so do this now -->
+    <PlaceObject groupname="tmp"/>
+  </Record>
+
+</Layout>
