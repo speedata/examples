@@ -1,0 +1,21 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en"
+  version="3.6">
+  <Pageformat height="12cm" width="17cm"/>
+  <Record element="data">
+    <PlaceObject>
+      <Image file="chart.svg" width="10cm"/>
+    </PlaceObject>
+    <PlaceObject>
+      <Table padding="2pt">
+        <ForAll select="datum">
+          <Tr>
+            <Td><Paragraph><Value select="x"></Value></Paragraph></Td>
+            <Td><Paragraph><Value select="y"></Value></Paragraph></Td>
+          </Tr>
+          <Tablerule color="gray"/>
+        </ForAll>
+      </Table>
+    </PlaceObject>
+  </Record>
+</Layout>

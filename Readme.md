@@ -11,4 +11,5 @@ Description  | Preview
 [Tables](tables) | <a href="tables"><img src="tables/firstpage.png" width="200"></a>
 [Typesetting on a grid](grid) | <a href="grid"><img src="grid/firstpage.png" width="200"></a>
 [Typography example](aesopgnatbull) | <a href="aesopgnatbull"><img src="aesopgnatbull/firstpage.png" width="200"></a>
+[SVG chart inclusion](charts) | <a href="charts"><img src="charts/firstpage.png" width="200"></a>
 
