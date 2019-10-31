@@ -8,4 +8,5 @@ Description  | Preview
 [A generic CSV to XML converter](csvreader) | <a href="csvreader"><img src="csvreader/firstpage.png" width="200"></a>
 [Create PDF from Excel files](xlsxreader) | <a href="xlsxreader"><img src="xlsxreader/firstpage.png" width="200"></a>
 [Copyfitting with groups](fontshrinking) | <a href="fontshrinking"><img src="fontshrinking/firstpage.png" width="200"></a>
+[Single pass table of contents](singlepasstoc) | <a href="singlepasstoc"><img src="singlepasstoc/firstpage.png" width="200"></a>
 

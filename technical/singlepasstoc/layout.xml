@@ -1,0 +1,98 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en"
+  version="3.7.12">
+
+  <!-- create the table of contents in one pass -->
+
+  <Pageformat height="228pt" width="12cm" />
+  <SetGrid height="12pt" nx="10"/>
+
+  <Pagetype name="allPages" test="true()">
+    <Margin left="1cm" right="1cm" top="24pt" bottom="24pt"/>
+    <!-- The area 'text' is two rows shorter than the page so we can
+          place the page number at the bottom without overlapping -->
+    <PositioningArea name="text">
+      <PositioningFrame height="{sd:number-of-rows() - 2}" width="{sd:number-of-columns() }" column="1" row="1" />
+    </PositioningArea>
+    <AtPageShipout>
+      <!-- page number -->
+      <PlaceObject column="1" row="{sd:number-of-rows()}" valign="bottom" allocate="no">
+        <Table  stretch="max">
+          <Tr>
+            <Td align="{if (sd:even(sd:current-page())) then 'left' else 'right'}">
+              <Paragraph>
+                <Value select="sd:current-page()" />
+              </Paragraph>
+            </Td>
+          </Tr>
+        </Table>
+      </PlaceObject>
+    </AtPageShipout>
+  </Pagetype>
+
+  <Record element="chapter">
+    <!-- This is like an array. The variables will be
+      chapter1title, chapter1page, chapter2title, chapter2page etc.
+    -->
+    <SetVariable variable="chapter{position()}title" select="@title" />
+    <SetVariable variable="chapter{position()}page" select="sd:current-page()" />
+    <Output area="text" row="1">
+      <Text>
+        <Paragraph>
+          <B>
+            <Value select="@title" />
+          </B>
+          <Action>
+            <Mark select="concat('chapter',position())" pdftarget="yes" />
+          </Action>
+        </Paragraph>
+        <Loop select="@paragraphs">
+          <Paragraph>
+            <Value select="sd:dummytext()" />
+          </Paragraph>
+        </Loop>
+      </Text>
+    </Output>
+    <NewPage />
+  </Record>
+
+  <Record element="data">
+    <!-- The table of contents will be inserted here and is one page long
+      To use this mechanism of “future pages”, we need to know this in advance.
+
+      Otherwise the page numbers will be out of sync.
+    -->
+    <InsertPages name="table of contents" pages="1" />
+
+    <!-- Output all chapters and collect page numbers -->
+    <ProcessNode select="chapter" />
+
+    <!-- Now since we know the page numbers where the chapters begin,
+        it is possible to typeset the table of contents.
+        Make sure the name of the saved pages is the same as the name
+        of the inserted pages above.
+    -->
+    <SavePages name="table of contents">
+      <PlaceObject>
+        <Table padding="4pt">
+          <Columns>
+            <Column width="7cm" />
+          </Columns>
+          <Loop select="count(chapter)" variable="n">
+            <Tr>
+              <Td>
+                <Paragraph>
+                  <A link="chapter{$n}">
+                    <Value select="concat($n,' ' , sd:variable('chapter',$n,'title')" />
+                    <HSpace leader="." />
+                    <Value select="sd:variable('chapter',$n,'page')" />
+                  </A>
+                </Paragraph>
+              </Td>
+            </Tr>
+          </Loop>
+        </Table>
+      </PlaceObject>
+    </SavePages>
+  </Record>
+</Layout>
