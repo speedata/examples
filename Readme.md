@@ -14,4 +14,4 @@ Description  | Preview
 [Typesetting on a grid](grid) | <a href="grid"><img src="grid/firstpage.png" width="200"></a>
 [Typography example](aesopgnatbull) | <a href="aesopgnatbull"><img src="aesopgnatbull/firstpage.png" width="200"></a>
 [SVG chart inclusion](charts) | <a href="charts"><img src="charts/firstpage.png" width="200"></a>
-[Comparison of documents](compare/frogking) | <a href="charts"><img src="compare/frogking/publisher/firstpage.png" width="200"></a>
+[Comparison of documents](compare/frogking) | <a href="compare/frogking"><img src="compare/frogking/publisher/firstpage.png" width="200"></a>
