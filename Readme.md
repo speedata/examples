@@ -2,6 +2,8 @@ This repository contains examples for the [speedata Publisher](https://github.co
 
 Introductory examples are in the directory [introduction](introduction), more technical examples are in the directory [technical](technical).
 
+There is a comparison of documents (currently only one) of speedata, LaTeX and Apache FOP.
+
 Description  | Preview
 ------------ | -------------
 [Newspaper layout](news) | <a href="news"><img src="news/firstpage.png" width="200"></a>
@@ -12,4 +14,4 @@ Description  | Preview
 [Typesetting on a grid](grid) | <a href="grid"><img src="grid/firstpage.png" width="200"></a>
 [Typography example](aesopgnatbull) | <a href="aesopgnatbull"><img src="aesopgnatbull/firstpage.png" width="200"></a>
 [SVG chart inclusion](charts) | <a href="charts"><img src="charts/firstpage.png" width="200"></a>
-
+[Comparison of documents](compare/frogking) | <a href="charts"><img src="compare/frogking/publisher/firstpage.png" width="200"></a>

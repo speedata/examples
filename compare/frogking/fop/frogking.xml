@@ -1,0 +1,9 @@
+<fop version="1.0">
+  <renderers>
+    <renderer mime="application/pdf">
+      <fonts>
+        <directory>../../fonts</directory>
+      </fonts>
+    </renderer>
+  </renderers>
+</fop>
