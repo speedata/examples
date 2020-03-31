@@ -1,0 +1,15 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+        xmlns:sd="urn:speedata:2009/publisher/functions/en"
+        version="3.9.7">
+   <Stylesheet filename="mystyle.css"/>
+   <Record element="data">
+      <Output>
+         <Text>
+            <Paragraph>
+               <Value select="sd:html(.)"/>
+            </Paragraph>
+         </Text>
+      </Output>
+   </Record>
+
+</Layout>

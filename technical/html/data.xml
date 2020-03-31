@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data><![CDATA[
+  <h1>Header 1</h1>
+  <h2>Header 2</h2>
+  <h3>Header 3</h3>
+  <h4>Header 4</h4>
+  <p>Normal    p</p>
+
+  <!--  <img src="_samplea.pdf" > -->
+
+  <p>text<span>span (green)</span>text<em>em</em><strong>strong</strong><u>underline</u></p>
+  <p>text <kbd>kbd <span class="foo">span.foo rgb(73, 16, 126)</span></kbd> text</p>
+
+  <pre class="language-xml" data-lang="xml"><span class="nt">&lt;Layout</span> <span class="na">xmlns=</span><span class="s">"urn:speedata.de:2009/publisher/en"</span>
+                  <span class="na">xmlns:sd=</span><span class="s">"urn:speedata:2009/publisher/functions/en"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;Record</span> <span class="na">element=</span><span class="s">"data"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ProcessNode</span> <span class="na">select=</span><span class="s">"article"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;Message</span> <span class="na">select=</span><span class="s">"$nr"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/Record&gt;</span>
+
+    <span class="nt">&lt;Record</span> <span class="na">element=</span><span class="s">"article"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;SetVariable</span> <span class="na">variable=</span><span class="s">"nr"</span> <span class="na">select=</span><span class="s">"@number"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/Record&gt;</span>
+<span class="nt">&lt;/Layout&gt;</span></pre>
+
+]]>
+</data>
