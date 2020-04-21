@@ -6,7 +6,17 @@
   <h4>Header 4</h4>
   <p>Normal    p</p>
 
-  <!--  <img src="_samplea.pdf" > -->
+   <img src="_samplea.pdf" >
+
+    <!-- <ol>
+      <li>first li</li>
+      <li>second li</li>
+    </ol> -->
+
+    <table>
+      <tr><td>table cell</td><td>table cell</td></tr>
+      <tr><td>another table cell</td><td>table cell</td></tr>
+    </table>
 
   <p>text<span>span (green)</span>text<em>em</em><strong>strong</strong><u>underline</u></p>
   <p>text <kbd>kbd <span class="foo">span.foo rgb(73, 16, 126)</span></kbd> text</p>

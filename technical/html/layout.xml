@@ -5,9 +5,9 @@
    <Record element="data">
       <Output>
          <Text>
-            <Paragraph>
+            <HTML>
                <Value select="sd:html(.)"/>
-            </Paragraph>
+            </HTML>
          </Text>
       </Output>
    </Record>
