@@ -19,8 +19,8 @@
   src: url("OpenSans-BoldItalic.ttf");
   font-style: italic;
   font-weight: bold;
-} */
-
+}
+ */
 
 body {
   font-family: sans-serif;
@@ -41,12 +41,7 @@ span {color: green;}
 
 a { font-family: monospace;}
 
-img { width: 4cm; height: 4cm;}
-
-/* h1 { */
-  /* font-family: h1;
-  font-size: 12pt; */
-/* } */
+img { width: 4cm;}
 
 /* LineTableTD */
 .lntd {
