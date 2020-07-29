@@ -1,0 +1,85 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en" xmlns:sd="urn:speedata:2009/publisher/functions/en" version="3.9.26">
+
+  <Pageformat height="150mm" width="150mm"/>
+  <Pagetype name="default" test="true()">
+    <PositioningArea name="main">
+      <!-- start the main frame in row 2, so the header fits in row 1 and elements don't overlap -->
+      <PositioningFrame width="{sd:number-of-columns()}" height="{sd:number-of-rows() - 1}" row="2" column="1"/>
+    </PositioningArea>
+    <AtPageCreation>
+      <PlaceObject column="1" row="1">
+        <Table stretch="max">
+          <Tr>
+            <Td>
+              <Paragraph>
+                <Value>First: </Value>
+                <Value select="sd:firstmark(sd:current-page())"/>
+              </Paragraph>
+            </Td>
+            <Td align="center">
+              <Paragraph>
+                <Value select="concat('Page ',sd:current-page(),'/',$_lastpage)"/>
+              </Paragraph>
+            </Td>
+            <Td align="right">
+              <Paragraph>
+                <Value>Last: </Value>
+                <Value select="sd:lastmark(sd:current-page())"/>
+              </Paragraph>
+            </Td>
+          </Tr>
+        </Table>
+      </PlaceObject>
+    </AtPageCreation>
+  </Pagetype>
+
+  <Record element="data">
+    <PlaceObject area="main">
+      <Table padding="2pt" stretch="max">
+        <ForAll select="row">
+          <Switch>
+            <Case test="position() = 1">
+              <Tablehead>
+                <Tr valign="top" backgroundcolor="#333">
+                  <ForAll select="cell">
+                    <Td>
+                      <Paragraph color="white">
+                        <Value select="."/>
+                      </Paragraph>
+                    </Td>
+                  </ForAll>
+                </Tr>
+              </Tablehead>
+            </Case>
+            <Otherwise>
+              <Tr valign="top" backgroundcolor="{ sd:alternating('tab','#fff','#ddd') }">
+                <!-- collect the data for the header -->
+                <ForAll select="cell">
+                  <Switch>
+                    <Case test="position() = 1">
+                      <SetVariable variable="firstname" select="."/>
+                    </Case>
+                    <Case test="position() = 2">
+                      <SetVariable variable="lastname" select="."/>
+                    </Case>
+                  </Switch>
+                </ForAll>
+                <!-- output the data to the table -->
+                <ForAll select="cell">
+                  <Td>
+                    <Paragraph>
+                      <Action>
+                        <Mark select="concat($firstname, ' ', $lastname)"/>
+                      </Action>
+                      <Value select="."/>
+                    </Paragraph>
+                  </Td>
+                </ForAll>
+              </Tr>
+            </Otherwise>
+          </Switch>
+        </ForAll>
+      </Table>
+    </PlaceObject>
+  </Record>
+</Layout>
