@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  This example splits a table onto multiple pages.
+  Normally the speedata publisher will do it by itself,
+  this is here for demonstration purpose only. Sometimes you might
+  need more complicated table break rules and this mechanism will help you.
+-->
+
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+        xmlns:sd="urn:speedata:2009/publisher/functions/en">
+  <Pageformat width="130mm" height="50mm" />
+  <Trace grid="no" />
+  <SetGrid height="12pt" nx="10"/>
+
+  <LoadFontfile name="CamingoCode-Regular" filename="CamingoCode-Regular.ttf" />
+  <DefineFontfamily fontsize="10" leading="12" name="tt">
+    <Regular fontface="CamingoCode-Regular" />
+  </DefineFontfamily>
+
+  <Record element="data">
+    <PlaceObject>
+      <Textblock>
+        <Paragraph>
+          <Value>My favourite passwords:</Value>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+
+    <!-- clear the variable 'tablerows' which is used to collect the
+        table rows of the previous iterations
+     -->
+    <SetVariable variable="tablerows" />
+    <ForAll select="entry">
+      <SetVariable variable="thisrow">
+        <Tr backgroundcolor="lightgray">
+          <Td>
+            <Paragraph fontface="tt">
+              <Value select="position()"/>
+              <Value>: </Value>
+              <Value select="." />
+            </Paragraph>
+          </Td>
+        </Tr>
+      </SetVariable>
+      <!-- put the previous lines and this line into a table -->
+      <Group name="tbl">
+        <Contents>
+          <PlaceObject>
+            <Table width="10" stretch="max">
+              <Copy-of select="$tablerows" />
+              <Copy-of select="$thisrow" />
+            </Table>
+          </PlaceObject>
+        </Contents>
+      </Group>
+
+      <!-- does it fit on the page? -->
+      <SetVariable
+        variable="remaining-height"
+        select="sd:number-of-rows() - sd:current-row() + 1" />
+
+        <Switch>
+          <Case test="sd:group-height('tbl') > $remaining-height">
+            <!-- too large, print table without the last row -->
+            <PlaceObject column="1">
+              <Table width="10" stretch="max">
+                <Copy-of select="$tablerows" />
+              </Table>
+            </PlaceObject>
+            <NextRow />
+
+            <SetVariable variable="tablerows">
+              <Copy-of select="$thisrow" />
+            </SetVariable>
+
+            <!-- clear the group -->
+            <Group name="tbl">
+              <Contents>
+                <PlaceObject>
+                  <Table width="10" stretch="max">
+                    <Copy-of select="$thisrow" />
+                  </Table>
+                </PlaceObject>
+              </Contents>
+            </Group>
+          </Case>
+          <Otherwise>
+            <!-- it fits, so we can safely add this row to the list of all rows  -->
+            <SetVariable variable="tablerows">
+              <Copy-of select="$tablerows" />
+              <Copy-of select="$thisrow" />
+            </SetVariable>
+          </Otherwise>
+        </Switch>
+      </ForAll>
+
+    <!-- last page -->
+    <PlaceObject groupname="tbl"/>
+  </Record>
+</Layout>

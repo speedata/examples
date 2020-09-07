@@ -29,7 +29,7 @@
 csv = require("csv")
 xml = require("xml")
 
-csvtab, msg = csv.decode("us-500.csv",{columns = {1,2,3}})
+csvtab, msg = csv.decode("us-500.csv",{columns = {2,1,4,7,8,5}})
 if not csvtab then
     print(msg)
     os.exit(-1)
