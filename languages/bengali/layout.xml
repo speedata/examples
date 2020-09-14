@@ -1,0 +1,34 @@
+<Layout
+  xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+  <Pageformat height="150mm" width="130mm" />
+  <SetGrid height="12pt" nx="5" />
+  <LoadFontfile name="NotoSansBengali-Regular" filename="NotoSansBengali-Regular.ttf" mode="harfbuzz" />
+  <LoadFontfile name="NotoSansBengali-SemiBold" filename="NotoSansBengali-SemiBold.ttf" mode="harfbuzz" />
+
+  <Options mainlanguage="Other"/>
+  <DefineFontfamily fontsize="10" leading="12" name="ben">
+    <Regular fontface="NotoSansBengali-Regular"/>
+    <Bold fontface="NotoSansBengali-SemiBold" />
+  </DefineFontfamily>
+
+  <Record element="data">
+    <PlaceObject>
+      <Textblock fontface="ben" textformat="left">
+        <Paragraph>
+          <B>
+          <Value>উৎস</Value>
+        </B>
+        </Paragraph>
+        <!-- example how to use static text in the layout and “dynamic” text in the data -->
+        <Paragraph>
+          <Value>রীঃ পূঃ দ্বিতীয়-প্রথম শতকে ব্রাহ্মী লিপির উত্তর ভারতীয় লিপিরূপ থেকে জন্ম নেয় কুষাণ লিপি, যা থেকে পরে গুপ্ত লিপির উৎপত্তি হয়। গুপ্ত লিপির ক্রমবিবর্তনের ফলে সিদ্ধমাতৃকা লিপির উৎপত্তি হয়, যার কালক্রমিক পরিণতি থেকে বাংলা লিপি বর্তমান রূপ ধারণ করে।</Value>
+        </Paragraph>
+        <Paragraph>
+          <Value select="."/>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+  </Record>
+</Layout>
+<!-- https://bn.wikipedia.org/wiki/বাংলা_লিপি -->
