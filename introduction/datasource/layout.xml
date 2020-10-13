@@ -4,13 +4,13 @@
   xmlns:sd="urn:speedata:2009/publisher/functions/en">
   <Options ignoreeol="yes" crop="3mm"/>
 
-  <LoadFontfile name="CrimsonText-Regular" filename="CrimsonText-Regular.ttf" />
-  <LoadFontfile name="CrimsonText-Bold" filename="CrimsonText-Bold.ttf" />
-  <LoadFontfile name="CrimsonText-Italic" filename="CrimsonText-Italic.ttf" />
+  <LoadFontfile name="CrimsonPro-Regular" filename="CrimsonPro-Regular.ttf" />
+  <LoadFontfile name="CrimsonPro-Bold" filename="CrimsonPro-Bold.ttf" />
+  <LoadFontfile name="CrimsonPro-Italic" filename="CrimsonPro-Italic.ttf" />
 
-  <DefineFontalias existing="CrimsonText-Regular" alias="regular"/>
-  <DefineFontalias existing="CrimsonText-Italic" alias="italic"/>
-  <DefineFontalias existing="CrimsonText-Bold" alias="bold"/>
+  <DefineFontalias existing="CrimsonPro-Regular" alias="regular"/>
+  <DefineFontalias existing="CrimsonPro-Italic" alias="italic"/>
+  <DefineFontalias existing="CrimsonPro-Bold" alias="bold"/>
 
 
   <!-- text is the default font face -->
