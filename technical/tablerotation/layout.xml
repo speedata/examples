@@ -1,0 +1,58 @@
+<Layout
+  xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+  <Trace objects="yes" grid="no"/>
+  <Pageformat height="330mm" width="230mm"/>
+  <SetGrid nx="10" ny="50"/>
+
+  <Record element="data">
+    <Loop select="3">
+      <SetVariable variable="valign" select="sd:alternating('v', 'top', 'middle', 'bottom')"/>
+      <Loop select="3">
+        <SetVariable variable="align" select="sd:alternating('h', 'left', 'center', 'right')"/>
+        <PlaceObject>
+          <Textblock width="3">
+            <Paragraph>
+              <Value>valign: </Value>
+              <Value select="$valign"/>
+              <Value>, align: </Value>
+              <Value select="$align"/>
+            </Paragraph>
+          </Textblock>
+        </PlaceObject>
+        <NextRow />
+        <Loop select="18" variable="i">
+          <PlaceObject>
+            <Table fontface="text">
+              <Columns>
+                <Column width="2cm"/>
+                <Column width="3cm"/>
+                <Column width="3cm"/>
+                <Column width="2cm"/>
+              </Columns>
+              <Tr valign="{$valign}" minheight="2.5cm">
+                <Td>
+                  <Paragraph><Value select="$i"></Value><Value>: text</Value></Paragraph>
+                </Td>
+                <Td align="{$align}" rotate="{ ($i - 1) * -20}">
+                  <Paragraph>
+                    <Value>rotated</Value><Br/><Value>text by </Value>
+                    <Value select="($i - 1) * -20"/>
+                    <Value>°</Value>
+                  </Paragraph>
+                </Td>
+                <Td align="{$align}" rotate="{ ($i - 1) * -20}">
+                  <Image file="ocean.pdf" width="1cm"/>
+                </Td>
+                <Td>
+                  <Paragraph><Value>text</Value></Paragraph>
+                </Td>
+              </Tr>
+            </Table>
+          </PlaceObject>
+        </Loop>
+        <NewPage/>
+      </Loop>
+    </Loop>
+  </Record>
+</Layout>

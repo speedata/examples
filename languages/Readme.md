@@ -5,3 +5,4 @@ Description  | Preview
 ------------ | -------------
 [Bengali](bengali) | <a href="bengali"><img src="bengali/firstpage.png" width="200"></a>
 [Chinese (Simplified Chinese)](chinese-sc) | <a href="chinese-sc"><img src="chinese-sc/firstpage.png" width="200"></a>
+[Language mix](mix) | <a href="mix"><img src="mix/firstpage.png" width="200"></a>

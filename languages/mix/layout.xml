@@ -1,0 +1,37 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en" xmlns:sd="urn:speedata:2009/publisher/functions/en">
+
+  <DefineTextformat name="text" rows="1" alignment="start" margin-bottom="8pt" />
+
+  <LoadFontfile name="NotoSansArabic-Regular" filename="NotoSansArabic-Regular.ttf" mode="harfbuzz" />
+  <LoadFontfile name="NotoSans-Regular" filename="NotoSans-Regular.ttf" mode="harfbuzz"/>
+  <LoadFontfile name="NotoSansBengali-Regular" filename="NotoSansBengali-Regular.ttf" mode="harfbuzz"/>
+  <LoadFontfile name="NotoSansCJKsc-Regular" filename="NotoSansCJKsc-Regular.otf" mode="harfbuzz" />
+
+  <DefineFontfamily fontsize="10" leading="12" name="latn">
+    <Regular fontface="NotoSans-Regular" />
+  </DefineFontfamily>
+
+  <DefineFontfamily fontsize="10" leading="12" name="arab">
+    <Regular fontface="NotoSansArabic-Regular" />
+  </DefineFontfamily>
+
+  <DefineFontfamily fontsize="10" leading="12" name="beng">
+    <Regular fontface="NotoSansBengali-Regular" />
+  </DefineFontfamily>
+
+  <DefineFontfamily fontsize="10" leading="12" name="hans">
+    <Regular fontface="NotoSansCJKsc-Regular" />
+  </DefineFontfamily>
+
+  <Record element="data">
+    <PlaceObject>
+      <Textblock fontfamily="arab" width="6">
+        <ForAll select="par">
+          <Paragraph html="all" fontfamily="{@script}">
+            <Value select="." />
+          </Paragraph>
+        </ForAll>
+      </Textblock>
+    </PlaceObject>
+  </Record>
+</Layout>
