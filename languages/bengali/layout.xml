@@ -14,7 +14,7 @@
 
   <Record element="data">
     <PlaceObject>
-      <Textblock fontface="ben" textformat="left">
+      <Textblock fontfamily="ben" textformat="left">
         <Paragraph>
           <B>
           <Value>উৎস</Value>
