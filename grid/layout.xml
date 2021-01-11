@@ -32,7 +32,7 @@
   </Pagetype>
 
   <Record element="data">
-    <PlaceObject row="10" column="12" valign="bottom">
+    <PlaceObject row="9" column="12" valign="bottom">
       <Image file="tree.pdf" width="10"/>
     </PlaceObject>
     <ForAll select="section">
