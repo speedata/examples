@@ -29,7 +29,7 @@
             </PlaceObject>
             <NextRow area="company"/>
             <PlaceObject area="company">
-                <Textblock fontface="company" textformat="company">
+                <Textblock fontfamily="company" textformat="company">
                     <Paragraph>
                         <Value>Print Company &amp; Office<br/>61556 W 20th Ave<br/>Seattle King WA 98104<br/><br/>206-711-6498<br/>206-395-6284<br/><br/>jbiddy@printcompany.com<br/></Value><A href="http://www.printcompany.com"><Value>www.printcompany.com</Value></A>
                     </Paragraph>
