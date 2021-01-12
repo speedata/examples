@@ -2,6 +2,7 @@
 <Layout xmlns="urn:speedata.de:2009/publisher/en"
   xmlns:sd="urn:speedata:2009/publisher/functions/en">
   <Trace grid="no" gridallocation="no" objects="no"/>
+  <PDFOptions showbookmarks="yes" />
 
   <LoadFontfile name="CrimsonText-Bold" filename="CrimsonText-Bold.ttf" />
   <LoadFontfile name="CrimsonText-Regular" filename="CrimsonText-Regular.ttf" marginprotrusion="100" />
@@ -27,7 +28,7 @@
     <AtPageShipout>
       <PlaceObject column="1" row="{ sd:number-of-rows() - 1}">
         <Textblock>
-          <Paragraph textformat="right"><Value select="concat('Page ',sd:current-page(), ' of ',$maxpage)"/></Paragraph>
+          <Paragraph textformat="right"><Value select="concat('Page ',sd:current-page(), ' of ',$_lastpage)"/></Paragraph>
         </Textblock>
       </PlaceObject>
     </AtPageShipout>
@@ -38,7 +39,7 @@
     <AtPageShipout>
       <PlaceObject column="1" row="{ sd:number-of-rows() - 1}">
         <Textblock>
-          <Paragraph textformat="left"><Value select="concat('Page ',sd:current-page(), ' of ',$maxpage)"/></Paragraph>
+          <Paragraph textformat="left"><Value select="concat('Page ',sd:current-page(), ' of ',$_lastpage)"/></Paragraph>
         </Textblock>
       </PlaceObject>
     </AtPageShipout>
@@ -47,7 +48,7 @@
 
   <Record element="tableofcontents">
     <PlaceObject column="3">
-      <Textblock fontface="Title">
+      <Textblock fontfamily="Title">
         <Paragraph>
           <Value>Contents</Value>
         </Paragraph>
@@ -58,24 +59,20 @@
       <Textblock width="20">
         <ForAll select="planetlisting">
           <Paragraph>
-            <Value select="@name" />
-            <Value>, page </Value>
-            <Value select="@pagenumber" />
+            <A link="{@name}">
+              <Value select="@name" />
+              <Value>, page </Value>
+              <Value select="@pagenumber" />
+            </A>
           </Paragraph>
         </ForAll>
       </Textblock>
     </PlaceObject>
-
-    <!-- this works because the last planat starts on the last page -->
-    <ForAll select="planetlisting">
-      <SetVariable variable="maxpage" select="@pagenumber"/>
-    </ForAll>
   </Record>
 
   <!-- Root element -->
   <Record element="planets">
     <SetVariable variable="column" select="2" />
-    <SetVariable variable="maxpage" select="0"/>
 
     <!-- this calls 'tableofcontents' if the file is found on the harddrive (second run)  -->
     <LoadDataset name="toc"/>
@@ -84,7 +81,7 @@
     <NewPage/>
     <ProcessNode select="planet" />
 
-    <SaveDataset filename="toc" elementname="tableofcontents" select="$contents" />
+    <SaveDataset name="toc" elementname="tableofcontents" select="$contents" />
     <!--
       this is the structure written to the harddrive:
 
@@ -115,6 +112,9 @@
     <PlaceObject column="1">
       <Textblock>
         <Bookmark select="@name" level="1"/>
+        <Action>
+          <Mark select="@name" pdftarget="yes" />
+        </Action>
         <Paragraph>
           <Value select="@name" />
         </Paragraph>
@@ -130,7 +130,7 @@
 
   <Record element="url">
     <PlaceObject column="{ $column }">
-      <Textblock width="29" fontface="Title">
+      <Textblock width="29" fontfamily="Title">
         <Paragraph>
           <Value>URL: </Value>
           <A href="{ string(.) }"><Value select="string(.)" /></A>
