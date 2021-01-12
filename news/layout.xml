@@ -50,7 +50,7 @@
             </ForAll>
             <AtPageCreation>
                 <PlaceObject column="1" row="1">
-                    <Table stretch="max" fontface="NonsenseNews">
+                    <Table stretch="max" fontfamily="NonsenseNews">
                         <Columns>
                             <Column width="1*"/>
                             <Column width="1*"/>
@@ -160,7 +160,7 @@
             <Case test="string(title) != ''">
                 <PlaceObject row="1" column="1" area="{$wholearea}">
                     <Textblock width="{@width}">
-                        <Paragraph fontface="h1" textformat="h1">
+                        <Paragraph fontfamily="h1" textformat="h1">
                             <Value select="string(title)"/>
                         </Paragraph>
                     </Textblock>
@@ -171,7 +171,7 @@
             <Case test="string(subtitle) != ''">
                 <PlaceObject column="1" area="{$wholearea}">
                     <Textblock width="{@width}">
-                        <Paragraph fontface="h2" textformat="h2">
+                        <Paragraph fontfamily="h2" textformat="h2">
                             <Value select="string(subtitle)"/>
                         </Paragraph>
                     </Textblock>
@@ -188,7 +188,7 @@
                 <Output area="{$area}" allocate="yes">
                     <Text>
                         <ForAll select="text/p">
-                            <Paragraph fontface="text" textformat="{if (position() = 1) then 'text' else 'textindent'}">
+                            <Paragraph fontfamily="text" textformat="{if (position() = 1) then 'text' else 'textindent'}">
                                 <Value select="."/>
                             </Paragraph>
                         </ForAll>
