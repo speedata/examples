@@ -2,13 +2,13 @@
     xmlns="urn:speedata.de:2009/publisher/en"
     xmlns:sd="urn:speedata:2009/publisher/functions/en"
     version="2.9.7">
-    <Options ignoreeol="yes"/>
+    <Options ignoreeol="yes" mainlanguage="English (Great Britain)"/>
 
     <SetGrid height="10pt" nx="20"/>
     <Pagetype name="title" test="sd:current-page() = 1">
         <Margin left="1cm" right="1cm" top="1cm" bottom="1cm"></Margin>
         <AtPageShipout>
-            <PlaceObject row="{sd:number-of-rows()}" column="1">
+            <PlaceObject row="{sd:number-of-rows()}" column="1" allocate="no">
                 <Table stretch="max">
                     <Tr>
                         <Td align="left">
@@ -29,6 +29,7 @@
         <PositioningArea name="img">
             <PositioningFrame width="10" height="{sd:number-of-rows() - 3}" row="1" column="23"/>
         </PositioningArea>
+        <!-- Grid height page 1 is 10pt, height on page 2 is 12pt -->
         <Grid nx="32" height="12pt"/>
         <AtPageShipout>
             <PlaceObject row="{sd:number-of-rows()}" column="1">
@@ -46,7 +47,6 @@
                                 </Td>
                             </Otherwise>
                         </Switch>
-
                     </Tr>
                 </Table>
             </PlaceObject>
@@ -95,17 +95,20 @@
                 </Tr>
             </Table>
         </PlaceObject>
-        <NextRow rows="1"/>
+        <NextRow/>
+        <NextRow/>
         <PlaceObject column="1">
-            <Textblock fontface="BigHeading" textformat="left" width="{sd:number-of-columns() - 6}">
+            <Textblock fontfamily="BigHeading" textformat="left" width="{sd:number-of-columns() - 6}">
                 <Paragraph>
                     <Value select="@title"/>
                 </Paragraph>
             </Textblock>
         </PlaceObject>
-        <NextRow rows="2"/>
+        <NextRow />
+        <NextRow />
+        <NextRow />
         <PlaceObject column="9">
-            <Textblock fontface="intro" textformat="left" width="{sd:number-of-columns() - 8}">
+            <Textblock fontfamily="intro" textformat="left" width="{sd:number-of-columns() - 8}">
                 <Paragraph><B><Value select="string(intro)"></Value></B></Paragraph>
             </Textblock>
         </PlaceObject>
@@ -115,7 +118,7 @@
                 <Image width="{@width}" file="{@filename}"/>
             </PlaceObject>
             <PlaceObject column="{@caption_x}">
-                <Textblock width="8" textformat="left"><Paragraph fontface="caption"><Value select="@caption"/></Paragraph></Textblock>
+                <Textblock width="8" textformat="left"><Paragraph fontfamily="caption"><Value select="@caption"/></Paragraph></Textblock>
             </PlaceObject>
         </ForAll>
 
@@ -144,7 +147,7 @@
                   <Paragraph>
                     <Switch>
                       <Case test="not(empty(@initial))">
-                        <Initial fontface="initial" padding-right="2pt"><Value select="@initial"/></Initial>
+                        <Initial fontfamily="initial" padding-right="2pt"><Value select="@initial"/></Initial>
                       </Case>
                     </Switch>
                     <Value select="."/></Paragraph>
