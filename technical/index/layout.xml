@@ -1,0 +1,56 @@
+<Layout
+	xmlns="urn:speedata.de:2009/publisher/en"
+    xmlns:sd="urn:speedata:2009/publisher/functions/en">
+
+	<Record element="data">
+		<SetVariable variable="indexentries" />
+		<ProcessNode select="keyword" />
+
+		<SetVariable variable="index">
+			<Element name="index">
+				<Makeindex select="$indexentries" sortkey="name" section="section" pagenumber="page" />
+			</Element>
+		</SetVariable>
+
+		<ProcessNode select="$index" />
+	</Record>
+
+	<Record element="keyword">
+		<SetVariable variable="indexentries">
+			<Copy-of select="$indexentries" />
+			<Element name="indexentry">
+				<Attribute name="name" select="@word" />
+				<Attribute name="page" select="@page" />
+			</Element>
+		</SetVariable>
+	</Record>
+	<Record element="index">
+		<PlaceObject column="1">
+			<Table width="3" stretch="max">
+				<ForAll select="section">
+					<Tr break-below="no" top-distance="10pt">
+						<Td colspan="2" backgroundcolor="lightgray">
+							<Paragraph>
+								<Value select="@name"></Value>
+							</Paragraph>
+						</Td>
+					</Tr>
+					<ForAll select="indexentry">
+						<Tr>
+							<Td>
+								<Paragraph>
+									<Value select="@name" />
+								</Paragraph>
+							</Td>
+							<Td align="right">
+								<Paragraph>
+									<Value select="@page" />
+								</Paragraph>
+							</Td>
+						</Tr>
+					</ForAll>
+				</ForAll>
+			</Table>
+		</PlaceObject>
+	</Record>
+</Layout>

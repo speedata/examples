@@ -1,0 +1,138 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+    xmlns:sd="urn:speedata:2009/publisher/functions/en"
+    version="4.1.16">
+    <Pageformat height="14cm" width="8cm" />
+    <SetGrid nx="5" height="12pt" />
+    <LoadFontfile
+        name="Amiri-Regular"
+        filename="amiri-regular.ttf"
+        mode="harfbuzz" />
+    <DefineFontfamily fontsize="10" leading="12" name="amiri">
+        <Regular fontface="Amiri-Regular" />
+    </DefineFontfamily>
+
+    <DefineTextformat name="start" alignment="start" />
+    <DefineTextformat name="end" alignment="end" />
+
+    <Record element="data">
+        <SetVariable variable="directions">
+            <Element name="direction"><Attribute name="dir" select="''" /></Element>
+            <Element name="direction"><Attribute name="dir" select="'ltr'" /></Element>
+            <Element name="direction"><Attribute name="dir" select="'rtl'" /></Element>
+        </SetVariable>
+        <SetVariable variable="bidichoices">
+            <Element name="bidi"><Attribute name="bidi" select="'yes'" /></Element>
+            <Element name="bidi"><Attribute name="bidi" select="'no'" /></Element>
+        </SetVariable>
+        <SetVariable variable="examples">
+            <Element name="example">
+                <Attribute name="textformat" select="'text'" />
+                <Attribute name="visiblename" select="'justified'" />
+            </Element>
+            <Element name="example">
+                <Attribute name="textformat" select="'left'" />
+                <Attribute name="visiblename" select="'left'" />
+            </Element>
+            <Element name="example">
+                <Attribute name="textformat" select="'right'" />
+                <Attribute name="visiblename" select="'right'" />
+            </Element>
+            <Element name="example">
+                <Attribute name="textformat" select="'centered'" />
+                <Attribute name="visiblename" select="'centered'" />
+            </Element>
+            <Element name="example">
+                <Attribute name="textformat" select="'start'" />
+                <Attribute name="visiblename" select="'start'" />
+            </Element>
+            <Element name="example">
+                <Attribute name="textformat" select="'end'" />
+                <Attribute name="visiblename" select="'end'" />
+            </Element>
+        </SetVariable>
+        <ForAll select="$directions">
+            <SetVariable variable="direction" select="@dir"/>
+            <Switch>
+                <Case test="$direction = ''">
+                    <SetVariable variable="visibledirection" select="'--'"/>
+                </Case>
+                <Otherwise>
+                    <SetVariable variable="visibledirection" select="$direction"/>
+                </Otherwise>
+
+            </Switch>
+            <ForAll select="$bidichoices">
+                <SetVariable variable="bidi" select="@bidi"/>
+                <ForAll select="$examples/example">
+                    <Switch>
+                        <!-- set to true() to get vertical rules -->
+                        <Case test="false()">
+                            <Switch>
+                                <Case test="@textformat = 'text' or @textformat = 'left'">
+                                    <PlaceObject allocate="no">
+                                        <Rule direction="vertical" length="{sd:number-of-rows() - 6}" color="lightgray" />
+                                    </PlaceObject>
+                                </Case>
+                            </Switch>
+                            <Switch>
+                                <Case test="@textformat = 'text' or @textformat = 'right'">
+                                    <PlaceObject column="{sd:number-of-columns()}" allocate="no" halign="right">
+                                        <Rule direction="vertical" length="{sd:number-of-rows() - 6}" color="lightgray" />
+                                    </PlaceObject>
+                                </Case>
+                            </Switch>
+                            <Switch>
+                                <Case test="@textformat = 'centered'">
+                                    <PlaceObject column="{sd:number-of-columns() idiv 2 + 1}" allocate="no" halign="center">
+                                        <Rule direction="vertical" length="{sd:number-of-rows() - 6}" color="lightgray" />
+                                    </PlaceObject>
+                                </Case>
+                            </Switch>
+                        </Case>
+                    </Switch>
+                    <PlaceObject>
+                        <Textblock>
+                            <Bookmark level="1" select="concat($visibledirection,', bidi: ', $bidi, ' ', @visiblename)" />
+                            <Paragraph>
+                                <Value select="concat('Align: ', @visiblename, ', direction: ',$visibledirection, ', bidi: ', $bidi)"/>
+                            </Paragraph>
+                        </Textblock>
+                    </PlaceObject>
+                    <NextRow />
+                    <PlaceObject column="1">
+                        <Textblock width="5">
+                            <Paragraph textformat="{@textformat}" direction="{$direction}" bidi="{$bidi}">
+                                <Value select="sd:dummytext()"></Value>
+                            </Paragraph>
+                        </Textblock>
+                    </PlaceObject>
+                    <NextRow />
+                    <PlaceObject column="1">
+                        <Textblock width="5">
+                            <Paragraph textformat="{@textformat}" fontfamily="amiri" direction="{$direction}" bidi="{$bidi}">
+                                <Value>المادة 1 يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.</Value>
+                            </Paragraph>
+                        </Textblock>
+                    </PlaceObject>
+                    <NextRow />
+                    <PlaceObject>
+                        <Textblock>
+                            <Paragraph>
+                                <Value>No direction setting:</Value>
+                            </Paragraph>
+                        </Textblock>
+                    </PlaceObject>
+                    <NextRow />
+                    <PlaceObject column="1">
+                        <Textblock fontfamily="amiri" width="5" textformat="{@textformat}" >
+                            <Paragraph bidi="{$bidi}" >
+                                <Value>العاشر ليونيكود (Unicode Conference)، الذي سيعقد في 10-12 آذار 1997 مبدينة</Value>
+                            </Paragraph>
+                        </Textblock>
+                    </PlaceObject>
+                    <NewPage />
+                </ForAll>
+            </ForAll>
+        </ForAll>
+    </Record>
+</Layout>
