@@ -3,7 +3,7 @@
   xmlns="urn:speedata.de:2009/publisher/en"
   xmlns:sd="urn:speedata:2009/publisher/functions/en">
 
-  <Options show-grid="no" trace="no" ignoreeol="yes" startpage="129"/>
+  <Options ignoreeol="yes" startpage="129"/>
 
   <Pageformat width="148mm" height="210mm"/>
   <SetGrid width="2mm" height="9pt"/>
@@ -31,18 +31,18 @@
 
 
   <Pagetype name="main" test="true()">
-    <Margin left="2mm" right="2mm" top="2mm" bottom="4mm"/>
+    <Margin left="2mm" right="2mm" top="2mm" bottom="12mm"/>
     <PositioningArea name="text">
-      <PositioningFrame column="2" row="3" height="61" width="33"/>
-      <PositioningFrame column="39" row="3" height="61" width="33"/>
+      <PositioningFrame column="2" row="3" height="59" width="33"/>
+      <PositioningFrame column="39" row="3" height="59" width="33"/>
     </PositioningArea>
     <AtPageCreation>
       <!-- the first row for the vertical rule between the two columns. 3 is the default -->
       <SetVariable variable="firstrow" select="3"/>
       <!-- the background frame -->
-      <PlaceObject row="1.3" column="1" allocate="no">
+      <PlaceObject allocate="no">
         <Frame framecolor="black" rulewidth="{$rulewd}">
-          <Box width="{sd:number-of-columns() - 1}" height="{sd:number-of-rows() - 1 }" backgroundcolor="white" />
+          <Box width="{sd:number-of-columns()}" height="{sd:number-of-rows()}" backgroundcolor="-" />
         </Frame>
       </PlaceObject>
 
@@ -72,8 +72,8 @@
   <Record element="data">
 
     <!-- The title image and the head -->
-    <PlaceObject column="2">
-      <Table stretch="max" width="{sd:number-of-columns() - 3}" padding="5pt">
+    <PlaceObject column="1">
+      <Table stretch="max" padding="5pt">
         <Tr>
           <Td align="center">
             <Image file="jc-title-flourish.pdf" width="{sd:number-of-columns() - 10}" />
@@ -82,31 +82,35 @@
         <Tablerule rulewidth="{$rulewd}" />
         <Tr>
           <Td align="center">
-            <Paragraph fontface="title"><Value select="head"/></Paragraph>
+            <Paragraph fontfamily="title"><Value select="head"/></Paragraph>
           </Td>
         </Tr>
         <Tablerule rulewidth="{$rulewd}" />
         <Tablerule rulewidth="9pt" color="white" />
       </Table>
     </PlaceObject>
-    <NextRow area="text"/>
 
     <!-- The vertical rule should start here, right after the head. It gets drawn in
          the page master "main" -->
-    <SetVariable variable="firstrow" select="sd:current-row('text')"/>
+    <SetVariable variable="firstrow" select="sd:current-row() - 1"/>
     <ProcessNode select="*"/>
   </Record>
 
   <!-- centered text for describing the stage -->
   <Record element="stage">
+    <Switch>
+      <Case test="position() > 1">
+        <NextRow rows="1" area="text"/>
+      </Case>
+    </Switch>
     <PlaceObject column="1" area="text">
       <Textblock>
-        <Paragraph textformat="center" fontface="text">
+        <Paragraph textformat="center" fontfamily="text">
           <I><Value select="."/></I>
         </Paragraph>
       </Textblock>
     </PlaceObject>
-    <NextRow area="text" rows="3"/>
+    <NextRow area="text" rows="1"/>
   </Record>
 
   <Record element="speaker">
@@ -118,30 +122,18 @@
             <Paragraph textformat="center"><I><Value select="@name"/></I></Paragraph>
           </Textblock>
         </PlaceObject>
-        <NextRow area="text"/>
         <!-- we need to remember the current row as it is used in the Output below
              so the text can wrap around the initial
         -->
-        <SetVariable variable="thisrow" select="sd:current-row('text')"/>
-
-        <!-- The table takes up only the space it really needs (stretch = no) -->
-        <PlaceObject row="{$thisrow}" column="1" area="text">
-          <Table stretch="no" padding="0.5pt">
-            <Tr>
-              <Td><Paragraph fontface="initial"><Value select="@capital"/></Paragraph></Td>
-            </Tr>
-          </Table>
-        </PlaceObject>
-
-        <!-- The text is set with allocate="auto" to wrap around the
-             table above. It must start at the same row as the table,
-             not in the current row
-        -->
-        <Output area="text" allocate="auto" row="{$thisrow}">
+        <Output area="text">
           <Text>
-            <Paragraph>
+            <Paragraph textformat="indent" html="off">
+              <Initial fontfamily="initial">
+                <Value select="@capital"/>
+              </Initial>
               <ForAll select="part">
                 <Value select="."/>
+                <Br />
               </ForAll>
             </Paragraph>
           </Text>
@@ -150,7 +142,7 @@
       <Otherwise>
         <Output area="text">
           <Text>
-            <Paragraph textformat="indent" fontface="text">
+            <Paragraph textformat="indent" fontfamily="text" html="off">
               <I><Value select="@name"/><Value> </Value></I>
               <ForAll select="part">
                 <Switch>
@@ -158,9 +150,11 @@
                     <I><Value select="."/></I>
                   </Case>
                   <Case test="@type='stage'">
-                    <Value> </Value><HSpace/><I><Value select="."/><Value>&#xA0;&#xA0;</Value></I>
+                    <Value> </Value><HSpace/><I><Value select="."/><Br /></I>
                   </Case>
-                  <Otherwise><Value select="."/></Otherwise>
+                  <Otherwise>
+                    <Value select="."/><Br />
+                  </Otherwise>
                 </Switch>
               </ForAll>
             </Paragraph>

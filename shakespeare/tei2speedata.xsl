@@ -50,14 +50,11 @@
     <xsl:text>&#x0A;</xsl:text>
   </xsl:template>
 
-
-  <xsl:template match="lb">
-    <xsl:choose>
-      <xsl:when test="position() > 1 and position() != last()">
-        <part><br/></part>
-      </xsl:when>
-    </xsl:choose>
+  <xsl:template match="stage/lb">
+    <br/>
   </xsl:template>
+
+
   <xsl:template match="hi">
     <part type="italic"><xsl:value-of select="."/></part>
   </xsl:template>
