@@ -5,3 +5,6 @@ publisher.status
 publisher.vars
 *-aux.xml
 .vscode
+result-*png
+pagediff-*.png
+source-*.png
