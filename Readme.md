@@ -1,6 +1,6 @@
 This repository contains examples for the [speedata Publisher](https://github.com/speedata/publisher), an OpenSource database publishing system (create a PDF from XML data).
 
-Introductory examples are in the directory [introduction](introduction), more technical examples are in the directory [technical](technical).
+Introductory examples are in the directory [introduction](introduction), more technical examples are in the directory [technical](technical). There is also a [new directory with MetaPost examples](metapost).
 
 There is a comparison of documents (currently only one) of speedata, LaTeX and Apache FOP.
 

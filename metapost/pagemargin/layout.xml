@@ -1,0 +1,44 @@
+<Layout
+    xmlns:sd="urn:speedata:2009/publisher/functions/en"
+    xmlns="urn:speedata.de:2009/publisher/en">
+
+    <SetGrid nx="12" height="12pt" />
+    <Pageformat height="210mm" width="148mm" />
+
+    <DefineGraphic name="RD">
+        % orange background
+        pickup pencircle scaled 1mm;
+        fill unitsquare xyscaled(page.width, page.height) withcolor orange;
+
+        % fill with white randomized box
+        path p ;
+        p = unitsquare xyscaled ( box.width - 2cm, box.height - 2cm ) shifted paired(1cm);
+        % to see what is going on, uncomment the following line:
+        % draw p;
+        unfill p randomized 1cm;
+    </DefineGraphic>
+
+    <Pagetype name="sample" test="true()">
+        <!-- when the page is created, start the previously defined metapost graphic -->
+        <AtPageCreation graphic="RD"/>
+    </Pagetype>
+
+    <!-- font for bigger text-->
+    <DefineFontfamily fontsize="25" leading="25" name="text">
+        <Regular fontface="serif" />
+    </DefineFontfamily>
+
+    <Record element="data">
+        <!-- four pages with lorem ipsum-->
+        <Loop select="4">
+            <PlaceObject column="2" row="3">
+                <Textblock width="10">
+                    <Paragraph>
+                        <Value select="sd:dummytext()"/>
+                    </Paragraph>
+                </Textblock>
+            </PlaceObject>
+            <NewPage />
+        </Loop>
+    </Record>
+</Layout>
