@@ -72,6 +72,6 @@
 Jani Biddy</Value></Paragraph>
             </Textblock>
         </PlaceObject>
-        <NewPage/>
+        <ClearPage/>
     </Record>
 </Layout>

@@ -3,7 +3,7 @@
     xmlns="urn:speedata.de:2009/publisher/en"
     xmlns:sd="urn:speedata:2009/publisher/functions/en">
     <Options show-grid="yes"/>
-    
+
     <Record element="data">
         <SetVariable variable="img" select="'ocean.pdf'"></SetVariable>
         <PlaceObject>
@@ -35,7 +35,7 @@
         <PlaceObject>
             <Image maxwidth="5" maxheight="10" file="{$img}" clip="no"/>
         </PlaceObject>
-        <NewPage/>
+        <ClearPage/>
         <PlaceObject>
             <Textblock>
                 <Paragraph><Value>With clip="no"</Value></Paragraph>
@@ -65,8 +65,8 @@
         <PlaceObject>
             <Image width="5" height="10" file="{$img}" clip="no"/>
         </PlaceObject>
-        <NewPage/>
-        
+        <ClearPage/>
+
         <PlaceObject>
             <Textblock>
                 <Paragraph><Value>With clip="yes"</Value></Paragraph>
@@ -96,8 +96,8 @@
         <PlaceObject>
             <Image width="5" height="10" file="{$img}" clip="yes"/>
         </PlaceObject>
-        
-        
+
+
     </Record>
-    
+
 </Layout>

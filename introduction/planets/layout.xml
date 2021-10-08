@@ -78,7 +78,7 @@
     <LoadDataset name="toc"/>
 
     <SetVariable variable="contents"/>
-    <NewPage/>
+    <ClearPage/>
     <ProcessNode select="planet" />
 
     <SaveDataset name="toc" elementname="tableofcontents" select="$contents" />
@@ -125,7 +125,7 @@
     <ProcessNode select="moons" />
     <ProcessNode select="description" />
 
-    <NewPage />
+    <ClearPage />
   </Record>
 
   <Record element="url">

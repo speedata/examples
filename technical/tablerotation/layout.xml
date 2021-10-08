@@ -51,7 +51,7 @@
             </Table>
           </PlaceObject>
         </Loop>
-        <NewPage/>
+        <ClearPage/>
       </Loop>
     </Loop>
   </Record>

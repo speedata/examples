@@ -112,7 +112,7 @@
                 <Paragraph><B><Value select="string(intro)"></Value></B></Paragraph>
             </Textblock>
         </PlaceObject>
-        <NewPage/>
+        <ClearPage/>
         <ForAll select="images/img">
             <PlaceObject row="{@y}" column="{@x}">
                 <Image width="{@width}" file="{@filename}"/>

@@ -130,7 +130,7 @@
                             </Paragraph>
                         </Textblock>
                     </PlaceObject>
-                    <NewPage />
+                    <ClearPage />
                 </ForAll>
             </ForAll>
         </ForAll>

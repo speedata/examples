@@ -53,7 +53,7 @@
         </Loop>
       </Text>
     </Output>
-    <NewPage />
+    <ClearPage />
   </Record>
 
   <Record element="data">
