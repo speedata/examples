@@ -4,7 +4,7 @@
 
   <SetGrid height="12pt" nx="42"/>
   <Trace grid="no" gridallocation="no"/>
-  
+
   <Pagetype name="all" test="true()">
     <Margin left="1cm" right="1cm" top="1cm" bottom="1cm"/>
     <PositioningArea name="text">
@@ -15,7 +15,7 @@
 
   <Record element="data">
       <PlaceObject column="67mm" row="2.1cm"  frame="without" allocate="yes">
-        <Image file="vase.jpg" width="16"/>
+        <Image file="vase.jpg" width="16" imageshape="yes"/>
       </PlaceObject>
     <Output area="text" row="1" allocate="auto">
       <Text>
