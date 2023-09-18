@@ -1,0 +1,20 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+    xmlns:sd="urn:speedata:2009/publisher/functions/en"
+    version="4.13.16">
+
+    <DefineFontfamily fontsize="12pt" leading="12pt" name="mptext">
+        <Regular fontface="serif" />
+        <Bold fontface="serif-bold" />
+    </DefineFontfamily>
+
+
+    <Record element="data">
+        <SetVariable variable="show_lines" select="'true'" type="mp:boolean"></SetVariable>
+        <SetVariable variable="show_labels" select="'true'" type="mp:boolean"></SetVariable>
+        <SetVariable variable="show_dots" select="'false'" type="mp:boolean"></SetVariable>
+
+        <PlaceObject column="1" frame="without" >
+            <Image width="{sd:number-of-columns()}" file="euro.mp"  />
+        </PlaceObject>
+    </Record>
+</Layout>

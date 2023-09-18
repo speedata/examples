@@ -19,7 +19,7 @@
     </DefineGraphic>
 
     <Pagetype name="sample" test="true()">
-        <!-- when the page is created, start the previously defined metapost graphic -->
+        <!-- when the page is created, start the previously defined MetaPost graphic -->
         <AtPageCreation graphic="RD"/>
     </Pagetype>
 
