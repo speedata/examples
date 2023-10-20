@@ -35,7 +35,7 @@
       <SetVariable variable="thisrow">
         <Tr backgroundcolor="lightgray">
           <Td>
-            <Paragraph fontface="tt">
+            <Paragraph fontfamily="tt">
               <Value select="position()"/>
               <Value>: </Value>
               <Value select="." />

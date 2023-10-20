@@ -36,7 +36,7 @@
                 <Table stretch="max">
                     <Tr>
                         <Switch>
-                            <Case test="sd:odd(sd:current-page()">
+                            <Case test="sd:odd(sd:current-page())">
                                 <Td align="left">
                                     <Paragraph><Value select="sd:current-page()"/><Value> – Sample journal</Value></Paragraph>
                                 </Td>

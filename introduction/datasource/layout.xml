@@ -27,7 +27,7 @@
   <Record element="data">
     <PlaceObject>
       <Textblock>
-        <Paragraph fontface="title">
+        <Paragraph fontfamily="title">
           <Value>Text and markup from the CDATA section:</Value>
         </Paragraph>
         <Paragraph><Value select="sd:decode-html(html)"/></Paragraph>
@@ -36,7 +36,7 @@
 
     <PlaceObject>
       <Textblock>
-        <Paragraph fontface="title">
+        <Paragraph fontfamily="title">
           <Value>Text and markup from the data file:</Value>
         </Paragraph>
         <ForAll select="text">
@@ -47,7 +47,7 @@
 
     <PlaceObject>
       <Textblock>
-        <Paragraph fontface="title">
+        <Paragraph fontfamily="title">
           <Value>Text and markup from the layout file:</Value>
         </Paragraph>
         <Paragraph><Value>A </Value><I><Value>wonderful</Value></I><Value> serenity has </Value><B><Value>taken possession</Value></B><Value> of my entire soul,</Value></Paragraph>

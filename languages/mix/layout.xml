@@ -27,7 +27,7 @@
     <PlaceObject>
       <Textblock width="6">
         <ForAll select="par">
-          <Paragraph html="all" fontfamily="{@script}">
+          <Paragraph html="all" fontfamily="{@script}" language="{@lang}">
             <Value select="." />
           </Paragraph>
         </ForAll>

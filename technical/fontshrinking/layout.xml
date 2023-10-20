@@ -22,7 +22,7 @@
         <Contents>
           <PlaceObject>
             <Textblock width="10">
-              <Paragraph fontface="tmp">
+              <Paragraph fontfamily="tmp">
                 <Value select="sd:dummytext()"/>
               </Paragraph>
             </Textblock>

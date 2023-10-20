@@ -29,7 +29,7 @@
   <Record element="data">
     <PlaceObject row="2" column="3">
       <Textblock width="8">
-        <Paragraph fontface="heading" textformat="left">
+        <Paragraph fontfamily="heading" textformat="left">
           <Value select="upper-case(story/@title)"/>
         </Paragraph>
       </Textblock>

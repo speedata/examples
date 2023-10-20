@@ -38,14 +38,14 @@
     <ForAll select="section">
       <Output area="text">
         <Text>
-          <Paragraph textformat="Title" fontface="Title">
+          <Paragraph textformat="Title" fontfamily="Title">
             <Value select="@title"/>
           </Paragraph>
         </Text>
       </Output>
       <Output area="text">
         <Text>
-          <Paragraph fontface="text">
+          <Paragraph fontfamily="text">
             <Value select="string(.)"/>
           </Paragraph>
         </Text>

@@ -23,7 +23,7 @@
         <NextRow />
         <Loop select="18" variable="i">
           <PlaceObject>
-            <Table fontface="text">
+            <Table fontfamily="text">
               <Columns>
                 <Column width="2cm"/>
                 <Column width="3cm"/>

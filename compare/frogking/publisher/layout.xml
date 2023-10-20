@@ -1,24 +1,24 @@
 <Layout xmlns="urn:speedata.de:2009/publisher/en"
   xmlns:sd="urn:speedata:2009/publisher/functions/en">
-  
+
   <Options ignoreeol="yes"/>
   <Trace grid="no"/>
   <SetGrid nx="10" height="12pt"/>
-  
+
   <Pagetype name="all pages" test="true()">
     <Margin left="5cm" right="5cm" top="3cm" bottom="3cm"></Margin>
   </Pagetype>
-  
+
   <LoadFontfile name="LinLibertineO" filename="LinLibertine_R.otf" />
   <LoadFontfile name="LinLibertineOB" filename="LinLibertine_RB.otf" />
 
   <DefineFontalias existing="LinLibertineO" alias="sans"/>
   <DefineFontalias existing="LinLibertineOB" alias="bold"/>
-  
+
   <DefineTextformat name="indent" indentation="1cm"/>
   <DefineTextformat name="firstpar" margin-top="12pt"/>
   <DefineTextformat name="title" margin-top="3pt"/>
-  
+
   <DefineFontfamily name="text" fontsize="10" leading="12">
     <Regular fontface="sans"/>
   </DefineFontfamily>
@@ -26,20 +26,20 @@
   <DefineFontfamily name="title" fontsize="14" leading="16">
     <Regular fontface="bold"/>
   </DefineFontfamily>
-  
+
   <Record element="data">
     <Output>
       <Text>
-        <Paragraph fontface="title" textformat="title"><Value select="title"/></Paragraph>
+        <Paragraph fontfamily="title" textformat="title"><Value select="title"/></Paragraph>
       </Text>
     </Output>
     <Output>
       <Text>
         <ForAll select="p">
-          <Paragraph textformat="{ if (position() = 1) then 'firstpar' else 'indent'}"><Value select="."/></Paragraph>  
+          <Paragraph textformat="{ if (position() = 1) then 'firstpar' else 'indent'}"><Value select="."/></Paragraph>
         </ForAll>
       </Text>
     </Output>
   </Record>
-  
+
 </Layout>

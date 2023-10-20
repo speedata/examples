@@ -19,7 +19,7 @@
     <Record element="data">
         <PlaceObject>
             <Textblock>
-                <Paragraph fontface="title">
+                <Paragraph fontfamily="title">
                     <Value>Budget 2016</Value>
                 </Paragraph>
             </Textblock>
@@ -76,7 +76,7 @@
         <!-- second version -->
         <PlaceObject>
             <Textblock>
-                <Paragraph fontface="title">
+                <Paragraph fontfamily="title">
                     <Value>Budget 2016</Value>
                 </Paragraph>
             </Textblock>
@@ -138,7 +138,7 @@
         <!-- and a third version with colors -->
         <PlaceObject>
             <Textblock>
-                <Paragraph fontface="title">
+                <Paragraph fontfamily="title">
                     <Value>Budget 2016</Value>
                 </Paragraph>
             </Textblock>
