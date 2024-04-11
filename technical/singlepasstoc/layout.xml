@@ -83,7 +83,7 @@
               <Td>
                 <Paragraph>
                   <A link="chapter{$n}">
-                    <Value select="concat($n,' ' , sd:variable('chapter',$n,'title')" />
+                    <Value select="concat($n,' ' , sd:variable('chapter',$n,'title'))" />
                     <HSpace leader="." />
                     <Value select="sd:variable('chapter',$n,'page')" />
                   </A>
