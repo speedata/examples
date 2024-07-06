@@ -1,0 +1,33 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+	xmlns:sd="urn:speedata:2009/publisher/functions/en" version="4.19.16">
+	<PDFOptions format="PDF/UA" />
+
+	<StructureElement role="Document">
+		<StructureElement role="Sect" id="section" />
+	</StructureElement>
+
+	<Record element="data">
+		<PlaceObject>
+			<Textblock>
+				<Paragraph role="H1" parent="section">
+					<B>
+						<Value>A very short story</Value>
+					</B>
+				</Paragraph>
+				<Paragraph role="P" parent="section">
+					<Value>Once upon a time....</Value>
+				</Paragraph>
+				<Paragraph role="P" parent="section">
+					<Value>This is a </Value>
+					<A href="https://www.speedata.de" description="link to speedata.de">
+						<Value>link to speedata.de</Value>
+					</A>
+					<Value>.</Value>
+				</Paragraph>
+			</Textblock>
+		</PlaceObject>
+		<PlaceObject >
+			<Image width="8" file="ocean.pdf" parent="section"  description="An image of an ocean"></Image>
+		</PlaceObject>
+	</Record>
+</Layout>

@@ -6,6 +6,7 @@ There is a comparison of documents (currently only one) of speedata, LaTeX and A
 
 Description  | Preview
 ------------ | -------------
+[Accessibility](accessibility) | <a href="accessibility"><img src="accessibility/firstpage.png" width="200"></a>
 [Newspaper layout](news) | <a href="news"><img src="news/firstpage.png" width="200"></a>
 [Magazine layout](magazine) | <a href="magazine"><img src="magazine/firstpage.png" width="200"></a>
 [Image shape](imageshape) | <a href="imageshape"><img src="imageshape/firstpage.png" width="200"></a>
