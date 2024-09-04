@@ -1,6 +1,7 @@
 <Layout
 	xmlns="urn:speedata.de:2009/publisher/en"
-	xmlns:sd="urn:speedata:2009/publisher/functions/en">
+	xmlns:sd="urn:speedata:2009/publisher/functions/en"
+	require="lxpath" version="4.19.21">
 
 	<Pageformat height="8cm" width="6cm" />
 
@@ -10,11 +11,11 @@
 
 		<SetVariable variable="index">
 			<Element name="index">
-				<Makeindex select="$indexentries" sortkey="name" section="section" pagenumber="page" />
+				<Makeindex select="$indexentries/indexentry" sortkey="name" section="section" pagenumber="page" />
 			</Element>
 		</SetVariable>
 
-		<ProcessNode select="$index" />
+		<ProcessNode select="$index/index" />
 	</Record>
 
 	<Record element="keyword">
@@ -31,7 +32,7 @@
 			<Table width="3" stretch="max">
 				<ForAll select="section">
 					<Tr break-below="no" top-distance="10pt">
-						<Td colspan="2" backgroundcolor="lightgray">
+						<Td colspan="2" background-color="lightgray">
 							<Paragraph>
 								<Value select="@name"></Value>
 							</Paragraph>
