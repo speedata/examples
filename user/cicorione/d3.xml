@@ -1,0 +1,22 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Aliquam erat volutpat</title>
+    <intro>Vivamus tincidunt dolor non elementum posuere. Donec a nibh placerat, vehicula tellus in, luctus urna.</intro>
+    <subsection nocircle="false">
+        <subtitle>Phasellus gravida tellus est</subtitle>
+        <p>quis scelerisque lacus auctor <abb>id</abb>. Nam fringilla turpis a magna tempus, id tempus metus venenatis. <b>In id condimentum quam.</b> Suspendisse tempus velit magna, eget dapibus nisl finibus non. Aliquam erat volutpat. Ut non lectus at lorem ultrices feugiat luctus sit amet metus.
+            Cras tempor velit nec tristique vulputate. Pellentesque accumsan varius quam, a consectetur purus auctor id.</p>
+        <p>Pellentesque a eros et odio pretium sollicitudin. Praesent ornare blandit libero, eget efficitur mauris rutrum id. Curabitur sit amet commodo velit. Integer eu diam ex. Sed in est vel tellus fermentum tempor vitae non nisl.</p>
+        <p>Vestibulum eget ex lectus. Duis non metus imperdiet, interdum metus vitae, dignissim velit. Sed viverra ipsum ut scelerisque tincidunt. Nunc tincidunt aliquet libero in rutrum. Sed sollicitudin viverra pretium. Praesent in nulla at elit vehicula porttitor quis vel ex.</p>
+    </subsection>
+    <subsection nocircle="false">
+        <subtitle>Orci varius natoque penatibus</subtitle>
+        <p>Et magnis dis parturient montes, nascetur ridiculus mus. Donec quis ipsum massa. Nunc bibendum odio eu turpis rhoncus, <b>volutpat sollicitudin diam molestie.</b> Vestibulum finibus venenatis ex, non feugiat justo venenatis vitae. Etiam aliquet sodales sollicitudin.</p>
+        <p>Nullam maximus erat ut ex interdum luctus cursus et sapien. Etiam vel iaculis justo. Maecenas varius eros sapien, lacinia viverra velit malesuada eget. Sed id fringilla mi. Sed elementum bibendum arcu, sed mollis risus tempus non. Aliquam sit amet lobortis augue. Proin sollicitudin ligula
+            eget egestas pharetra.</p>
+        <sub-break break="true" />
+    </subsection>
+    <subsection nocircle="false">
+        <subtitle>Morbi ac molestie tellus</subtitle>
+        <p>Duis ut rhoncus libero, <b>eu rhoncus quam.</b> Pellentesque eget magna vel mi sagittis venenatis. Proin eu ex non nisl feugiat tincidunt. Aenean euismod eget erat non rutrum. Fusce ligula sem, lobortis a tortor a, mollis consequat lacus. Morbi faucibus faucibus imperdiet.</p>
+    </subsection>
+</section>

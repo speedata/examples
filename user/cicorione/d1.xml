@@ -1,0 +1,34 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Lorem ipsum dolor sit amet</title>
+	<intro>
+	Consectetur adipiscing elit. Morbi vestibulum eget turpis in rhoncus. Sed suscipit erat quis egestas imperdiet.
+	</intro>
+	<subsection nocircle="false">
+		<subtitle>Donec ac tristique odio I</subtitle>
+		<p>Praesent pellentesque quis tortor vel pharetra. Sed non viverra leo. Maecenas laoreet lacinia semper. Donec id neque quis arcu molestie aliquam. Cras ac faucibus ante, non aliquam risus. Nam suscipit, nunc ut vehicula hendrerit, lacus purus vehicula sem.
+</p>
+		<p>Non semper nisi purus sit amet dui. Ut at scelerisque turpis. (from now <abb>PS</abb>) Suspendisse scelerisque cursus mi, nec varius sem fringilla id. Cras nibh orci, rhoncus vel diam sed, congue finibus lacus. Pellentesque vestibulum ipsum vel mattis eleifend. Nunc eget elit a libero placerat placerat. Maecenas diam nunc, maximus et consectetur id, vehicula at sem.</p>
+		<p>Donec vel <abb>PS</abb> lacus sed arcu faucibus faucibus. Pellentesque mauris tortor, congue ac condimentum id, hendrerit consectetur nisi. Nullam ut turpis consectetur, tempor lorem eget, accumsan ante. Nunc molestie rutrum suscipit. Morbi nec leo quam. Cras gravida aliquam placerat. Praesent porta fringilla neque, eget tincidunt erat eleifend ac. Donec consectetur, est tristique luctus ultricies, tortor odio vestibulum odio, vel dignissim ex sem vitae felis.</p>
+	</subsection>
+	<subsection nocircle="false">
+		<subtitle>Aliquam erat</subtitle>
+		<p>Vivamus tincidunt dolor non elementum posuere. <i>Donec a nibh placerat,</i> vehicula tellus in, luctus urna. Phasellus gravida tellus est, quis scelerisque lacus auctor id. Nam fringilla turpis a magna tempus, id tempus metus venenatis. In id condimentum quam. Suspendisse tempus velit magna, eget dapibus nisl finibus non. Aliquam erat volutpat.</p>
+		<p>Ut non lectus at lorem ultrices feugiat luctus sit amet metus. Cras tempor velit nec tristique vulputate. Pellentesque accumsan varius quam, a consectetur purus auctor id.<abb>PS</abb> Pellentesque a eros et odio pretium sollicitudin. Praesent ornare blandit libero, eget efficitur mauris rutrum id. Curabitur sit amet commodo velit. Integer eu diam ex</p>
+	</subsection>
+	<subsection nocircle="true">
+		<sub-break break="true" />
+	</subsection>
+	<subsection nocircle="false">
+		<subtitle>Sed in est vel tellus fermentum tempor vitae non nisl</subtitle>
+		<p>Vestibulum eget ex lectus. Duis non metus imperdiet, interdum metus vitae, dignissim velit. Sed viverra ipsum ut scelerisque tincidunt. Nunc tincidunt aliquet libero in rutrum. Sed sollicitudin viverra pretium. Praesent in nulla at elit vehicula porttitor quis vel ex.</p>
+		<p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis ipsum massa. Nunc bibendum odio eu turpis rhoncus, volutpat sollicitudin diam molestie. Vestibulum finibus venenatis ex, non feugiat justo venenatis vitae. Etiam aliquet sodales sollicitudin.</p>
+		<p>Nullam maximus erat ut ex interdum luctus cursus et sapien:
+			<ul>
+				<li>Etiam vel iaculis justo.</li>
+				<li>Maecenas varius eros sapien.</li>
+				<li>Lacinia viverra velit malesuada eget.</li>
+				<li>Sed id fringilla mi.</li>
+			</ul>
+		</p>
+	</subsection>
+</section>

@@ -1,0 +1,61 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Sed elementum bibendum arcu</title>
+	<intro>
+		Sed mollis risus tempus non. Aliquam sit amet lobortis augue. Proin sollicitudin ligula eget egestas pharetra.
+	</intro>
+	<subsection nocircle="false">
+		<subtitle>Morbi ac molestie</subtitle>
+		<p>Duis ut rhoncus libero, <abb>eu</abb> rhoncus quam. Pellentesque eget magna vel mi sagittis venenatis. <i>Proin eu ex non nisl feugiat tincidunt.</i> Aenean euismod eget erat non rutrum. Fusce ligula sem, lobortis a tortor a, <b>mollis consequat lacus.</b>
+		</p>
+	</subsection>
+	<subsection nocircle="false">
+		<subtitle>Morbi faucibus faucibus imperdiet</subtitle>
+		<p>Curabitur aliquet, mi ut sollicitudin ullamcorper, tortor mi aliquam tortor, vitae rutrum tellus nisi in orci. Nulla facilisi.</p>
+	</subsection>
+	<subsection nocircle="false">
+		<subtitle>Maecenas bibendum</subtitle>
+		<p>lacus sed blandit tristique, <i>nunc nisl tincidunt mi,</i> a porta libero lacus a ante. Duis et finibus lorem. Cras id ligula sit amet orci sodales varius et sed mi. Etiam sed orci diam. Nunc in dolor urna. Vivamus condimentum metus non leo lacinia blandit. Aenean ultrices venenatis bibendum.</p>
+		<p>In at quam nec est condimentum rutrum. Donec auctor justo quis tortor pellentesque, vitae blandit magna feugiat. Vestibulum ut justo arcu. Nullam porttitor consectetur vulputate. In sed turpis dapibus, auctor libero a, <i>vehicula dui.</i> Pellentesque eu ultricies arcu, in rhoncus massa. Aenean id tincidunt lorem. Cras vel ante quis tortor consequat bibendum eget id erat. Morbi luctus tortor velit, eu tincidunt augue ultrices non. Proin elementum, nisl sed luctus commodo, <i>ipsum sapien blandit ante,</i> ut dictum erat purus a nibh.</p>
+		<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse accumsan, tortor ut tristique dignissim, ante metus congue lectus, id ultrices felis ipsum sit amet dolor.</p>
+	</subsection>
+	<subsection nocircle="false">
+		<subtitle>Cras gravida aliquam placerat</subtitle>
+		<p>Praesent porta fringilla neque, eget tincidunt erat eleifend ac. Donec consectetur, est tristique luctus ultricies, tortor odio vestibulum odio, vel dignissim ex sem vitae felis. Aliquam erat volutpat. Vivamus tincidunt dolor non elementum posuere. Donec a nibh placerat, vehicula tellus in, luctus urna.</p>
+	</subsection>
+	<subsection nocircle="true">
+			<img file="_samplea.pdf" caption="Duis et finibus lorem."/>
+	</subsection>
+	<subsection nocircle="true">
+		<p>Nunc eget massa sollicitudin, aliquet tortor at, fringilla felis. Ut sagittis, neque ac ullamcorper elementum, purus urna sagittis neque, at iaculis quam est et tellus.</p>
+	</subsection>
+		<subsection nocircle="true">
+				<sub-break break="true" />
+	</subsection>
+	<subsection nocircle="false">
+		<subtitle>Fusce ut enim eget elit</subtitle>
+		<p>volutpat ultrices sit amet sollicitudin urna. Cras ullamcorper elit nec dolor accumsan eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus: <link>https://doc.speedata.de/publisher/en/lxpath/</link>. Ut vehicula neque est, id dictum velit placerat ut. Sed consectetur magna non leo fermentum malesuada. Etiam eleifend nisi id lacus porta aliquam. Aenean eget fermentum <abb>est.</abb>
+		</p>
+		<p>Lorem ipsum dolor sit <abb>amet</abb>, consectetur adipiscing elit. Morbi vestibulum eget turpis in rhoncus. Sed suscipit erat quis egestas imperdiet. Donec ac tristique odio.</p>
+	</subsection>
+	<subsection nocircle="false">
+		<subtitle>Praesent pellentesque quis tortor vel pharetra</subtitle>
+		<p>Sed non viverra leo. Maecenas laoreet lacinia semper. Donec id neque quis arcu molestie aliquam. Cras ac faucibus ante, non aliquam risus.</p>
+	</subsection>
+	<subsection nocircle="false">
+		<subtitle>Nam suscipit, nunc ut vehicula hendrerit</subtitle>
+		<p>lacus purus vehicula sem, non semper nisi purus sit amet dui. Ut at scelerisque turpis. Suspendisse scelerisque cursus mi, <abb>nec</abb> varius sem fringilla id. Cras nibh orci, rhoncus vel diam sed, congue finibus lacus.</p>
+		<p>Pellentesque vestibulum ipsum vel mattis eleifend. Nunc eget elit a libero placerat placerat:
+			<ul>
+				<li>Maecenas diam nunc, maximus et consectetur id, vehicula at sem.</li>
+				<li>Donec vel lacus sed arcu faucibus faucibus. Pellentesque mauris tortor, congue ac condimentum id, hendrerit consectetur nisi.</li>
+				<li>Nullam ut turpis consectetur, tempor lorem eget, accumsan ante. Nunc molestie rutrum suscipit.</li>
+				<li>Morbi nec leo quam. Cras gravida aliquam placerat.</li>
+			</ul>
+		</p>
+	<sub-break break="true" />
+	</subsection>
+	<subsection nocircle="false">
+		<subtitle>Praesent porta fringilla neque</subtitle>
+		<p>Eget tincidunt erat eleifend ac. Donec consectetur, est tristique luctus ultricies, tortor odio vestibulum odio, vel dignissim ex sem vitae felis.</p>
+	</subsection>
+</section>

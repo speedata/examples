@@ -1,0 +1,15 @@
+<data xmlns:xi="http://www.w3.org/2001/XInclude">
+	<Cover>
+		<Title>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Title>
+		<Headline>Morbi vestibulum eget turpis in rhoncus.</Headline>
+		<Revision>MXCVXIII</Revision>
+		<Author>Author 1</Author>
+		<Author>Author 2</Author>
+		<Author>(you can add others authors...)</Author>
+		<Organization>Gallia Cisalpinae</Organization>
+	</Cover>
+	<xi:include href="d1.xml" />
+	<xi:include href="d2.xml" />
+	<xi:include href="d3.xml" />
+	<xi:include href="d4.xml" />
+</data>

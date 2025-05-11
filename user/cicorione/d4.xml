@@ -1,0 +1,36 @@
+<section xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Curabitur aliquet, mi ut sollicitudin ullamcorper</title>
+	<intro>Tortor mi aliquam tortor, vitae rutrum tellus nisi in orci.</intro>
+	<subsection nocircle="false">
+		<subtitle>Nulla facilisi</subtitle>
+		<p>Maecenas bibendum, lacus sed blandit tristique, nunc nisl tincidunt mi, a porta libero lacus a ante:
+			<ul>
+				<li>Duis et finibus lorem</li>
+				<li>Cras id ligula sit amet orci</li>
+				<li>Sodales varius et sed mi</li>
+			</ul>
+		Etiam sed orci diam. Nunc in dolor urna.</p>
+	</subsection>
+	<subsection nocircle="false">
+		<subtitle>Vivamus condimentum metus</subtitle>
+		<p>Non leo lacinia blandit. Aenean ultrices venenatis bibendum. Aliquam in nisl in lorem tempus vehicula vel id nibh. In at quam nec est condimentum rutrum. Donec auctor justo quis tortor pellentesque, vitae blandit magna feugiat. Vestibulum ut justo arcu. Nullam porttitor consectetur vulputate. In sed turpis dapibus, auctor libero a, vehicula dui. Pellentesque eu ultricies arcu, in rhoncus massa. Aenean id tincidunt lorem.</p>
+		<p>Cras vel ante quis tortor consequat bibendum eget id erat. Morbi luctus tortor velit, eu tincidunt augue ultrices non. Proin elementum, nisl sed luctus commodo, ipsum sapien blandit ante, ut dictum erat purus a nibh. Nulla aliquam, mauris vitae aliquet bibendum, augue mauris finibus magna, cursus porta augue justo tincidunt magna. Proin sagittis ante ut tellus gravida euismod. Fusce id neque metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+	</subsection>
+		<subsection nocircle="true">
+		<!-- <sub-break break="true" /> -->
+	</subsection>
+	<subsection nocircle="false">
+		<subtitle>Nunc eget massa sollicitudin</subtitle>
+		<p>Aliquet tortor at, fringilla felis. Ut sagittis, neque ac ullamcorper elementum, purus urna sagittis neque, at iaculis quam est et tellus. Fusce ut enim eget elit volutpat ultrices sit amet sollicitudin urna. Cras ullamcorper elit nec dolor accumsan eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut vehicula neque est, id dictum velit placerat ut.</p>
+		<p>Sed consectetur magna non leo fermentum malesuada. Etiam eleifend nisi id lacus porta aliquam. Aenean eget fermentum est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vestibulum eget turpis in rhoncus. Sed suscipit erat quis egestas imperdiet.</p>
+	</subsection>
+	<subsection nocircle="false">
+		<subtitle>Aenean eget fermentum est</subtitle>
+		<p>Praesent pellentesque <abb>quis</abb> tortor vel pharetra. Sed non viverra leo:
+			<ol>
+				<li>Maecenas laoreet lacinia semper;</li>
+				<li>Donec id neque quis arcu <i>molestie aliquam.</i></li>
+			</ol>
+		Pellentesque a eros et odio pretium sollicitudin. Praesent ornare blandit libero, eget efficitur mauris rutrum id. Curabitur sit amet commodo velit. Integer eu diam ex. Sed in est vel tellus fermentum tempor vitae non nisl. Vestibulum eget ex lectus. Duis non metus imperdiet, interdum metus vitae, dignissim velit. Sed viverra ipsum ut scelerisque tincidunt. Nunc tincidunt aliquet libero in rutrum. Sed sollicitudin viverra pretium. Praesent in nulla at elit vehicula porttitor quis vel ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis ipsum massa. Nunc bibendum odio eu turpis rhoncus, volutpat sollicitudin diam molestie. Vestibulum finibus venenatis ex, non feugiat justo venenatis vitae. Etiam aliquet sodales sollicitudin.</p>
+	</subsection>
+</section>

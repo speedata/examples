@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+The MIT License (MIT)
+
+Copyright © 2025  Mister D  (misterd@mailbox.org)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- PAGE SIZE & TRACE OPTIONS -->
+  <SetGrid nx="20" height="13pt" />
+  <Trace grid="no" textformat="no" objects="no" gridlocation="foreground" />
+  <!-- letter size -->
+  <Pageformat width="8.5in" height="11in" />
+
+
+  <!-- FONTS -->
+  <LoadFontfile name="TeXGyreHeros-Regular" filename="texgyreheros-regular.otf" />
+  <LoadFontfile name="TeXGyreHeros-Bold" filename="texgyreheros-bold.otf" />
+  <LoadFontfile name="TeXGyreHeros-Italic" filename="texgyreheros-italic.otf" />
+  <LoadFontfile name="TeXGyreHeros-BoldItalic" filename="texgyreheros-bolditalic.otf" />
+
+  <!-- fonts definitions & Styles -->
+  <DefineFontfamily fontsize="14" leading="18" name="paragraph">
+    <Regular fontface="TeXGyreHeros-Regular" />
+    <Italic fontface="TeXGyreHeros-Italic" />
+    <Bold fontface="TeXGyreHeros-Bold" />
+  </DefineFontfamily>
+
+  <DefineFontfamily fontsize="12" leading="14" name="para-toc">
+    <Regular fontface="TeXGyreHeros-Regular" />
+    <Italic fontface="TeXGyreHeros-Italic" />
+    <Bold fontface="TeXGyreHeros-Bold" />
+  </DefineFontfamily>
+
+  <DefineFontfamily fontsize="10" leading="12" name="intro">
+    <Regular fontface="TeXGyreHeros-Italic" />
+  </DefineFontfamily>
+
+  <DefineFontfamily fontsize="16" leading="18" name="subtitle">
+    <Regular fontface="TeXGyreHeros-Bold" />
+  </DefineFontfamily>
+
+  <DefineFontfamily fontsize="20" leading="24" name="title">
+    <Regular fontface="TeXGyreHeros-Bold" />
+  </DefineFontfamily>
+
+  <DefineFontfamily fontsize="10" leading="10" name="header">
+    <Regular fontface="TeXGyreHeros-Italic" />
+  </DefineFontfamily>
+
+  <DefineTextformat name="header" alignment="centered" hyphenate="no" />
+  <DefineTextformat name="intro" alignment="leftaligned" column-padding-top=".125in" hyphenate="no" border-bottom="1pt" />
+  <DefineTextformat name="firstpar" alignment="justified" column-padding-top=".125in" />
+  <DefineTextformat name="par" alignment="justified" indentation=".25in" column-padding-top=".125in" />
+  <DefineTextformat name="title" alignment="leftaligned" break-below="no" />
+  <DefineTextformat name="cover" alignment="centered" break-below="no" hyphenate="no" />
+
+  <!-- NOTE: use the breakpage on DATA to move the circle and to follow the <subtitle></subtitle> -->
+  <DefineTextformat name="subtitle" margin-bottom="0pt" margin-top="14pt" break-below="yes" />
+
+  <!-- CSS STYLE -->
+  <!-- "abb" stands for abbreviations -->
+  <Stylesheet>
+    abb {
+    color: gray;
+    font-size: 16pt;
+    font-weight: bold;
+    }
+    url {
+    color: gray;
+    font-style: italic;
+    text-decoration: underline overline;
+    }
+    ul {
+    list-style: none;
+    list-style-position: outside;
+    padding-left: 0;
+    padding-bottom: 3pt;
+    }
+    ul li::before {
+    content: "•";
+    color: gray;
+    display: inline-block;
+    width: 2em;
+    }
+    ol {
+    list-style-type: upper-roman;
+    list-style-color: gray;
+    padding-left: 2em;
+    padding-bottom: 100pt;
+    }
+    ol li::before {
+    color: gray;
+    display: inline-block;
+    width: 2em;
+    }
+  </Stylesheet>
+
+  <!-- MASTERS -->
+
+  <!-- MASTER: BODY -->
+
+  <Pagetype name="body" test="sd:current-page() > 1">
+    <Margin inner=".5in" outer=".25in" top=".75in" bottom=".75in" />
+
+    <!-- TEXT AREA -->
+
+    <PositioningArea name="text">
+      <PositioningFrame width="{sd:number-of-columns() -3}" height="{sd:number-of-rows() -5}" row="2" column="3" />
+    </PositioningArea>
+
+    <AtPageCreation>
+
+      <!-- it draws a line on the header -->
+      <PlaceObject row="-0.1" column="3">
+        <Rule length="{sd:number-of-columns() -3}" rulewidth="1pt" color="black" direction="horizontal" />
+      </PlaceObject>
+
+      <!-- it draws a bold vertical line on the body -->
+      <PlaceObject row="2" column="2">
+        <Rule length="{sd:number-of-rows() -5}" rulewidth="6pt" color="black" direction="vertical" />
+      </PlaceObject>
+
+    </AtPageCreation>
+
+    <AtPageShipout>
+
+      <!-- headers, when it is page 2: "Table of Content"-->
+      <PlaceObject row="-1" column="3">
+        <Textblock width="{sd:number-of-columns() -3}">
+          <Paragraph fontfamily="header" textformat="header">
+            <Switch>
+              <Case test="sd:current-page() = 2">
+                <Value>Table of Content</Value>
+              </Case>
+              <Otherwise>
+                <Value select="concat($title-count,'. ',$title-header)" />
+              </Otherwise>
+            </Switch>
+          </Paragraph>
+        </Textblock>
+      </PlaceObject>
+
+      <!-- Logo block + page number, it uses a table -->
+      <PlaceObject column="3" row="{sd:number-of-rows() -1}">
+        <Table border-collapse="collapse" width="{sd:number-of-columns() - 3}" stretch="max">
+          <Tr minheight="20pt" align="center">
+            <Td>
+              <Image width="1in" file="logo_.pdf" />
+            </Td>
+          </Tr>
+          <Tr align="center">
+            <Td padding-top="10pt">
+              <Paragraph fontfamily="intro" color="black">
+                <Switch>
+                  <Case test="sd:current-page() &lt;= 2.5">
+                    <Message select="'it will not print the page number'" />
+                  </Case>
+                  <Otherwise>
+                    <Value>[ </Value>
+                    <Value select="sd:visible-pagenumber(sd:current-page())" />
+                    <Value> ]</Value>
+                  </Otherwise>
+                </Switch>
+              </Paragraph>
+            </Td>
+          </Tr>
+        </Table>
+      </PlaceObject>
+
+    </AtPageShipout>
+
+  </Pagetype>
+
+  <!-- MASTER: COVER -->
+  <Pagetype name="cover" test="sd:current-page() = 1">
+    <Margin left="1in" right="1in" top="2in" bottom="3.5in" />
+
+    <AtPageCreation>
+
+      <!-- TITLE BLOCK -->
+      <PlaceObject row="1" column="2">
+        <Frame framecolor="black" rulewidth="2pt">
+          <Box width="{sd:number-of-columns() - 2}" height="10" background-color="white" />
+        </Frame>
+      </PlaceObject>
+
+      <PlaceObject row="2" column="1">
+        <Box width="{sd:number-of-columns()}" height="8" background-color="white" />
+      </PlaceObject>
+
+      <!-- AUTHORS BLOCK -->
+      <PlaceObject row="25">
+        <Table stretch="max">
+          <Tr align="center">
+            <Td>
+              <!-- WRAPPED CONTENT -->
+              <Table padding="5pt" stretch="no" fontfamily="paragraph" width="{sd:number-of-columns() - 6}">
+                <Columns>
+                  <Column width="1*" />
+                  <Column width="1*" />
+                </Columns>
+                <Tr align="center" valign="top">
+                  <Td padding-bottom="10pt">
+                    <Paragraph>
+                      <Value>Authors: </Value>
+                      <Br/>
+                      <B>
+                        <ForAll select="Cover/Author">
+                          <Value select="."/>
+                          <Br/>
+                        </ForAll>
+                      </B>
+                    </Paragraph>
+                  </Td>
+                  <Td padding-bottom="10pt">
+                    <Paragraph>
+                      <Value>Revision: </Value>
+                      <Br />
+                      <B>
+                        <Value select="Cover/Revision" />
+                      </B>
+                    </Paragraph>
+                  </Td>
+                </Tr>
+                <Tablerule rulewidth="1pt" color="darkgray"/>
+                <Tr align="center" top-distance="10pt">
+                  <Td colspan="2">
+                    <Paragraph>
+                      <B>
+                        <Value select="Cover/Organization" />
+                      </B>
+                    </Paragraph>
+                  </Td>
+                </Tr>
+                <Tr align="center">
+                  <Td colspan="2" padding-top="10pt">
+                    <Image file="logo_.pdf" maxwidth="2in" />
+                  </Td>
+                </Tr>
+              </Table>
+            </Td>
+          </Tr>
+        </Table>
+      </PlaceObject>
+
+    </AtPageCreation>
+
+  </Pagetype>
+
+  <DefineMatter name="frontmatter" label="lowercase-romannumeral" />
+  <DefineMatter name="bodymatter" label="decimal" resetbefore="yes" />
+
+  <!-- COVER -->
+
+  <Record element="data">
+
+    <ProcessNode select="*" />
+
+    <SetVariable variable="title-header" select="section/title" />
+
+    <ClearPage pagetype="cover" />
+
+    <PlaceObject row="4" column="2">
+      <Textblock width="{sd:number-of-columns() - 2}">
+        <Paragraph fontfamily="title" textformat="cover">
+          <Value select="Cover/Title" />
+        </Paragraph>
+        <Paragraph fontfamily="intro" textformat="cover">
+          <Value select="Cover/Headline" />
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+
+    <ClearPage matter="frontmatter" />
+
+    <!-- TABLE OF CONTENT -->
+
+    <!-- Sections and subsections are actually counted -->
+    <SetVariable variable="toc-title-count" select="1" />
+
+    <PlaceObject area="text">
+
+      <Table padding="4pt" border-collapse="separate" width="{sd:number-of-columns() - 3}" stretch="max">
+        <Tr minheight="20pt">
+          <Td>
+            <Paragraph fontfamily="title" color="black">
+              <Value>Table of Content</Value>
+            </Paragraph>
+          </Td>
+        </Tr>
+
+        <ForAll select="section">
+
+          <Tr top-distance="10pt">
+            <Td>
+              <Paragraph fontfamily="para-toc" color="black">
+                <B>
+                  <Value select="concat($toc-title-count,'.&#x2003;')" />
+                  <Value select="title" />
+                  <HSpace leader=" . " />
+                  <Value select="sd:visible-pagenumber(sd:pagenumber(title))" />
+                </B>
+              </Paragraph>
+            </Td>
+          </Tr>
+
+          <SetVariable variable="toc-subtitle-count" select="1" />
+
+          <ForAll select="subsection">
+
+            <Switch>
+              <Case test="not(empty(subtitle))">
+                <Tr>
+                  <Td padding-left="24pt">
+                    <Paragraph fontfamily="para-toc" color="black">
+                      <Value select="concat($toc-title-count,'.',$toc-subtitle-count,'&#x2003;')" />
+                      <Value select="subtitle" />
+                      <HSpace leader=" . " />
+                      <Value select="sd:visible-pagenumber(sd:pagenumber(subtitle))" />
+                    </Paragraph>
+                  </Td>
+                </Tr>
+                <SetVariable variable="toc-subtitle-count" select="$toc-subtitle-count + 1" />
+              </Case>
+              <Otherwise>
+                <Message select="'Subtitle missing as expected'" />
+              </Otherwise>
+            </Switch>
+
+          </ForAll>
+
+          <!-- it increases the counter -->
+          <SetVariable variable="toc-title-count" select="$toc-title-count + 1" />
+
+        </ForAll>
+
+      </Table>
+    </PlaceObject>
+
+    <ClearPage matter="bodymatter" />
+
+    <!-- BODY -->
+
+    <!-- this variable is used to count the total of the section
+         to avoid wrong numbering on the header -->
+    <SetVariable variable="total-section" select="0" />
+
+    <!-- add a number for each section -->
+    <SetVariable variable="title-count" select="1" />
+
+    <!-- here I get the total of the sections counting the titles -->
+    <ForAll select="section/title">
+      <SetVariable variable="total-section" select="$total-section + 1" />
+    </ForAll>
+
+    <ForAll select="section">
+
+      <SetVariable variable="title-header" select="title" />
+      <SetVariable variable="title-box" select="sd:current-row('text')" />
+
+      <PlaceObject row="{$title-box}" column="1">
+        <Box width="1.5" height="5" background-color="white" />
+      </PlaceObject>
+
+      <Output area="text">
+        <Text>
+
+          <Paragraph fontfamily="title">
+            <Value select="concat($title-count,'. ',title)" />
+          </Paragraph>
+
+          <Action>
+            <Mark select="title" />
+          </Action>
+
+        </Text>
+      </Output>
+
+      <Output area="text">
+        <Text>
+
+          <Paragraph fontfamily="intro" textformat="intro" padding-right="4">
+            <Value select="intro" />
+          </Paragraph>
+
+        </Text>
+      </Output>
+
+      <SetVariable variable="subtitle-count" select="1" />
+
+      <ForAll select="subsection">
+
+        <SetVariable variable="subtitle-box" select="sd:current-row('text') + 2.7" />
+
+        <!-- NOTE: use the breakpage on DATA to move the circle and to follow the <subtitle></subtitle> -->
+        <Switch>
+          <Case test="@nocircle = 'false'">
+            <PlaceObject row="{sd:current-row('text')}" column="1" allocate="no" clipatmargin="yes">
+              <Box width="2" height="1" background-color="white" />
+            </PlaceObject>
+            <PlaceObject row="{$subtitle-box}" column="2">
+              <Circle radiusx="10pt" radiusy="10pt" />
+            </PlaceObject>
+          </Case>
+          <Case test="@nocircle = 'true'">
+            <Message select="concat('TEST ', @nocircle, ': Will **not** draw any graphics')" />
+          </Case>
+        </Switch>
+
+        <Output area="text">
+          <Text>
+
+            <ForAll select="subtitle">
+              <Paragraph fontfamily="subtitle" textformat="subtitle">
+                <Action>
+                  <Mark select="." />
+                </Action>
+                <Value select="concat($title-count,'.',$subtitle-count,' ',.)" />
+              </Paragraph>
+            </ForAll>
+
+            <ForAll select="p">
+              <!-- firstpar on the first paragraph and par on all subsequent paragraphs -->
+              <Paragraph fontfamily="paragraph" textformat="{ if (position() = 1) then 'first' else ''}par">
+                <Value select="." />
+              </Paragraph>
+            </ForAll>
+          </Text>
+        </Output>
+
+        <Switch>
+          <Case test="not(empty(subtitle))">
+            <SetVariable variable="subtitle-count" select="$subtitle-count + 1" />
+          </Case>
+        </Switch>
+
+        <!-- images don't flush across the text (<p></p>)
+             must be a separated subsection -->
+
+        <ForAll select="img">
+
+          <PlaceObject area="text">
+            <Table stretch="max" padding="15pt">
+              <Tr minheight="10pt" break-below="no">
+              </Tr>
+              <Tablerule break-below="no" rulewidth="1pt" color="darkgray" />
+              <Tr align="center" break-below="no">
+                <Td>
+                  <Image file="{@file}" margin-top=".125in" margin-bottom=".125in" maxheight="2.5in"/>
+                  <Paragraph>
+                    <Value select="@caption" />
+                  </Paragraph>
+                </Td>
+              </Tr>
+              <Tablerule rulewidth="1pt" color="darkgray" />
+              <Tr minheight="10pt"></Tr>
+            </Table>
+          </PlaceObject>
+
+        </ForAll>
+
+        <!-- if you need to break the page at subsection level
+             use this snippet -->
+        <ForAll select="sub-break">
+          <Switch>
+            <Case test="@break = 'true'">
+              <ClearPage />
+            </Case>
+          </Switch>
+        </ForAll>
+
+      </ForAll>
+
+      <!-- it increases by one the number of the sections
+           but stops when the total of section is reached -->
+
+      <Switch>
+        <Case test="$title-count &lt; $total-section">
+          <SetVariable variable="title-count" select="$title-count + 1" />
+        </Case>
+        <Otherwise>
+          <Message select="'Stop adding +1'" />
+        </Otherwise>
+      </Switch>
+
+      <NextRow rows="1.5" area="text" />
+
+      <!-- if you need to break the page at section level
+             use this snippet -->
+      <Switch>
+        <Case test="pagebreak/@break = 'true'">
+          <ClearPage />
+        </Case>
+      </Switch>
+    </ForAll>
+
+     <!-- this deletes partially the vertical if last page ;-) -->
+    <Switch>
+      <Case test="sd:current-page() = $_lastpage">
+      <PlaceObject row="{sd:current-row('text')}" column="1" allocate="no" clipatmargin="yes">
+              <Box width="2" height="{sd:number-of-rows('text')}" background-color="white" />
+      </PlaceObject>
+      </Case>
+    </Switch>
+  </Record>
+</Layout>
