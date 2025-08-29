@@ -24,7 +24,7 @@
 -- The parameter columns is optional. If present, it contains the order
 -- of the columns that are taken from the CSV file. For example. 3,2,1
 -- outputs the first three columns in reverse order.
--- For more options see the manual at https://speedata.github.io/publisher/manual/description-en/luafilter.html
+-- For more options see the manual at https://doc.speedata.de/publisher/en/advancedtopics/preprocessing/
 -- You can set the character set (if your data is in Latin-1) and the separator (if it is not a comma)
 csv = require("csv")
 xml = require("xml")
