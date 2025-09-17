@@ -13,6 +13,6 @@ Description  | Preview
 [Manual table splitting](tablebuilding) | <a href="tablebuilding"><img src="tablebuilding/firstpage.png" width="200"></a>
 [Fun with rotation in tables](tablerotation) | <a href="tablerotation"><img src="tablerotation/firstpage.png" width="200"></a>
 [Single pass table of contents](singlepasstoc) | <a href="singlepasstoc"><img src="singlepasstoc/firstpage.png" width="200"></a>
-[The new HTML module](html) | <a href="html"><img src="html/firstpage.png" width="200"></a>
 [How to sort data](index) | <a href="index"><img src="index/firstpage.png" width="200"></a>
 [Alignment of RTL and LTR text](mixedtextalignment) | <a href="mixedtextalignment"><img src="mixedtextalignment/firstpage.png" width="200"></a>
+[Creating ZUGFeRD invoices](ZUGFeRD) | <a href="ZUGFeRD"><img src="ZUGFeRD/firstpage.png" width="200"></a>

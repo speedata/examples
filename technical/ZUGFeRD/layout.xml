@@ -1,0 +1,531 @@
+<Layout version="5.1.24"
+	xmlns="urn:speedata.de:2009/publisher/en"
+	xmlns:sf="urn:speedata/layoutfunctions"
+	xmlns:sd="urn:speedata:2009/publisher/functions/en"
+	xmlns:rsm="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100"
+	xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"
+	xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"
+>
+	<DefineColor name="green" model="cmyk" c="70" m="8" y="98" k="25" />
+	<AttachFile type="ZUGFeRD invoice" filename="factur-x.xml" ></AttachFile>
+	<Options namespaces="strict" />
+	<Pageformat height="297mm" width="210mm" />
+	<SetGrid height="12pt" nx="10" />
+	<DefineFontfamily fontsize="10pt" leading="12pt" name="text">
+		<Regular fontface="serif" />
+		<Bold fontface="serif-bold" />
+		<Italic fontface="serif-italic" />
+		<BoldItalic fontface="serif-bolditalic" />
+	</DefineFontfamily>
+	<DefineFontfamily fontsize="8pt" leading="10pt" name="small">
+		<Regular fontface="serif" />
+		<Bold fontface="serif-bold" />
+		<Italic fontface="serif-italic" />
+		<BoldItalic fontface="serif-bolditalic" />
+	</DefineFontfamily>
+
+	<Function name="sf:format-iban">
+		<Param name="iban" />
+		<Value select="replace($iban,'(.{4})', '$1 ')" />
+	</Function>
+	<Function name="sf:format-date">
+		<Param name="date" />
+		<Value select="concat(format-number(substring($date, 7, 2), '0'), '.',format-number(substring($date, 5, 2), '0'), '.',substring($date, 1, 4))" />
+	</Function>
+	<Function name="sf:currency-code-to-text">
+		<Param name="code" />
+		<Switch>
+			<Case test="$code = 'EUR'">
+				<Value>Euro</Value>
+			</Case>
+			<Case test="$code = 'USD'">
+				<Value>US-Dollar</Value>
+			</Case>
+			<Otherwise>
+				<Value select="$code" />
+			</Otherwise>
+		</Switch>
+	</Function>
+	<Function name="sf:tax-category-code-to-text">
+		<Param name="code" />
+		<Param name="rate" />
+		<Param name="exemption" />
+		<Switch>
+			<Case test="$code = 'S'">
+				<Value select="$rate" />
+				<Value>%</Value>
+				<Value>&#xa0;</Value>
+				<Value>Umsatzsteuer</Value>
+			</Case>
+			<Case test="$code = 'AA'">
+				<Value select="$rate" />
+				<Value>%</Value>
+				<Value>&#xa0;</Value>
+				<Value>Ermäßigt A</Value>
+			</Case>
+			<Case test="$code = 'B'">
+				<Value select="$rate" />
+				<Value>%</Value>
+				<Value>&#xa0;</Value>
+				<Value>Ermäßigt B</Value>
+			</Case>
+			<Case test="$code = 'Z'">
+				<Value>Nullsatz</Value>
+			</Case>
+			<Case test="$code = 'AE'">
+				<Value select="$exemption" />
+			</Case>
+			<Case test="$code = 'E'">
+				<Value select="$exemption" />
+			</Case>
+			<Otherwise>
+				<Value select="$code" />
+			</Otherwise>
+		</Switch>
+	</Function>
+	<!-- see https://erechnung.berlin/cii/unitcode/ -->
+	<Function name="sf:unitcode-to-text">
+		<Param name="code" />
+		<Switch>
+			<Case test="$code = 'C62'">
+				<Value>Stück</Value>
+			</Case>
+			<Case test="$code = 'KGM'">
+				<Value>kg</Value>
+			</Case>
+			<Case test="$code = 'LTR'">
+				<Value>Liter</Value>
+			</Case>
+			<Case test="$code = 'MON'">
+				<Value>Monate</Value>
+			</Case>
+			<Case test="$code = 'HUR'">
+				<Value>Stunden</Value>
+			</Case>
+			<Case test="$code = 'MTK'">
+				<Value>m²</Value>
+			</Case>
+			<Case test="$code = 'H87'">
+				<Value>Stück</Value>
+			</Case>
+			<Otherwise>
+				<Value select="$code" />
+			</Otherwise>
+		</Switch>
+	</Function>
+	<Function name="sf:remove-decimal-zeros">
+		<Param name="amount" />
+		<Value select="replace(string($amount), '\.0+$', '')" />
+	</Function>
+	<Function name="sf:format-amount">
+		<Param name="amount" />
+		<Value select="format-number($amount, '#,##0.00')" />
+	</Function>
+
+	<Pagetype name="all pages" test="true()">
+		<Margin top="10mm" bottom="10mm" left="20mm" right="10mm" />
+		<AtPageShipout>
+			<PlaceObject column="0mm" row="0mm">
+				<Box height="297mm" width="5mm" background-color="green" />
+			</PlaceObject>
+			<SetVariable variable="iban" select="$ApplicableHeaderTradeSettlement/ram:SpecifiedTradeSettlementPaymentMeans/ram:PayeePartyCreditorFinancialAccount/ram:IBANID" />
+			<PlaceObject row="280mm" column="20mm">
+				<Table stretch="max">
+					<Columns>
+						<Loop select="3">
+							<Column width="1*" />
+						</Loop>
+					</Columns>
+					<Tr valign="top">
+						<Td>
+							<Paragraph>
+								<Value select="$SellerTradeParty/ram:Name" />
+								<Br />
+								<Value select="$SellerTradeParty/ram:PostalTradeAddress/ram:LineOne" />
+								<Br />
+								<Switch>
+									<Case test="not(string($SellerTradeParty/ram:PostalTradeAddress/ram:LineTwo) = '')">
+										<Value select="$SellerTradeParty/ram:PostalTradeAddress/ram:LineTwo" />
+										<Br />
+									</Case>
+								</Switch>
+								<Value select="$SellerTradeParty/ram:PostalTradeAddress/ram:PostcodeCode" />
+								<Value>&#xa0;</Value>
+								<Value select="$SellerTradeParty/ram:PostalTradeAddress/ram:CityName" />
+							</Paragraph>
+						</Td>
+						<Switch>
+							<Case test="not(string($iban) = '')">
+								<Td>
+									<Paragraph>
+										<Value>Bankverbindung</Value>
+										<Br />
+										<Value select="$ApplicableHeaderTradeSettlement/ram:SpecifiedTradeSettlementPaymentMeans/ram:PayeePartyCreditorFinancialAccount/ram:AccountName" />
+										<Br />
+										<Value select="sf:format-iban($ApplicableHeaderTradeSettlement/ram:SpecifiedTradeSettlementPaymentMeans/ram:PayeePartyCreditorFinancialAccount/ram:IBANID)" />
+									</Paragraph>
+								</Td>
+							</Case>
+						</Switch>
+						<Td>
+							<Paragraph>
+								<Value>Umsatzsteuer-ID</Value>
+								<Br />
+								<Value select="$SellerTradeParty/ram:SpecifiedTaxRegistration/ram:ID[@schemeID = 'VA']" />
+							</Paragraph>
+						</Td>
+					</Tr>
+				</Table>
+			</PlaceObject>
+		</AtPageShipout>
+	</Pagetype>
+
+	<!-- Generic invoice layout -->
+	<Record element="rsm:CrossIndustryInvoice">
+		<SetVariable variable="SellerTradeParty" select="rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty" />
+		<SetVariable variable="BuyerTradeParty" select="rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerTradeParty" />
+		<SetVariable variable="ApplicableHeaderTradeSettlement" select="rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement" />
+		<SetVariable variable="PaymentTerms" select="rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradePaymentTerms" />
+		<SetVariable variable="currencyCode" select="sf:currency-code-to-text($ApplicableHeaderTradeSettlement/ram:InvoiceCurrencyCode)" />
+
+		<!-- address -->
+		<ProcessNode select="$BuyerTradeParty" />
+		<!-- invoice number and date -->
+		<ProcessNode select="rsm:ExchangedDocument" />
+
+		<!-- opening -->
+		<Switch>
+			<Case test="sd:variable-exists('opening') and not(string($opening) = '')">
+				<PlaceObject column="1" row="20">
+					<Textblock>
+						<Paragraph>
+							<Value select="$opening" />
+						</Paragraph>
+					</Textblock>
+				</PlaceObject>
+				<NextRow rows="2" />
+			</Case>
+			<Otherwise>
+				<PlaceObject column="1" row="20">
+					<Box height="1" width="{sd:number-of-columns()}" background-color="-" />
+				</PlaceObject>
+			</Otherwise>
+		</Switch>
+		<SetVariable variable="hasDifferentTax" select="count(distinct-values(rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:ApplicableTradeTax/ram:RateApplicablePercent)) > 1" />
+
+		<SetVariable variable="ncolumns" select="if ($hasDifferentTax) then 6 else 5" />
+		<PlaceObject>
+			<Table stretch="max" columndistance="5pt" padding="2pt">
+				<Columns>
+					<Column width="1cm" />
+					<Column width="2cm" />
+					<Column width="1*" />
+					<Switch>
+						<Case test="$hasDifferentTax">
+							<Column width="1cm" />
+						</Case>
+					</Switch>
+					<Column width="2cm" />
+					<Column width="2cm" />
+				</Columns>
+				<Tablehead>
+					<Tablerule />
+					<Tr valign="top" align="center">
+						<Td align="right">
+							<Paragraph>
+								<I>
+									<Value>Menge</Value>
+								</I>
+							</Paragraph>
+						</Td>
+						<Td align="center">
+							<Paragraph>
+								<I>
+									<Value>Einheit</Value>
+								</I>
+							</Paragraph>
+						</Td>
+						<Td>
+							<Paragraph>
+								<I>
+									<Value>Leistung</Value>
+								</I>
+							</Paragraph>
+						</Td>
+						<Switch>
+							<Case test="$hasDifferentTax">
+								<Td align="right">
+									<Paragraph>
+										<I>
+											<Value>Steuer</Value>
+										</I>
+									</Paragraph>
+								</Td>
+							</Case>
+						</Switch>
+						<Td align="right">
+							<Paragraph>
+								<I>
+									<Value>Einzelpreis</Value>
+									<Br />
+									<Value>(</Value>
+									<Value select="$currencyCode" />
+									<Value>)</Value>
+								</I>
+							</Paragraph>
+						</Td>
+						<Td align="right" padding-right="4pt">
+							<Paragraph>
+								<I>
+									<Value>Gesamtpreis</Value>
+									<Br />
+									<Value>(</Value>
+									<Value select="$currencyCode" />
+									<Value>)</Value>
+								</I>
+							</Paragraph>
+						</Td>
+					</Tr>
+					<Tablerule />
+				</Tablehead>
+				<ForAll select="rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem">
+					<Tr valign="top">
+						<Td align="right">
+							<Paragraph>
+								<Value select="sf:remove-decimal-zeros(ram:SpecifiedLineTradeDelivery/ram:BilledQuantity)" />
+							</Paragraph>
+						</Td>
+						<Td align="center">
+							<Paragraph>
+								<Value select="sf:unitcode-to-text(ram:SpecifiedLineTradeDelivery/ram:BilledQuantity/@unitCode)" />
+							</Paragraph>
+						</Td>
+						<Td>
+							<Paragraph>
+								<Value select="ram:SpecifiedTradeProduct/ram:Name" />
+								<Switch>
+									<Case test="not(string(ram:SpecifiedTradeProduct/ram:Description) = '')">
+										<Br />
+										<Value select="ram:SpecifiedTradeProduct/ram:Description" />
+									</Case>
+								</Switch>
+							</Paragraph>
+						</Td>
+						<Switch>
+							<Case test="$hasDifferentTax">
+								<Td align="right">
+									<Paragraph>
+										<Value select="sf:remove-decimal-zeros(ram:SpecifiedLineTradeSettlement/ram:ApplicableTradeTax/ram:RateApplicablePercent)" />
+										<Value>%</Value>
+									</Paragraph>
+								</Td>
+							</Case>
+						</Switch>
+
+						<Td align="right">
+							<Paragraph>
+								<Value select="sf:format-amount(ram:SpecifiedLineTradeAgreement/ram:NetPriceProductTradePrice/ram:ChargeAmount)" />
+								<Value />
+								<Value select="ram:SpecifiedLineTradeAgreement/ram:NetPriceProductTradePrice/ram:ChargeAmount/@currencyID" />
+							</Paragraph>
+						</Td>
+						<Td align="right" padding-right="4pt">
+							<Paragraph>
+								<Value select="ram:SpecifiedLineTradeSettlement/ram:SpecifiedTradeSettlementLineMonetarySummation/ram:LineTotalAmount" />
+								<Value />
+								<Value select="ram:SpecifiedLineTradeAgreement/ram:GrossPriceProductTradePrice/@currencyID" />
+							</Paragraph>
+						</Td>
+					</Tr>
+				</ForAll>
+				<Tablerule />
+				<Tablerule rulewidth="3pt" color="-" />
+				<Tr>
+					<Td colspan="{$ncolumns - 1 }" align="right">
+						<Paragraph>
+							<Value>Nettosumme</Value>
+						</Paragraph>
+					</Td>
+					<Td align="right">
+						<Paragraph>
+							<Value select="$ApplicableHeaderTradeSettlement/ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:LineTotalAmount" />
+							<Value>&#xa0;</Value>
+							<Value select="$currencyCode" />
+						</Paragraph>
+					</Td>
+				</Tr>
+				<ForAll select="$ApplicableHeaderTradeSettlement/ram:ApplicableTradeTax">
+					<Tr valign="top">
+						<Td colspan="{$ncolumns - 1 }" align="right">
+							<Paragraph>
+								<Value select="sf:tax-category-code-to-text(ram:CategoryCode, sf:remove-decimal-zeros(ram:RateApplicablePercent), ram:ExemptionReason)" />
+							</Paragraph>
+						</Td>
+						<Td align="right">
+							<Paragraph>
+								<Value select="ram:CalculatedAmount" />
+								<Value>&#xa0;</Value>
+								<Value select="$currencyCode" />
+							</Paragraph>
+						</Td>
+					</Tr>
+				</ForAll>
+				<Tr>
+					<Td colspan="{$ncolumns - 1 }" align="right">
+						<Paragraph>
+							<Value>Gesamtbetrag</Value>
+						</Paragraph>
+					</Td>
+					<Td align="right">
+						<Paragraph>
+							<Value select="$ApplicableHeaderTradeSettlement/ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:GrandTotalAmount" />
+							<Value>&#xa0;</Value>
+							<Value select="$currencyCode" />
+						</Paragraph>
+					</Td>
+				</Tr>
+			</Table>
+		</PlaceObject>
+		<Switch>
+			<Case test="sd:variable-exists('closing')">
+				<NextRow rows="3" />
+				<PlaceObject>
+					<Textblock>
+						<Paragraph>
+							<Value select="$closing" />
+						</Paragraph>
+					</Textblock>
+				</PlaceObject>
+			</Case>
+			<Otherwise>
+				<PlaceObject>
+					<Box height="1" width="{sd:number-of-columns()}" background-color="-" />
+				</PlaceObject>
+			</Otherwise>
+		</Switch>
+		<Switch>
+			<Case test="sd:variable-exists('noteAAK')">
+				<NextRow rows="2" />
+				<PlaceObject>
+					<Textblock>
+						<Paragraph>
+							<Value select="$noteAAK" />
+						</Paragraph>
+					</Textblock>
+				</PlaceObject>
+			</Case>
+		</Switch>
+		<Switch>
+			<Case test="not(string($PaymentTerms/ram:Description) = '')">
+				<NextRow rows="2" />
+				<PlaceObject>
+					<Textblock>
+						<Paragraph>
+							<Value select="$PaymentTerms/ram:Description" />
+						</Paragraph>
+					</Textblock>
+				</PlaceObject>
+			</Case>
+		</Switch>
+	</Record>
+
+	<Record element="rsm:ExchangedDocument">
+		<ForAll select="ram:IncludedNote">
+			<Switch>
+				<Case test="not(string(ram:SubjectCode) = '')">
+					<SetVariable variable="{concat('note', ram:SubjectCode)}" select="ram:Content" />
+				</Case>
+				<Case test="contains(ram:Content, '·')">
+					<ForAll select="tokenize(ram:Content,'·')">
+						<Switch>
+							<Case test="position() = 1">
+								<SetVariable variable="opening" select="." />
+							</Case>
+							<Otherwise>
+								<SetVariable variable="closing" select="." />
+							</Otherwise>
+						</Switch>
+					</ForAll>
+				</Case>
+				<Otherwise>
+					<SetVariable variable="opening">
+						<Value select="ram:Content" />
+					</SetVariable>
+				</Otherwise>
+			</Switch>
+		</ForAll>
+
+		<!-- Invoice number and date -->
+		<PlaceObject column="200mm" row="45mm" hreference="right">
+			<Textblock>
+				<Paragraph textformat="right" html="off">
+					<Value>Datum: </Value>
+					<Value select="sf:format-date(ram:IssueDateTime/udt:DateTimeString)" />
+					<Br />
+					<Value>Rechnung </Value>
+					<Value select="ram:ID" />
+					<Switch>
+						<Case test="not(string($PaymentTerms/ram:DueDateDateTime/udt:DateTimeString) = '')">
+							<Br />
+							<Value>Zahlungsziel: </Value>
+							<Value select="sf:format-date($PaymentTerms/ram:DueDateDateTime/udt:DateTimeString)" />
+						</Case>
+					</Switch>
+					<Switch>
+						<Case test="sd:variable-exists('noteREG')">
+							<Br />
+							<Br />
+							<Value select="$noteREG" />
+						</Case>
+					</Switch>
+				</Paragraph>
+			</Textblock>
+		</PlaceObject>
+
+	</Record>
+
+	<Record element="ram:BuyerTradeParty">
+		<!-- From and recipient-->
+		<PlaceObject column="20mm" row="45mm">
+			<Textblock>
+				<Paragraph fontfamily="small">
+					<Value select="$SellerTradeParty/ram:Name" />
+					<Value> · </Value>
+					<Value select="$SellerTradeParty/ram:PostalTradeAddress/ram:LineOne" />
+					<Value> · </Value>
+					<Switch>
+						<Case test="not(string($SellerTradeParty/ram:PostalTradeAddress/ram:LineTwo) = '')">
+							<Value select="$SellerTradeParty/ram:PostalTradeAddress/ram:LineTwo" />
+							<Value> · </Value>
+						</Case>
+					</Switch>
+					<Value select="$SellerTradeParty/ram:PostalTradeAddress/ram:PostcodeCode" />
+					<Value>&#xa0;</Value>
+					<Value select="$SellerTradeParty/ram:PostalTradeAddress/ram:CityName" />
+				</Paragraph>
+			</Textblock>
+		</PlaceObject>
+
+		<PlaceObject column="20mm" row="63mm">
+			<Textblock>
+				<Paragraph>
+					<Value select="ram:Name" />
+					<Br />
+					<Value select="ram:DefinedTradeContact/ram:PersonName" />
+					<Br />
+					<Value select="ram:PostalTradeAddress/ram:LineOne" />
+					<Br />
+					<Switch>
+						<Case test="not(string(ram:PostalTradeAddress/ram:LineTwo) = '')">
+							<Value select="ram:PostalTradeAddress/ram:LineTwo" />
+							<Br />
+						</Case>
+					</Switch>
+					<Value select="ram:PostalTradeAddress/ram:PostcodeCode" />
+					<Value>&#xa0;</Value>
+					<Value select="ram:PostalTradeAddress/ram:CityName" />
+				</Paragraph>
+			</Textblock>
+		</PlaceObject>
+	</Record>
+</Layout>
