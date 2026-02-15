@@ -16,3 +16,77 @@ Description  | Preview
 [Typography example](aesopgnatbull) | <a href="aesopgnatbull"><img src="aesopgnatbull/firstpage.png" width="200"></a>
 [SVG chart inclusion](charts) | <a href="charts"><img src="charts/firstpage.png" width="200"></a>
 [Comparison of documents](compare/frogking) | <a href="compare/frogking"><img src="compare/frogking/publisher/firstpage.png" width="200"></a>
+
+---
+
+<details>
+<summary><strong>Introduction examples</strong> (10 examples)</summary>
+
+Description  | Preview
+------------ | -------------
+[The Hello world example](introduction/helloworld) | <a href="introduction/helloworld"><img src="introduction/helloworld/firstpage.png" width="200"></a>
+[A very simple table](introduction/simpletable) | <a href="introduction/simpletable"><img src="introduction/simpletable/firstpage.png" width="200"></a>
+[Data processing with ProcessNode](introduction/dataprocessing1) | <a href="introduction/dataprocessing1"><img src="introduction/dataprocessing1/firstpage.png" width="200"></a>
+[Data processing with ForAll](introduction/dataprocessing2) | <a href="introduction/dataprocessing2"><img src="introduction/dataprocessing2/firstpage.png" width="200"></a>
+[Different sources of text markup](introduction/datasource) | <a href="introduction/datasource"><img src="introduction/datasource/firstpage.png" width="200"></a>
+[Lot's of pages](introduction/mailmerge) | <a href="introduction/mailmerge"><img src="introduction/mailmerge/firstpage.png" width="200"></a>
+[Table of contents example](introduction/planets) | <a href="introduction/planets"><img src="introduction/planets/firstpage.png" width="200"></a>
+[Running sums in a table](introduction/runningsum) | <a href="introduction/runningsum"><img src="introduction/runningsum/firstpage.png" width="200"></a>
+[Text overflow in a text frame](introduction/textframe) | <a href="introduction/textframe"><img src="introduction/textframe/firstpage.png" width="200"></a>
+[Dictionary like headings](introduction/dictionary) | <a href="introduction/dictionary"><img src="introduction/dictionary/firstpage.png" width="200"></a>
+
+</details>
+
+<details>
+<summary><strong>Technical examples</strong> (14 examples)</summary>
+
+Description  | Preview
+------------ | -------------
+[Base 64 encoded images](technical/base64decode) | <a href="technical/base64decode"><img src="technical/base64decode/firstpage.png" width="200"></a>
+[Copy fitting with groups](technical/fontshrinking) | <a href="technical/fontshrinking"><img src="technical/fontshrinking/firstpage.png" width="200"></a>
+[Effect of rotate and origin-x/y](technical/rotating) | <a href="technical/rotating"><img src="technical/rotating/firstpage.png" width="200"></a>
+[Text-wrapping around objects](technical/wraparoundobjects) | <a href="technical/wraparoundobjects"><img src="technical/wraparoundobjects/firstpage.png" width="200"></a>
+[Image size and clipping](technical/images) | <a href="technical/images"><img src="technical/images/firstpage.png" width="200"></a>
+[A generic CSV to XML converter](technical/csvreader) | <a href="technical/csvreader"><img src="technical/csvreader/firstpage.png" width="200"></a>
+[Database publishing with JSON](technical/jsonreader) | <a href="technical/jsonreader"><img src="technical/jsonreader/firstpage.png" width="200"></a>
+[Create PDF from Excel files](technical/xlsxreader) | <a href="technical/xlsxreader"><img src="technical/xlsxreader/firstpage.png" width="200"></a>
+[Manual table splitting](technical/tablebuilding) | <a href="technical/tablebuilding"><img src="technical/tablebuilding/firstpage.png" width="200"></a>
+[Fun with rotation in tables](technical/tablerotation) | <a href="technical/tablerotation"><img src="technical/tablerotation/firstpage.png" width="200"></a>
+[Single pass table of contents](technical/singlepasstoc) | <a href="technical/singlepasstoc"><img src="technical/singlepasstoc/firstpage.png" width="200"></a>
+[How to sort data](technical/index) | <a href="technical/index"><img src="technical/index/firstpage.png" width="200"></a>
+[Alignment of RTL and LTR text](technical/mixedtextalignment) | <a href="technical/mixedtextalignment"><img src="technical/mixedtextalignment/firstpage.png" width="200"></a>
+[Creating ZUGFeRD invoices](technical/ZUGFeRD) | <a href="technical/ZUGFeRD"><img src="technical/ZUGFeRD/firstpage.png" width="200"></a>
+
+</details>
+
+<details>
+<summary><strong>MetaPost examples</strong> (2 examples)</summary>
+
+Description  | Preview
+------------ | -------------
+[Page margin](metapost/pagemargin) | <a href="metapost/pagemargin"><img src="metapost/pagemargin/firstpage.png" width="200"></a>
+[MetaPost Image](metapost/mpimage) | <a href="metapost/mpimage"><img src="metapost/mpimage/firstpage.png" width="200"></a>
+
+</details>
+
+<details>
+<summary><strong>Language examples</strong> (3 examples)</summary>
+
+These require speedata Publisher version 4.1 and above.
+
+Description  | Preview
+------------ | -------------
+[Bengali](languages/bengali) | <a href="languages/bengali"><img src="languages/bengali/firstpage.png" width="200"></a>
+[Chinese (Simplified Chinese)](languages/chinese-sc) | <a href="languages/chinese-sc"><img src="languages/chinese-sc/firstpage.png" width="200"></a>
+[Language mix](languages/mix) | <a href="languages/mix"><img src="languages/mix/firstpage.png" width="200"></a>
+
+</details>
+
+<details>
+<summary><strong>User contributed examples</strong> (1 example)</summary>
+
+Description  | Preview
+------------ | -------------
+[Paragraphs with margin markings](user/cicorione) | <a href="user/cicorione"><img src="user/cicorione/firstpage.png" width="200"></a>
+
+</details>
