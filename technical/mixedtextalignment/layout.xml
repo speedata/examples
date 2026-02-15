@@ -50,7 +50,7 @@
                 <Attribute name="visiblename" select="'end'" />
             </Element>
         </SetVariable>
-        <ForAll select="$directions">
+        <ForAll select="$directions/direction">
             <SetVariable variable="direction" select="@dir"/>
             <Switch>
                 <Case test="$direction = ''">
@@ -61,7 +61,7 @@
                 </Otherwise>
 
             </Switch>
-            <ForAll select="$bidichoices">
+            <ForAll select="$bidichoices/bidi">
                 <SetVariable variable="bidi" select="@bidi"/>
                 <ForAll select="$examples/example">
                     <Switch>
