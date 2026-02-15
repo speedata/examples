@@ -1,8 +1,23 @@
 This repository contains examples for the [speedata Publisher](https://github.com/speedata/publisher), an OpenSource database publishing system (create a PDF from XML data).
 
-Introductory examples are in the directory [introduction](introduction), more technical examples are in the directory [technical](technical). There is also a [new directory with MetaPost examples](metapost).
+## Table of contents
 
-There is a comparison of documents (currently only one) of speedata, LaTeX and Apache FOP.
+- [Showcase](#showcase)
+  - [Accessibility](accessibility) · [Newspaper layout](news) · [Magazine layout](magazine) · [Image shape](imageshape) · [TEI text typesetting](shakespeare) · [Tables](tables) · [Typesetting on a grid](grid) · [Typography example](aesopgnatbull) · [SVG chart inclusion](charts)
+- [Introduction examples](#introduction-examples)
+  - [Hello world](introduction/helloworld) · [Simple table](introduction/simpletable) · [ProcessNode](introduction/dataprocessing1) · [ForAll](introduction/dataprocessing2) · [Text markup sources](introduction/datasource) · [Mail merge](introduction/mailmerge) · [Table of contents](introduction/planets) · [Running sums](introduction/runningsum) · [Text overflow](introduction/textframe) · [Dictionary headings](introduction/dictionary)
+- [Technical examples](#technical-examples)
+  - [Base64 images](technical/base64decode) · [Copy fitting](technical/fontshrinking) · [Rotate](technical/rotating) · [Wrap around objects](technical/wraparoundobjects) · [Image clipping](technical/images) · [CSV reader](technical/csvreader) · [JSON reader](technical/jsonreader) · [XLSX reader](technical/xlsxreader) · [Table splitting](technical/tablebuilding) · [Table rotation](technical/tablerotation) · [Single pass TOC](technical/singlepasstoc) · [Sorting data](technical/index) · [Mixed text alignment](technical/mixedtextalignment) · [ZUGFeRD invoices](technical/ZUGFeRD)
+- [MetaPost examples](#metapost-examples)
+  - [Page margin](metapost/pagemargin) · [MetaPost Image](metapost/mpimage)
+- [Language examples](#language-examples)
+  - [Bengali](languages/bengali) · [Chinese](languages/chinese-sc) · [Language mix](languages/mix)
+- [User contributed examples](#user-contributed-examples)
+  - [Paragraphs with margin markings](user/cicorione)
+- [Comparison of documents](#comparison-of-documents)
+  - [Frog King](compare/frogking)
+
+## Showcase
 
 Description  | Preview
 ------------ | -------------
@@ -15,12 +30,8 @@ Description  | Preview
 [Typesetting on a grid](grid) | <a href="grid"><img src="grid/firstpage.png" width="200"></a>
 [Typography example](aesopgnatbull) | <a href="aesopgnatbull"><img src="aesopgnatbull/firstpage.png" width="200"></a>
 [SVG chart inclusion](charts) | <a href="charts"><img src="charts/firstpage.png" width="200"></a>
-[Comparison of documents](compare/frogking) | <a href="compare/frogking"><img src="compare/frogking/publisher/firstpage.png" width="200"></a>
 
----
-
-<details>
-<summary><strong>Introduction examples</strong> (10 examples)</summary>
+## Introduction examples
 
 Description  | Preview
 ------------ | -------------
@@ -35,10 +46,7 @@ Description  | Preview
 [Text overflow in a text frame](introduction/textframe) | <a href="introduction/textframe"><img src="introduction/textframe/firstpage.png" width="200"></a>
 [Dictionary like headings](introduction/dictionary) | <a href="introduction/dictionary"><img src="introduction/dictionary/firstpage.png" width="200"></a>
 
-</details>
-
-<details>
-<summary><strong>Technical examples</strong> (14 examples)</summary>
+## Technical examples
 
 Description  | Preview
 ------------ | -------------
@@ -57,20 +65,14 @@ Description  | Preview
 [Alignment of RTL and LTR text](technical/mixedtextalignment) | <a href="technical/mixedtextalignment"><img src="technical/mixedtextalignment/firstpage.png" width="200"></a>
 [Creating ZUGFeRD invoices](technical/ZUGFeRD) | <a href="technical/ZUGFeRD"><img src="technical/ZUGFeRD/firstpage.png" width="200"></a>
 
-</details>
-
-<details>
-<summary><strong>MetaPost examples</strong> (2 examples)</summary>
+## MetaPost examples
 
 Description  | Preview
 ------------ | -------------
 [Page margin](metapost/pagemargin) | <a href="metapost/pagemargin"><img src="metapost/pagemargin/firstpage.png" width="200"></a>
 [MetaPost Image](metapost/mpimage) | <a href="metapost/mpimage"><img src="metapost/mpimage/firstpage.png" width="200"></a>
 
-</details>
-
-<details>
-<summary><strong>Language examples</strong> (3 examples)</summary>
+## Language examples
 
 These require speedata Publisher version 4.1 and above.
 
@@ -80,13 +82,16 @@ Description  | Preview
 [Chinese (Simplified Chinese)](languages/chinese-sc) | <a href="languages/chinese-sc"><img src="languages/chinese-sc/firstpage.png" width="200"></a>
 [Language mix](languages/mix) | <a href="languages/mix"><img src="languages/mix/firstpage.png" width="200"></a>
 
-</details>
-
-<details>
-<summary><strong>User contributed examples</strong> (1 example)</summary>
+## User contributed examples
 
 Description  | Preview
 ------------ | -------------
 [Paragraphs with margin markings](user/cicorione) | <a href="user/cicorione"><img src="user/cicorione/firstpage.png" width="200"></a>
 
-</details>
+## Comparison of documents
+
+Comparison of speedata, LaTeX and Apache FOP (currently only one example).
+
+Description  | Preview
+------------ | -------------
+[Comparison of documents](compare/frogking) | <a href="compare/frogking"><img src="compare/frogking/publisher/firstpage.png" width="200"></a>
