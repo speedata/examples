@@ -40,7 +40,6 @@
                     <PositioningFrame width="{@width}" height="{@height}" row="{@y + $dy}"
                         column="{@x}"/>
                 </PositioningArea>
-
                 <PositioningArea name="article{position()}">
                     <Loop select="@width" variable="i">
                         <PositioningFrame width="1" height="{@height}" row="{@y + $dy}"
@@ -85,7 +84,7 @@
     </Record>
 
     <Record element="advertisement">
-        <PlaceObject row="{@y + $dy}" column="{@x}">
+        <PlaceObject row="{@y + $dy}" column="{@x}" >
             <Image file="{@img}" width="{@width}" height="{@height}"/>
         </PlaceObject>
     </Record>
@@ -93,7 +92,7 @@
     <Record element="article">
         <Message select="concat('Article name: ',string(title))"/>
         <SetVariable variable="area" select="concat('article',position())"/>
-        <SetVariable variable="wholearea" select="concat('article',position(),'-complete')"/>
+        <SetVariable variable="wholearea" select="concat($area,'-complete')"/>
         <Switch>
             <Case test="@width = 1">
                 <!--  Small  -->
@@ -205,7 +204,7 @@
                 <Switch>
                     <Case test="@row != 'top'">
                         <PlaceObject column="1">
-                            <Box width="{@width}" height="1" backgroundcolor="white"/>
+                            <Box width="{@width}" height="1" background-color="white"/>
                         </PlaceObject>
                     </Case>
                 </Switch>
@@ -237,7 +236,7 @@
                 <Switch>
                     <Case test="@row != 'bottom'">
                         <PlaceObject column="1">
-                            <Box width="{@width}" height="1" backgroundcolor="white"/>
+                            <Box width="{@width}" height="1" background-color="white"/>
                         </PlaceObject>
                     </Case>
                 </Switch>
