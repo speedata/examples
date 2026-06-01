@@ -20,7 +20,7 @@
 
 	<Record element="keyword">
 		<SetVariable variable="indexentries">
-			<Copy-of select="$indexentries" />
+			<Copy-of select="$indexentries/indexentry" />
 			<Element name="indexentry">
 				<Attribute name="name" select="@word" />
 				<Attribute name="page" select="@page" />
