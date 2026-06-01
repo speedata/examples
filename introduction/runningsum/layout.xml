@@ -12,7 +12,7 @@
     <PlaceObject>
       <Table stretch="max" padding="4pt">
         <Tablehead page="first">
-          <Tr backgroundcolor="lightgray" align="center">
+          <Tr background-color="lightgray" align="center">
             <Td border-bottom="0.25pt"><Paragraph><B><Value>No.</Value></B></Paragraph></Td>
             <Td border-bottom="0.25pt"><Paragraph><B><Value>Image</Value></B></Paragraph></Td>
             <Td border-bottom="0.25pt"><Paragraph><B><Value>Name</Value></B></Paragraph></Td>
@@ -21,7 +21,7 @@
           </Tr>
         </Tablehead>
         <Tablehead page="all">
-          <Tr backgroundcolor="lightgray" align="center">
+          <Tr background-color="lightgray" align="center">
             <Td border-bottom="0.25pt"><Paragraph><B><Value>No.</Value></B></Paragraph></Td>
             <Td border-bottom="0.25pt"><Paragraph><B><Value>Image</Value></B></Paragraph></Td>
             <Td border-bottom="0.25pt"><Paragraph><B><Value>Name</Value></B></Paragraph></Td>
@@ -46,7 +46,7 @@
           </Tr>
         </Tablefoot>
         <ForAll select="item">
-          <Tr data="@sum" backgroundcolor="{sd:alternating('tab','white','lightgray')}">
+          <Tr data="@sum" background-color="{sd:alternating('tab','white','lightgray')}">
             <Td align="center"><Paragraph><Value select="position()"></Value></Paragraph></Td>
             <Td align="center"><Image maxwidth="2" maxheight="3" file="{@image}"/></Td>
             <Td align="left"><Paragraph><Value select="@name"></Value></Paragraph></Td>

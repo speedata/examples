@@ -42,7 +42,7 @@
       <!-- the background frame -->
       <PlaceObject allocate="no">
         <Frame framecolor="black" rulewidth="{$rulewd}">
-          <Box width="{sd:number-of-columns()}" height="{sd:number-of-rows()}" backgroundcolor="-" />
+          <Box width="{sd:number-of-columns()}" height="{sd:number-of-rows()}" background-color="-" />
         </Frame>
       </PlaceObject>
 

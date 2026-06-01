@@ -33,7 +33,7 @@
     <SetVariable variable="tablerows" />
     <ForAll select="entry">
       <SetVariable variable="thisrow">
-        <Tr backgroundcolor="lightgray">
+        <Tr background-color="lightgray">
           <Td>
             <Paragraph fontfamily="tt">
               <Value select="position()"/>

@@ -90,7 +90,7 @@
         <NextRow rows="1"/>
         <PlaceObject>
             <Table padding="2pt">
-                <Tr backgroundcolor="black">
+                <Tr background-color="black">
                     <Td><Paragraph color="white"><Value select="@author"></Value></Paragraph></Td>
                 </Tr>
             </Table>

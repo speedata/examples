@@ -40,7 +40,7 @@
           <Switch>
             <Case test="position() = 1">
               <Tablehead>
-                <Tr valign="top" backgroundcolor="#333">
+                <Tr valign="top" background-color="#333">
                   <ForAll select="cell">
                     <Td>
                       <Paragraph color="white">
@@ -52,7 +52,7 @@
               </Tablehead>
             </Case>
             <Otherwise>
-              <Tr valign="top" backgroundcolor="{ sd:alternating('tab','#fff','#ddd') }">
+              <Tr valign="top" background-color="{ sd:alternating('tab','#fff','#ddd') }">
                 <!-- collect the data for the header -->
                 <ForAll select="cell">
                   <Switch>

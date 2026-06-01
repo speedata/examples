@@ -13,17 +13,17 @@
 
     <Record element="data">
         <PlaceObject column="8" row="1">
-            <Box width="3" height="7" backgroundcolor="thistle" padding-left="2mm"
+            <Box width="3" height="7" background-color="thistle" padding-left="2mm"
                 padding-bottom="2mm"/>
         </PlaceObject>
 
         <PlaceObject column="1" row="11">
-            <Box width="4" height="7" backgroundcolor="lightgreen" padding-top="2mm"
+            <Box width="4" height="7" background-color="lightgreen" padding-top="2mm"
                 padding-right="2mm"/>
         </PlaceObject>
 
         <PlaceObject column="1" row="1" page="next" keepposition="yes">
-            <Box width="4" height="7" backgroundcolor="steelblue" padding-top="2mm"
+            <Box width="4" height="7" background-color="steelblue" padding-top="2mm"
                 padding-right="2mm"/>
         </PlaceObject>
 

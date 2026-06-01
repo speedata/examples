@@ -147,15 +147,15 @@
         <PlaceObject>
             <Table stretch="max" padding="2pt" width="14">
                 <Columns>
-                    <Column width="1*" backgroundcolor="bg"/>
-                    <Column width="1*" backgroundcolor="bg"/>
-                    <Column width="1*" backgroundcolor="bg"/>
-                    <Column width="1*" backgroundcolor="bg"/>
+                    <Column width="1*" background-color="bg"/>
+                    <Column width="1*" background-color="bg"/>
+                    <Column width="1*" background-color="bg"/>
+                    <Column width="1*" background-color="bg"/>
                     <Column width="1*"/>
                     <Column width="1*"/>
                 </Columns>
                 <Tablehead>
-                    <Tr align="center" backgroundcolor="black" valign="top">
+                    <Tr align="center" background-color="black" valign="top">
                         <Td padding-left="3pt" align="left"><Paragraph color="white"><I><Value>Group</Value></I></Paragraph></Td>
                         <Td border-right="1pt" border-right-color="white"><Paragraph color="white"><I><Value></Value></I></Paragraph></Td>
                         <Td><Paragraph color="white"><I><Value>Article-<br/>number</Value></I></Paragraph></Td>
