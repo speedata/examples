@@ -1,0 +1,37 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+
+  <Pageformat width="148mm" height="105mm"/>
+
+  <Record element="data">
+    <PlaceObject>
+      <Table stretch="max" padding="3pt">
+        <Columns>
+          <Column width="32mm"/>
+          <Column width="24mm"/>
+          <Column width="1*"/>
+          <Column width="10mm" align="right"/>
+          <Column width="17mm" align="right"/>
+        </Columns>
+        <Tablehead>
+          <Tr background-color="lightgray">
+            <Td><Paragraph><B><Value>Item no.</Value></B></Paragraph></Td>
+            <Td><Paragraph><B><Value>Dimensions</Value></B></Paragraph></Td>
+            <Td><Paragraph><B><Value>Application</Value></B></Paragraph></Td>
+            <Td><Paragraph><B><Value>PU</Value></B></Paragraph></Td>
+            <Td><Paragraph><B><Value>Price in €</Value></B></Paragraph></Td>
+          </Tr>
+        </Tablehead>
+        <ForAll select="group/article">
+          <Tr>
+            <Td><Paragraph><Value select="@number"/></Paragraph></Td>
+            <Td><Paragraph><Value select="@dim"/></Paragraph></Td>
+            <Td><Paragraph><Value select="@application"/></Paragraph></Td>
+            <Td><Paragraph><Value select="@pu"/></Paragraph></Td>
+            <Td><Paragraph><Value select="@price"/></Paragraph></Td>
+          </Tr>
+        </ForAll>
+      </Table>
+    </PlaceObject>
+  </Record>
+</Layout>

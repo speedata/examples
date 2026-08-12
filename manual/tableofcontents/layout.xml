@@ -1,0 +1,86 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+
+  <Pagetype name="catalog" test="true()">
+    <Margin left="20mm" right="20mm" top="20mm" bottom="20mm"/>
+    <AtPageShipout>
+      <PlaceObject column="20mm" row="280mm" allocate="no">
+        <Textblock width="17" textformat="centered">
+          <Paragraph><Value select="sd:current-page()"/></Paragraph>
+        </Textblock>
+      </PlaceObject>
+    </AtPageShipout>
+  </Pagetype>
+
+  <DefineFontfamily name="title" fontsize="18" leading="22">
+    <Regular fontface="sans-bold"/>
+  </DefineFontfamily>
+
+  <Record element="data">
+    <LoadDataset name="toc"/>
+    <SetVariable variable="entries"/>
+    <ProcessNode select="group"/>
+    <SaveDataset name="toc" elementname="tableofcontents"
+                 select="$entries"/>
+  </Record>
+
+  <Record element="group">
+    <SetVariable variable="entries">
+      <Copy-of select="$entries/entry"/>
+      <Element name="entry">
+        <Attribute name="name" select="@name"/>
+        <Attribute name="material" select="@material"/>
+        <Attribute name="page" select="sd:current-page()"/>
+      </Element>
+    </SetVariable>
+
+    <PlaceObject>
+      <Textblock>
+        <Paragraph fontfamily="title"><Value select="@name"/></Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <PlaceObject row="{sd:current-row() + 1}">
+      <Table stretch="max" padding="3pt">
+        <Tablehead>
+          <Tr background-color="lightgray">
+            <Td><Paragraph><B><Value>Item no.</Value></B></Paragraph></Td>
+            <Td><Paragraph><B><Value>Dimensions</Value></B></Paragraph></Td>
+            <Td><Paragraph><B><Value>Drive</Value></B></Paragraph></Td>
+            <Td align="right"><Paragraph><B><Value>PU</Value></B></Paragraph></Td>
+            <Td align="right"><Paragraph><B><Value>Price in €</Value></B></Paragraph></Td>
+          </Tr>
+        </Tablehead>
+        <ForAll select="article">
+          <Tr>
+            <Td><Paragraph><Value select="@number"/></Paragraph></Td>
+            <Td><Paragraph><Value select="@dim"/></Paragraph></Td>
+            <Td><Paragraph><Value select="@drive"/></Paragraph></Td>
+            <Td align="right"><Paragraph><Value select="@pu"/></Paragraph></Td>
+            <Td align="right"><Paragraph><Value select="@price"/></Paragraph></Td>
+          </Tr>
+        </ForAll>
+      </Table>
+    </PlaceObject>
+    <ClearPage/>
+  </Record>
+
+  <Record element="tableofcontents">
+    <PlaceObject>
+      <Textblock>
+        <Paragraph fontfamily="title"><Value>Contents</Value></Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <PlaceObject row="{sd:current-row() + 1}">
+      <Table stretch="max" padding="3pt">
+        <ForAll select="entry">
+          <Tr>
+            <Td><Paragraph><B><Value select="@name"/></B></Paragraph></Td>
+            <Td><Paragraph><Value select="@material"/></Paragraph></Td>
+            <Td align="right"><Paragraph><Value select="@page"/></Paragraph></Td>
+          </Tr>
+        </ForAll>
+      </Table>
+    </PlaceObject>
+    <ClearPage/>
+  </Record>
+</Layout>

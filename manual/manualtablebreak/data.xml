@@ -1,0 +1,52 @@
+<data company="Confixa">
+  <group name="Chipboard screws" code="CS" material="steel, zinc plated">
+    <article number="CS-3012" dim="3.0 × 12" drive="TX10" pu="1000" price="4.90"/>
+    <article number="CS-3016" dim="3.0 × 16" drive="TX10" pu="1000" price="5.20"/>
+    <article number="CS-3020" dim="3.0 × 20" drive="TX10" pu="1000" price="5.60"/>
+    <article number="CS-3516" dim="3.5 × 16" drive="TX15" pu="1000" price="5.40"/>
+    <article number="CS-3520" dim="3.5 × 20" drive="TX15" pu="1000" price="5.80"/>
+    <article number="CS-3525" dim="3.5 × 25" drive="TX15" pu="1000" price="6.30"/>
+    <article number="CS-3530" dim="3.5 × 30" drive="TX15" pu="1000" price="6.90"/>
+    <article number="CS-4020" dim="4.0 × 20" drive="TX20" pu="500" price="4.20"/>
+    <article number="CS-4025" dim="4.0 × 25" drive="TX20" pu="500" price="4.50"/>
+    <article number="CS-4030" dim="4.0 × 30" drive="TX20" pu="500" price="4.90"/>
+    <article number="CS-4035" dim="4.0 × 35" drive="TX20" pu="500" price="5.30"/>
+    <article number="CS-4040" dim="4.0 × 40" drive="TX20" pu="500" price="5.80"/>
+    <article number="CS-4045" dim="4.0 × 45" drive="TX20" pu="500" price="6.20"/>
+    <article number="CS-4050" dim="4.0 × 50" drive="TX20" pu="500" price="6.70"/>
+    <article number="CS-4525" dim="4.5 × 25" drive="TX25" pu="500" price="4.90"/>
+    <article number="CS-4530" dim="4.5 × 30" drive="TX25" pu="500" price="5.30"/>
+    <article number="CS-4540" dim="4.5 × 40" drive="TX25" pu="500" price="6.10"/>
+    <article number="CS-4550" dim="4.5 × 50" drive="TX25" pu="500" price="6.90"/>
+    <article number="CS-4560" dim="4.5 × 60" drive="TX25" pu="500" price="7.80"/>
+    <article number="CS-5030" dim="5.0 × 30" drive="TX25" pu="200" price="3.60"/>
+    <article number="CS-5040" dim="5.0 × 40" drive="TX25" pu="200" price="4.10"/>
+    <article number="CS-5050" dim="5.0 × 50" drive="TX25" pu="200" price="4.70"/>
+    <article number="CS-5060" dim="5.0 × 60" drive="TX25" pu="200" price="5.30"/>
+    <article number="CS-5070" dim="5.0 × 70" drive="TX25" pu="200" price="5.90"/>
+    <article number="CS-5080" dim="5.0 × 80" drive="TX25" pu="200" price="6.60"/>
+    <article number="CS-6040" dim="6.0 × 40" drive="TX30" pu="100" price="3.20"/>
+    <article number="CS-6060" dim="6.0 × 60" drive="TX30" pu="100" price="4.10"/>
+    <article number="CS-6080" dim="6.0 × 80" drive="TX30" pu="100" price="5.00"/>
+    <article number="CS-60100" dim="6.0 × 100" drive="TX30" pu="100" price="6.10"/>
+    <article number="CS-60120" dim="6.0 × 120" drive="TX30" pu="100" price="7.30"/>
+  </group>
+  <group name="Wall plugs" code="WP" material="nylon">
+    <article number="WP-0525" dim="5 × 25" pu="100" price="2.10"/>
+    <article number="WP-0630" dim="6 × 30" pu="100" price="2.40"/>
+    <article number="WP-0840" dim="8 × 40" pu="100" price="3.60"/>
+    <article number="WP-1050" dim="10 × 50" pu="50" price="3.20"/>
+    <article number="WP-1260" dim="12 × 60" pu="25" price="2.90"/>
+    <article number="WP-1470" dim="14 × 70" pu="20" price="3.80"/>
+  </group>
+  <group name="Wedge anchors" code="WA" material="steel, zinc plated">
+    <article number="WA-0875" dim="M8 × 75" pu="50" price="12.40"/>
+    <article number="WA-0895" dim="M8 × 95" pu="50" price="14.10"/>
+    <article number="WA-1090" dim="M10 × 90" pu="25" price="9.80"/>
+    <article number="WA-10115" dim="M10 × 115" pu="25" price="11.60"/>
+    <article number="WA-12100" dim="M12 × 100" pu="20" price="13.20"/>
+    <article number="WA-12140" dim="M12 × 140" pu="20" price="16.40"/>
+    <article number="WA-16125" dim="M16 × 125" pu="10" price="15.90"/>
+    <article number="WA-16180" dim="M16 × 180" pu="10" price="21.30"/>
+  </group>
+</data>

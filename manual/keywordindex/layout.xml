@@ -1,0 +1,105 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+
+  <Pagetype name="catalog" test="true()">
+    <Margin left="20mm" right="20mm" top="20mm" bottom="20mm"/>
+    <AtPageShipout>
+      <PlaceObject column="20mm" row="280mm" allocate="no">
+        <Textblock width="17" textformat="centered">
+          <Paragraph><Value select="sd:current-page()"/></Paragraph>
+        </Textblock>
+      </PlaceObject>
+    </AtPageShipout>
+  </Pagetype>
+
+  <DefineFontfamily name="title" fontsize="18" leading="22">
+    <Regular fontface="sans-bold"/>
+  </DefineFontfamily>
+
+  <Record element="data">
+    <SetVariable variable="indexentries"/>
+    <ProcessNode select="group"/>
+
+    <SetVariable variable="index">
+      <Element name="baseindex">
+        <Makeindex select="$indexentries/indexentry" sortkey="name"
+                   section="section" pagenumber="page"/>
+      </Element>
+    </SetVariable>
+    <ProcessNode select="$index/baseindex"/>
+  </Record>
+
+  <Record element="group">
+    <ProcessNode select="article"/>
+
+    <PlaceObject>
+      <Textblock>
+        <Paragraph fontfamily="title"><Value select="@name"/></Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <PlaceObject row="{sd:current-row() + 1}">
+      <Table stretch="max" padding="3pt">
+        <Tablehead>
+          <Tr background-color="lightgray">
+            <Td><Paragraph><B><Value>Item no.</Value></B></Paragraph></Td>
+            <Td><Paragraph><B><Value>Dimensions</Value></B></Paragraph></Td>
+            <Td><Paragraph><B><Value>Base material</Value></B></Paragraph></Td>
+            <Td align="right"><Paragraph><B><Value>PU</Value></B></Paragraph></Td>
+            <Td align="right"><Paragraph><B><Value>Price in €</Value></B></Paragraph></Td>
+          </Tr>
+        </Tablehead>
+        <ForAll select="article">
+          <Tr>
+            <Td><Paragraph><Value select="@number"/></Paragraph></Td>
+            <Td><Paragraph><Value select="@dim"/></Paragraph></Td>
+            <Td><Paragraph><Value select="@base"/></Paragraph></Td>
+            <Td align="right"><Paragraph><Value select="@pu"/></Paragraph></Td>
+            <Td align="right"><Paragraph><Value select="@price"/></Paragraph></Td>
+          </Tr>
+        </ForAll>
+      </Table>
+    </PlaceObject>
+    <ClearPage/>
+  </Record>
+
+  <Record element="article">
+    <SetVariable variable="indexentries">
+      <Copy-of select="$indexentries/indexentry"/>
+      <Element name="indexentry">
+        <Attribute name="name" select="@base"/>
+        <Attribute name="page" select="sd:current-page()"/>
+      </Element>
+    </SetVariable>
+  </Record>
+
+  <Record element="baseindex">
+    <PlaceObject>
+      <Textblock>
+        <Paragraph fontfamily="title"><Value>Index</Value></Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <PlaceObject row="{sd:current-row() + 1}">
+      <Table padding="3pt">
+        <Columns>
+          <Column width="6cm"/>
+          <Column width="3cm"/>
+        </Columns>
+        <ForAll select="section">
+          <Tr break-below="no" top-distance="8pt">
+            <Td colspan="2" border-bottom="1pt">
+              <Paragraph><B><Value select="@name"/></B></Paragraph>
+            </Td>
+          </Tr>
+          <ForAll select="indexentry">
+            <Tr>
+              <Td><Paragraph><Value select="@name"/></Paragraph></Td>
+              <Td align="right">
+                <Paragraph><Value select="sd:merge-pagenumbers(@page)"/></Paragraph>
+              </Td>
+            </Tr>
+          </ForAll>
+        </ForAll>
+      </Table>
+    </PlaceObject>
+  </Record>
+</Layout>

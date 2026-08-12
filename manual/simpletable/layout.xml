@@ -1,0 +1,43 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+
+  <Record element="data">
+    <PlaceObject>
+      <Table stretch="max" padding="3pt">
+        <Tablehead>
+          <Tr background-color="lightgray">
+            <Td><Paragraph><B><Value>Item no.</Value></B></Paragraph></Td>
+            <Td><Paragraph><B><Value>Dimensions</Value></B></Paragraph></Td>
+            <Td><Paragraph><B><Value>Drive</Value></B></Paragraph></Td>
+            <Td align="right"><Paragraph><B><Value>PU</Value></B></Paragraph></Td>
+            <Td align="right"><Paragraph><B><Value>Price in €</Value></B></Paragraph></Td>
+          </Tr>
+        </Tablehead>
+        <Tablefoot>
+          <Tablerule rulewidth="0.5pt"/>
+          <Tr>
+            <Td colspan="5" align="right">
+              <Paragraph><Value>Net prices per PU</Value></Paragraph>
+            </Td>
+          </Tr>
+        </Tablefoot>
+        <ForAll select="group">
+          <Tr top-distance="8pt" break-below="no">
+            <Td colspan="5" border-bottom="1pt">
+              <Paragraph><B><Value select="@name"/></B></Paragraph>
+            </Td>
+          </Tr>
+          <ForAll select="article">
+            <Tr>
+              <Td><Paragraph><Value select="@number"/></Paragraph></Td>
+              <Td><Paragraph><Value select="@dim"/></Paragraph></Td>
+              <Td><Paragraph><Value select="@drive"/></Paragraph></Td>
+              <Td align="right"><Paragraph><Value select="@pu"/></Paragraph></Td>
+              <Td align="right"><Paragraph><Value select="@price"/></Paragraph></Td>
+            </Tr>
+          </ForAll>
+        </ForAll>
+      </Table>
+    </PlaceObject>
+  </Record>
+</Layout>

@@ -6,6 +6,8 @@ This repository contains examples for the [speedata Publisher](https://github.co
   - [Accessibility](accessibility) · [Newspaper layout](news) · [Magazine layout](magazine) · [Image shape](imageshape) · [TEI text typesetting](shakespeare) · [Tables](tables) · [Typesetting on a grid](grid) · [Typography example](aesopgnatbull) · [SVG chart inclusion](charts)
 - [Introduction examples](#introduction-examples)
   - [Hello world](introduction/helloworld) · [Simple table](introduction/simpletable) · [ProcessNode](introduction/dataprocessing1) · [ForAll](introduction/dataprocessing2) · [Text markup sources](introduction/datasource) · [Mail merge](introduction/mailmerge) · [Table of contents](introduction/planets) · [Running sums](introduction/runningsum) · [Text overflow](introduction/textframe) · [Dictionary headings](introduction/dictionary)
+- [Examples from the manual](#examples-from-the-manual)
+  - [Simple table with automatic breaking](manual/simpletable) · [Controlling column widths](manual/columnwidths) · [Continuation head](manual/continuationhead) · [Manual table breaking](manual/manualtablebreak) · [Data sheet scaffold](manual/datasheet) · [Table of contents](manual/tableofcontents) · [Keyword index](manual/keywordindex)
 - [Technical examples](#technical-examples)
   - [Base64 images](technical/base64decode) · [Copy fitting](technical/fontshrinking) · [Rotate](technical/rotating) · [Wrap around objects](technical/wraparoundobjects) · [Image clipping](technical/images) · [CSV reader](technical/csvreader) · [JSON reader](technical/jsonreader) · [XLSX reader](technical/xlsxreader) · [Table splitting](technical/tablebuilding) · [Table rotation](technical/tablerotation) · [Single pass TOC](technical/singlepasstoc) · [Sorting data](technical/index) · [Mixed text alignment](technical/mixedtextalignment) · [ZUGFeRD invoices](technical/ZUGFeRD)
 - [MetaPost examples](#metapost-examples)
@@ -45,6 +47,20 @@ Description  | Preview
 [Running sums in a table](introduction/runningsum) | <a href="introduction/runningsum"><img src="introduction/runningsum/firstpage.png" width="200"></a>
 [Text overflow in a text frame](introduction/textframe) | <a href="introduction/textframe"><img src="introduction/textframe/firstpage.png" width="200"></a>
 [Dictionary like headings](introduction/dictionary) | <a href="introduction/dictionary"><img src="introduction/dictionary/firstpage.png" width="200"></a>
+
+## Examples from the manual
+
+These examples accompany the [how-to guides](https://doc.speedata.de/publisher/en/howto/) in the manual.
+
+Description  | Preview
+------------ | -------------
+[Simple table with automatic breaking](manual/simpletable) | <a href="manual/simpletable"><img src="manual/simpletable/firstpage.png" width="200"></a>
+[Controlling column widths](manual/columnwidths) | <a href="manual/columnwidths"><img src="manual/columnwidths/firstpage.png" width="200"></a>
+[Continuation head and continuation note](manual/continuationhead) | <a href="manual/continuationhead"><img src="manual/continuationhead/firstpage.png" width="200"></a>
+[Breaking complex tables manually](manual/manualtablebreak) | <a href="manual/manualtablebreak"><img src="manual/manualtablebreak/firstpage.png" width="200"></a>
+[Basic structure of a data sheet](manual/datasheet) | <a href="manual/datasheet"><img src="manual/datasheet/firstpage.png" width="200"></a>
+[Table of contents](manual/tableofcontents) | <a href="manual/tableofcontents"><img src="manual/tableofcontents/firstpage.png" width="200"></a>
+[Keyword index](manual/keywordindex) | <a href="manual/keywordindex"><img src="manual/keywordindex/indexpage.png" width="200"></a>
 
 ## Technical examples
 
