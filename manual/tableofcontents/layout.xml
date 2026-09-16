@@ -26,7 +26,7 @@
 
   <Record element="group">
     <SetVariable variable="entries">
-      <Copy-of select="$entries/entry"/>
+      <Copy-of select="$entries"/>
       <Element name="entry">
         <Attribute name="name" select="@name"/>
         <Attribute name="material" select="@material"/>

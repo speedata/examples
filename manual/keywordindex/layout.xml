@@ -64,7 +64,7 @@
 
   <Record element="article">
     <SetVariable variable="indexentries">
-      <Copy-of select="$indexentries/indexentry"/>
+      <Copy-of select="$indexentries"/>
       <Element name="indexentry">
         <Attribute name="name" select="@base"/>
         <Attribute name="page" select="sd:current-page()"/>
