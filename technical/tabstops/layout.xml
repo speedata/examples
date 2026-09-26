@@ -1,0 +1,88 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+
+  <!-- Tab stops in text formats: table of contents with leaders, a form
+       with labels and values, amounts aligned on the decimal point and
+       captions centered below signature lines.
+       Requires speedata Publisher 5.9.8 or later. -->
+
+  <Pageformat width="148mm" height="140mm"/>
+  <SetGrid width="5mm" height="12pt"/>
+  <Pagetype name="page" test="true()">
+    <Margin left="12mm" right="12mm" top="12mm" bottom="12mm"/>
+  </Pagetype>
+
+  <DefineFontfamily name="title" fontsize="13" leading="15">
+    <Regular fontface="TeXGyreHeros-Bold"/>
+  </DefineFontfamily>
+
+  <!-- chapter number at 0, title at 8mm, page number flush right with dot leaders.
+       indentation and rows="-1" give a hanging indent for long titles. -->
+  <DefineTextformat name="toc" alignment="leftaligned" indentation="8mm" rows="-1"
+                    margin-bottom="2pt" tab-stops="8mm, 100% right leader(' . ')"/>
+
+  <!-- label and value, wrapped values continue below the value -->
+  <DefineTextformat name="form" alignment="leftaligned" indentation="35mm" rows="-1"
+                    margin-bottom="2pt" tab-stops="35mm"/>
+
+  <!-- article no., text, quantity (right), unit price and total (decimal point) -->
+  <DefineTextformat name="order" alignment="leftaligned"
+                    tab-stops="20mm, 78mm right, 96mm decimal, 100% right"/>
+
+  <!-- two signature lines drawn with an underscore leader and the captions
+       centered below them -->
+  <DefineTextformat name="signature" alignment="leftaligned"
+                    tab-stops="42% leader('_'), 58%, 100% leader('_')"/>
+  <DefineTextformat name="captions" alignment="leftaligned" tab-stops="21% center, 79% center"/>
+
+  <Record element="data">
+    <PlaceObject column="1">
+      <Textblock>
+        <Paragraph fontfamily="title"><Value>Contents</Value></Paragraph>
+        <ForAll select="contents/chapter">
+          <Paragraph textformat="toc">
+            <Value select="concat(@no, '&#9;', @title, '&#9;', @page)"/>
+          </Paragraph>
+        </ForAll>
+      </Textblock>
+    </PlaceObject>
+
+    <PlaceObject column="1" row="{sd:current-row() + 1}">
+      <Textblock>
+        <Paragraph fontfamily="title"><Value>Order</Value></Paragraph>
+        <ForAll select="customer/field">
+          <Paragraph textformat="form">
+            <B><Value select="@label"/></B><Value>&#9;</Value><Value select="@value"/>
+          </Paragraph>
+        </ForAll>
+      </Textblock>
+    </PlaceObject>
+
+    <PlaceObject column="1" row="{sd:current-row() + 1}">
+      <Textblock>
+        <Paragraph textformat="order">
+          <B><Value>No.&#9;Article&#9;Qty&#9;Price €&#9;Total €</Value></B>
+        </Paragraph>
+        <SetVariable variable="total" select="0"/>
+        <ForAll select="order/item">
+          <SetVariable variable="total" select="$total + @qty * @price"/>
+          <Paragraph textformat="order">
+            <Value select="concat(@number, '&#9;', @text, '&#9;', @qty, '&#9;',
+                                  format-number(@price, '0.00'), '&#9;',
+                                  format-number(@qty * @price, '0.00'))"/>
+          </Paragraph>
+        </ForAll>
+        <Paragraph textformat="order">
+          <B><Value select="concat('&#9;Total&#9;&#9;&#9;', format-number($total, '0.00'))"/></B>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+
+    <PlaceObject column="1" row="{sd:current-row() + 3}">
+      <Textblock>
+        <Paragraph textformat="signature"><Value>&#9;&#9;&#9;</Value></Paragraph>
+        <Paragraph textformat="captions"><Value>&#9;Place, date&#9;Signature</Value></Paragraph>
+      </Textblock>
+    </PlaceObject>
+  </Record>
+</Layout>

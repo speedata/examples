@@ -1,0 +1,21 @@
+<data company="Confixa">
+  <contents>
+    <chapter no="1" title="Chipboard screws" page="3"/>
+    <chapter no="2" title="Wood construction screws for load-bearing timber connections and roof structures" page="12"/>
+    <chapter no="3" title="Wall plugs" page="27"/>
+    <chapter no="4" title="Anchors and fixing systems for concrete and masonry" page="41"/>
+    <chapter no="5" title="Index" page="108"/>
+  </contents>
+  <customer>
+    <field label="Customer no." value="40-1187"/>
+    <field label="Company" value="Holzbau Beispiel GmbH"/>
+    <field label="Delivery address" value="Hauptstraße 12, 51147 Köln, gate 3, please deliver between 7 and 11 am"/>
+    <field label="Contact" value="Alice Example, +49 221 123456"/>
+  </customer>
+  <order>
+    <item number="CS-3012" text="Chipboard screw 3.0 × 12" qty="4" price="4.90"/>
+    <item number="CS-6080" text="Chipboard screw 6.0 × 80" qty="10" price="5.00"/>
+    <item number="WP-8" text="Wall plug 8 mm" qty="25" price="0.35"/>
+    <item number="AN-M10" text="Anchor M10, galvanized" qty="100" price="1.2"/>
+  </order>
+</data>

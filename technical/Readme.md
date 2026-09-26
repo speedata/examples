@@ -16,3 +16,5 @@ Description  | Preview
 [How to sort data](index) | <a href="index"><img src="index/firstpage.png" width="200"></a>
 [Alignment of RTL and LTR text](mixedtextalignment) | <a href="mixedtextalignment"><img src="mixedtextalignment/firstpage.png" width="200"></a>
 [Creating ZUGFeRD invoices](ZUGFeRD) | <a href="ZUGFeRD"><img src="ZUGFeRD/firstpage.png" width="200"></a>
+[Column widths: percent, stars, min, max, ?](columnwidths) | <a href="columnwidths"><img src="columnwidths/firstpage.png" width="200"></a>
+[Tab stops](tabstops) | <a href="tabstops"><img src="tabstops/firstpage.png" width="200"></a>

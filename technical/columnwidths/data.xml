@@ -1,0 +1,16 @@
+<data company="Confixa">
+  <group name="Chipboard screws" code="CS" material="steel, zinc plated">
+    <article number="CS-3012" dim="3.0 × 12" drive="TX10" pu="1000" price="4.90"
+             application="Fine work in chipboard and MDF"/>
+    <article number="CS-4030" dim="4.0 × 30" drive="TX20" pu="500" price="4.90"
+             application="Universal screw for wood and chipboard, no pre-drilling required"/>
+    <article number="CS-4050" dim="4.0 × 50" drive="TX20" pu="500" price="6.70"
+             application="Universal screw for wood and chipboard, no pre-drilling required"/>
+    <article number="CS-5070" dim="5.0 × 70" drive="TX25" pu="200" price="5.90"
+             application="Load-bearing timber connections, pre-drill in hardwood"/>
+    <article number="CS-6080" dim="6.0 × 80" drive="TX30" pu="100" price="5.00"
+             application="Heavy-duty connections in solid timber"/>
+    <article number="CS-60120" dim="6.0 × 120" drive="TX30" pu="100" price="7.30"
+             application="Heavy-duty connections, requires pre-drilling near edges"/>
+  </group>
+</data>

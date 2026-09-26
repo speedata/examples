@@ -1,0 +1,209 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+
+  <!-- Column widths: page 1 shows percentages of the table width and star
+       widths with decimals, page 2 widths from the content (max, min,
+       minwidth and ?). Requires speedata Publisher 5.9.8 or later. -->
+
+  <Pageformat width="210mm" height="148mm"/>
+  <SetGrid width="5mm" height="12pt"/>
+  <Pagetype name="page" test="true()">
+    <Margin left="10mm" right="10mm" top="10mm" bottom="10mm"/>
+  </Pagetype>
+
+  <DefineFontfamily name="title" fontsize="13" leading="15">
+    <Regular fontface="TeXGyreHeros-Bold"/>
+  </DefineFontfamily>
+  <DefineFontfamily name="small" fontsize="8" leading="10">
+    <Regular fontface="TeXGyreHeros-Regular"/>
+    <Bold fontface="TeXGyreHeros-Bold"/>
+  </DefineFontfamily>
+  <DefineColor name="head" model="gray" g="85"/>
+  <DefineTextformat name="note" alignment="leftaligned" margin-bottom="6pt"/>
+  <DefineTextformat name="nohyphen" alignment="leftaligned" hyphenate="no"/>
+
+  <Record element="data">
+    <SetVariable variable="articles" select="group/article"/>
+
+    <!-- 1. The whole width of the page -->
+    <PlaceObject column="1">
+      <Textblock>
+        <Paragraph fontfamily="title"><Value>Percentages keep the proportions</Value></Paragraph>
+        <Paragraph textformat="note">
+          <Value>The columns are declared as 20%, 16%, *, 8% and 12%. The star column gets the remaining 44%.</Value>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <PlaceObject column="1">
+      <Table stretch="max" padding="2pt" fontfamily="small">
+        <Columns>
+          <Column width="20%"/>
+          <Column width="16%"/>
+          <Column width="*"/>
+          <Column width="8%" align="right"/>
+          <Column width="12%" align="right"/>
+        </Columns>
+        <Copy-of select="sd:articletable($articles)"/>
+      </Table>
+    </PlaceObject>
+
+    <!-- 2. The same declaration in two tables of half the width -->
+    <PlaceObject column="1" row="{sd:current-row() + 1}">
+      <Textblock>
+        <Paragraph textformat="note">
+          <Value>The same declaration in two tables of half the width: all columns shrink in the same ratio.</Value>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <SetVariable variable="row" select="sd:current-row()"/>
+    <PlaceObject column="1" row="{$row}">
+      <Table stretch="max" padding="2pt" fontfamily="small" width="18">
+        <Columns>
+          <Column width="20%"/>
+          <Column width="16%"/>
+          <Column width="*"/>
+          <Column width="8%" align="right"/>
+          <Column width="12%" align="right"/>
+        </Columns>
+        <Copy-of select="sd:articletable($articles[position() &lt;= 3])"/>
+      </Table>
+    </PlaceObject>
+    <PlaceObject column="21" row="{$row}">
+      <Table stretch="max" padding="2pt" fontfamily="small" width="18">
+        <Columns>
+          <Column width="20%"/>
+          <Column width="16%"/>
+          <Column width="*"/>
+          <Column width="8%" align="right"/>
+          <Column width="12%" align="right"/>
+        </Columns>
+        <Copy-of select="sd:articletable($articles[position() &gt; 3])"/>
+      </Table>
+    </PlaceObject>
+
+    <!-- 3. Star widths with decimals. Without a row the object goes to
+         the next free place, below the taller of the two tables. -->
+    <NextRow/>
+    <PlaceObject column="1">
+      <Textblock>
+        <Paragraph textformat="note">
+          <Value>Star widths may have decimals, a star on its own means 1*. The remaining width is shared in the ratio 1 : 1.5 : 2.5.</Value>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <PlaceObject column="1">
+      <Table stretch="max" padding="4pt" fontfamily="small">
+        <Columns>
+          <Column width="30mm" background-color="head"/>
+          <Column width="*" background-color="#dbe8f5"/>
+          <Column width="1.5*" background-color="#b7d1eb"/>
+          <Column width="2.5*" background-color="#93bae1"/>
+        </Columns>
+        <Tr>
+          <Td><Paragraph><Value>30mm</Value></Paragraph></Td>
+          <Td><Paragraph><Value>*</Value></Paragraph></Td>
+          <Td><Paragraph><Value>1.5*</Value></Paragraph></Td>
+          <Td><Paragraph><Value>2.5*</Value></Paragraph></Td>
+        </Tr>
+      </Table>
+    </PlaceObject>
+    <!-- Page 2: widths from the content -->
+    <ClearPage/>
+    <PlaceObject column="1">
+      <Textblock>
+        <Paragraph fontfamily="title"><Value>Widths from the content</Value></Paragraph>
+        <Paragraph textformat="note">
+          <Value>max: the columns get the natural width of their content, the star column gets the rest. The size column has minwidth="25mm".</Value>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <PlaceObject column="1">
+      <Table stretch="max" padding="2pt" fontfamily="small">
+        <Columns>
+          <Column width="max"/>
+          <Column width="max" minwidth="25mm"/>
+          <Column width="*"/>
+          <Column width="max" align="right"/>
+          <Column width="max" align="right"/>
+        </Columns>
+        <Copy-of select="sd:articletable($articles)"/>
+      </Table>
+    </PlaceObject>
+
+    <PlaceObject column="1" row="{sd:current-row() + 1}">
+      <Textblock>
+        <Paragraph textformat="note">
+          <Value>min: the column is as narrow as its widest word (here without hyphenation). minwidth sets a lower bound, the star column gets the rest.</Value>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <PlaceObject column="1">
+      <Table stretch="max" padding="2pt" fontfamily="small">
+        <Columns>
+          <Column width="min" background-color="#dbe8f5"/>
+          <Column width="min" minwidth="40mm" background-color="#b7d1eb"/>
+          <Column width="*" background-color="#93bae1"/>
+        </Columns>
+        <Tr valign="top">
+          <Td><Paragraph textformat="nohyphen"><Value>min: load-bearing timber connections</Value></Paragraph></Td>
+          <Td><Paragraph textformat="nohyphen"><Value>min, minwidth="40mm": load-bearing timber connections</Value></Paragraph></Td>
+          <Td><Paragraph textformat="nohyphen"><Value>*: load-bearing timber connections</Value></Paragraph></Td>
+        </Tr>
+      </Table>
+    </PlaceObject>
+
+    <PlaceObject column="1" row="{sd:current-row() + 1}">
+      <Textblock>
+        <Paragraph textformat="note">
+          <Value>?: after the fixed first column (30mm), the ?-columns share the rest in the ratio of their natural widths. This needs stretch="max" on the table.</Value>
+        </Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <PlaceObject column="1">
+      <Table stretch="max" padding="2pt" fontfamily="small">
+        <Columns>
+          <Column width="30mm"/>
+          <Column width="?"/>
+          <Column width="?"/>
+        </Columns>
+        <Tablehead>
+          <Tr background-color="head">
+            <Td><Paragraph><B><Value>Article no. (30mm)</Value></B></Paragraph></Td>
+            <Td><Paragraph><B><Value>Size (?)</Value></B></Paragraph></Td>
+            <Td><Paragraph><B><Value>Application (?)</Value></B></Paragraph></Td>
+          </Tr>
+        </Tablehead>
+        <ForAll select="$articles[position() &lt;= 3]">
+          <Tr>
+            <Td><Paragraph><Value select="@number"/></Paragraph></Td>
+            <Td><Paragraph><Value select="@dim"/></Paragraph></Td>
+            <Td><Paragraph><Value select="@application"/></Paragraph></Td>
+          </Tr>
+        </ForAll>
+      </Table>
+    </PlaceObject>
+  </Record>
+
+  <!-- Head and rows of an article table -->
+  <Function name="sd:articletable">
+    <Param name="articles"/>
+    <Tablehead>
+      <Tr background-color="head">
+        <Td><Paragraph><B><Value>Article no.</Value></B></Paragraph></Td>
+        <Td><Paragraph><B><Value>Size</Value></B></Paragraph></Td>
+        <Td><Paragraph><B><Value>Application</Value></B></Paragraph></Td>
+        <Td><Paragraph><B><Value>PU</Value></B></Paragraph></Td>
+        <Td><Paragraph><B><Value>Price €</Value></B></Paragraph></Td>
+      </Tr>
+    </Tablehead>
+    <ForAll select="$articles">
+      <Tr valign="top">
+        <Td><Paragraph><Value select="@number"/></Paragraph></Td>
+        <Td><Paragraph><Value select="@dim"/></Paragraph></Td>
+        <Td><Paragraph><Value select="@application"/></Paragraph></Td>
+        <Td><Paragraph><Value select="@pu"/></Paragraph></Td>
+        <Td><Paragraph><Value select="@price"/></Paragraph></Td>
+      </Tr>
+    </ForAll>
+  </Function>
+</Layout>
