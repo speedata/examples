@@ -133,7 +133,7 @@
     <PlaceObject column="1" row="{sd:current-row() + 1}">
       <Textblock>
         <Paragraph textformat="note">
-          <Value>min: the column is as narrow as its widest word (here without hyphenation). minwidth sets a lower bound, the star column gets the rest.</Value>
+          <Value>min: the column is as narrow as its widest word (here without hyphenation). minwidth sets a lower bound (for all kinds of widths), the star column gets the rest.</Value>
         </Paragraph>
       </Textblock>
     </PlaceObject>
@@ -155,7 +155,7 @@
     <PlaceObject column="1" row="{sd:current-row() + 1}">
       <Textblock>
         <Paragraph textformat="note">
-          <Value>?: after the fixed first column (30mm), the ?-columns share the rest in the ratio of their natural widths. This needs stretch="max" on the table.</Value>
+          <Value>?: after the fixed first column (30mm), the ?-columns share the rest in the ratio of their natural widths (stretch="max"). Without stretch="max" they get their natural width.</Value>
         </Paragraph>
       </Textblock>
     </PlaceObject>

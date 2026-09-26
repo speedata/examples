@@ -12,8 +12,8 @@ The second page shows widths that follow the content:
 
 * `max`: the natural width of the content, never narrower than the widest word,
 * `min`: as narrow as the widest word,
-* `minwidth`: a lower bound for `min` and `max` columns,
-* `?`: after the fixed columns, the rest is shared in the ratio of the natural widths (needs `stretch="max"` on the table).
+* `minwidth`: a lower bound for the width of any column,
+* `?`: the natural width of the content; with `stretch="max"` the rest after the fixed columns is shared in the ratio of the natural widths.
 
 See also the how-to [Controlling column widths](https://doc.speedata.de/publisher/en/howto/columnwidths/).
 
