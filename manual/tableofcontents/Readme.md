@@ -1,6 +1,6 @@
 To get the PDF:
 
-Run `sp --runs 3` on the command line inside this directory. Three runs are needed: the first collects the page numbers, the second adds the table of contents at the front (which shifts everything back by one page), and the third outputs the correct numbers.
+Run `sp` on the command line inside this directory. The layout sets `<Options runs="3"/>`, because three runs are needed: the first collects the page numbers, the second adds the table of contents at the front (which shifts everything back by one page), and the third outputs the correct numbers.
 
 ----
 

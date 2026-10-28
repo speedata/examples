@@ -1,5 +1,6 @@
 <Layout xmlns="urn:speedata.de:2009/publisher/en"
   xmlns:sd="urn:speedata:2009/publisher/functions/en">
+  <Options runs="3" />
 
   <Pagetype name="catalog" test="true()">
     <Margin left="20mm" right="20mm" top="20mm" bottom="20mm"/>

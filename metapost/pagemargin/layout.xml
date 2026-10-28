@@ -6,6 +6,9 @@
     <Pageformat height="210mm" width="148mm" />
 
     <DefineGraphic name="RD">
+        % a fixed seed gives the same random shapes on every run
+        randomseed := 42;
+
         % orange background
         pickup pencircle scaled 1mm;
         fill unitsquare xyscaled(page.width, page.height) withcolor orange;
