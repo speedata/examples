@@ -97,7 +97,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
     list-style-type: upper-roman;
     list-style-color: gray;
     padding-left: 2em;
-    padding-bottom: 100pt;
+    padding-bottom: 3pt;
     }
     ol li::before {
     color: gray;
