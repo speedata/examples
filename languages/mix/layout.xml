@@ -2,10 +2,10 @@
 
   <DefineTextformat name="text" rows="1" alignment="start" margin-bottom="8pt" />
 
-  <LoadFontfile name="NotoSansArabic-Regular" filename="NotoSansArabic-Regular.ttf" mode="harfbuzz" />
-  <LoadFontfile name="NotoSans-Regular" filename="NotoSans-Regular.ttf" mode="harfbuzz"/>
-  <LoadFontfile name="NotoSansBengali-Regular" filename="NotoSansBengali-Regular.ttf" mode="harfbuzz"/>
-  <LoadFontfile name="NotoSansCJKsc-Regular" filename="NotoSansCJKsc-Regular.otf" mode="harfbuzz" />
+  <LoadFontfile name="NotoSansArabic-Regular" filename="NotoSansArabic-Regular.ttf" />
+  <LoadFontfile name="NotoSans-Regular" filename="NotoSans-Regular.ttf"/>
+  <LoadFontfile name="NotoSansBengali-Regular" filename="NotoSansBengali-Regular.ttf"/>
+  <LoadFontfile name="NotoSansCJKsc-Regular" filename="NotoSansCJKsc-Regular.otf" />
 
   <DefineFontfamily fontsize="10" leading="12" name="latn">
     <Regular fontface="NotoSans-Regular" />

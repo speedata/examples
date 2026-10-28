@@ -5,8 +5,7 @@
     <SetGrid nx="5" height="12pt" />
     <LoadFontfile
         name="Amiri-Regular"
-        filename="amiri-regular.ttf"
-        mode="harfbuzz" />
+        filename="amiri-regular.ttf" />
     <DefineFontfamily fontsize="10" leading="12" name="amiri">
         <Regular fontface="Amiri-Regular" />
     </DefineFontfamily>

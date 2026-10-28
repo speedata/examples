@@ -3,7 +3,7 @@
 		version="4.1.6">
 
 	<Pageformat height="10cm" width="12cm" />
-	<LoadFontfile name="NotoSansCJKsc-Regular" filename="NotoSansCJKsc-Regular.otf" mode="harfbuzz" />
+	<LoadFontfile name="NotoSansCJKsc-Regular" filename="NotoSansCJKsc-Regular.otf" />
 
 	<DefineFontfamily name="text" fontsize="10" leading="12">
 		<Regular fontface="NotoSansCJKsc-Regular" />

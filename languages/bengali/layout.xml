@@ -3,8 +3,8 @@
   xmlns:sd="urn:speedata:2009/publisher/functions/en">
   <Pageformat height="150mm" width="130mm" />
   <SetGrid height="12pt" nx="5" />
-  <LoadFontfile name="NotoSansBengali-Regular" filename="NotoSansBengali-Regular.ttf" mode="harfbuzz" />
-  <LoadFontfile name="NotoSansBengali-SemiBold" filename="NotoSansBengali-SemiBold.ttf" mode="harfbuzz" />
+  <LoadFontfile name="NotoSansBengali-Regular" filename="NotoSansBengali-Regular.ttf" />
+  <LoadFontfile name="NotoSansBengali-SemiBold" filename="NotoSansBengali-SemiBold.ttf" />
 
   <Options mainlanguage="Other"/>
   <DefineFontfamily fontsize="10" leading="12" name="ben">
