@@ -1,0 +1,19 @@
+<data company="Confixa">
+  <group name="Chipboard screws" material="steel, zinc plated">
+    <article number="CS-3012" dim="3.0 × 12" drive="TX10" pu="1000" price="4.90"/>
+    <article number="CS-3520" dim="3.5 × 20" drive="TX15" pu="1000" price="5.40"/>
+    <article number="CS-4030" dim="4.0 × 30" drive="TX20" pu="500" price="4.90" sale="yes"/>
+    <article number="CS-4050" dim="4.0 × 50" drive="TX20" pu="500" price="6.70"/>
+    <article number="CS-5060" dim="5.0 × 60" drive="TX25" pu="200" price="5.20"/>
+    <article number="CS-5070" dim="5.0 × 70" drive="TX25" pu="200" price="5.90" sale="yes"/>
+    <article number="CS-6080" dim="6.0 × 80" drive="TX30" pu="100" price="5.00"/>
+    <article number="CS-60120" dim="6.0 × 120" drive="TX30" pu="100" price="7.30"/>
+  </group>
+  <group name="Wood screws" material="stainless steel A2">
+    <article number="WS-3525" dim="3.5 × 25" drive="TX15" pu="500" price="8.40"/>
+    <article number="WS-4040" dim="4.0 × 40" drive="TX20" pu="250" price="7.90"/>
+    <article number="WS-4560" dim="4.5 × 60" drive="TX20" pu="200" price="9.60" sale="yes"/>
+    <article number="WS-5080" dim="5.0 × 80" drive="TX25" pu="100" price="8.80"/>
+    <article number="WS-6100" dim="6.0 × 100" drive="TX30" pu="50" price="7.70"/>
+  </group>
+</data>

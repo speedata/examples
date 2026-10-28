@@ -9,7 +9,7 @@ This repository contains examples for the [speedata Publisher](https://github.co
 - [Examples from the manual](#examples-from-the-manual)
   - [Simple table with automatic breaking](manual/simpletable) · [Controlling column widths](manual/columnwidths) · [Continuation head](manual/continuationhead) · [Manual table breaking](manual/manualtablebreak) · [Data sheet scaffold](manual/datasheet) · [Table of contents](manual/tableofcontents) · [Keyword index](manual/keywordindex)
 - [Technical examples](#technical-examples)
-  - [Base64 images](technical/base64decode) · [Copy fitting](technical/fontshrinking) · [Rotate](technical/rotating) · [Wrap around objects](technical/wraparoundobjects) · [Image clipping](technical/images) · [CSV reader](technical/csvreader) · [JSON reader](technical/jsonreader) · [XLSX reader](technical/xlsxreader) · [Table splitting](technical/tablebuilding) · [Table rotation](technical/tablerotation) · [Single pass TOC](technical/singlepasstoc) · [Sorting data](technical/index) · [Mixed text alignment](technical/mixedtextalignment) · [ZUGFeRD invoices](technical/ZUGFeRD) · [Column widths: percent, stars, min, max, ?](technical/columnwidths) · [Tab stops](technical/tabstops)
+  - [Base64 images](technical/base64decode) · [Copy fitting](technical/fontshrinking) · [Rotate](technical/rotating) · [Wrap around objects](technical/wraparoundobjects) · [Image clipping](technical/images) · [CSV reader](technical/csvreader) · [JSON reader](technical/jsonreader) · [XLSX reader](technical/xlsxreader) · [Table splitting](technical/tablebuilding) · [Table rotation](technical/tablerotation) · [Single pass TOC](technical/singlepasstoc) · [Sorting data](technical/index) · [Mixed text alignment](technical/mixedtextalignment) · [ZUGFeRD invoices](technical/ZUGFeRD) · [Column widths: percent, stars, min, max, ?](technical/columnwidths) · [Tab stops](technical/tabstops) · [Table with CSS](technical/csstable)
 - [MetaPost examples](#metapost-examples)
   - [Page margin](metapost/pagemargin) · [MetaPost Image](metapost/mpimage)
 - [Language examples](#language-examples)
@@ -82,6 +82,7 @@ Description  | Preview
 [Creating ZUGFeRD invoices](technical/ZUGFeRD) | <a href="technical/ZUGFeRD"><img src="technical/ZUGFeRD/firstpage.png" width="200"></a>
 [Column widths: percent, stars, min, max, ?](technical/columnwidths) | <a href="technical/columnwidths"><img src="technical/columnwidths/firstpage.png" width="200"></a>
 [Tab stops](technical/tabstops) | <a href="technical/tabstops"><img src="technical/tabstops/firstpage.png" width="200"></a>
+[Styling a table with CSS](technical/csstable) | <a href="technical/csstable"><img src="technical/csstable/firstpage.png" width="200"></a>
 
 ## MetaPost examples
 

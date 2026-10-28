@@ -1,0 +1,86 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+
+  <!-- Styling a table with CSS: zebra stripes, a highlighted first
+       column, right aligned prices and classes from the data. The table
+       commands only contain the structure; the look is in the stylesheet.
+       Requires speedata Publisher 5.9.14 or later. -->
+
+  <Pageformat width="148mm" height="210mm"/>
+  <Pagetype name="page" test="true()">
+    <Margin left="12mm" right="12mm" top="12mm" bottom="12mm"/>
+  </Pagetype>
+
+  <Stylesheet>
+    /* The whole table: font size and color are passed on to the cells. */
+    table.prices { font-size: 9pt; line-height: 12pt; color: #263238; padding: 2pt 4pt }
+
+    /* Table head: dark row, white bold text, counted on its own. */
+    table.prices tablehead tr { background-color: #37586e }
+    table.prices tablehead td { color: #ffffff; font-weight: bold }
+
+    /* Zebra stripes for the rows of the body. */
+    table.prices tr:nth-child(even) { background-color: #e6edf1 }
+
+    /* First column (article number) bold, the last two columns right aligned. */
+    table.prices td:first-child { font-weight: bold }
+    table.prices td:nth-child(4), table.prices td:nth-child(5) { text-align: right }
+
+    /* Classes from the layout and the data. A group row has no stripe:
+       same specificity as the zebra rule, but later in the stylesheet. */
+    table.prices tr.sale { color: #a33a2a }
+    table.prices tr.group { background-color: #ffffff }
+    table.prices tr.group td { font-size: 11pt; font-weight: bold; padding-top: 8pt; border-bottom-width: 0.5pt }
+
+    /* Headline and note. */
+    paragraph.title { font-size: 16pt; line-height: 20pt; font-weight: bold; margin-bottom: 6pt }
+    paragraph.note { font-size: 8pt; color: #546e7a; margin-top: 6pt }
+  </Stylesheet>
+
+  <Record element="data">
+    <PlaceObject>
+      <Textblock>
+        <Paragraph class="title"><Value select="concat(@company, ' price list')"/></Paragraph>
+      </Textblock>
+    </PlaceObject>
+    <PlaceObject>
+      <Table class="prices" stretch="max">
+        <Columns>
+          <Column width="max"/>
+          <Column width="1*"/>
+          <Column width="max"/>
+          <Column width="max"/>
+          <Column width="max"/>
+        </Columns>
+        <Tablehead>
+          <Tr>
+            <Td><Paragraph><Value>Article</Value></Paragraph></Td>
+            <Td><Paragraph><Value>Size (mm)</Value></Paragraph></Td>
+            <Td><Paragraph><Value>Drive</Value></Paragraph></Td>
+            <Td><Paragraph><Value>Pack</Value></Paragraph></Td>
+            <Td><Paragraph><Value>Price (€)</Value></Paragraph></Td>
+          </Tr>
+        </Tablehead>
+        <ForAll select="group">
+          <Tr class="group">
+            <Td colspan="5"><Paragraph><Value select="concat(@name, ', ', @material)"/></Paragraph></Td>
+          </Tr>
+          <ForAll select="article">
+            <Tr class="{if (@sale = 'yes') then 'sale' else ''}">
+              <Td><Paragraph><Value select="@number"/></Paragraph></Td>
+              <Td><Paragraph><Value select="@dim"/></Paragraph></Td>
+              <Td><Paragraph><Value select="@drive"/></Paragraph></Td>
+              <Td><Paragraph><Value select="@pu"/></Paragraph></Td>
+              <Td><Paragraph><Value select="@price"/></Paragraph></Td>
+            </Tr>
+          </ForAll>
+        </ForAll>
+      </Table>
+    </PlaceObject>
+    <PlaceObject>
+      <Textblock>
+        <Paragraph class="note"><Value>Prices in red are on sale. Prices per pack, excluding VAT.</Value></Paragraph>
+      </Textblock>
+    </PlaceObject>
+  </Record>
+</Layout>

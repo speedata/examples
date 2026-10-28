@@ -18,3 +18,4 @@ Description  | Preview
 [Creating ZUGFeRD invoices](ZUGFeRD) | <a href="ZUGFeRD"><img src="ZUGFeRD/firstpage.png" width="200"></a>
 [Column widths: percent, stars, min, max, ?](columnwidths) | <a href="columnwidths"><img src="columnwidths/firstpage.png" width="200"></a>
 [Tab stops](tabstops) | <a href="tabstops"><img src="tabstops/firstpage.png" width="200"></a>
+[Styling a table with CSS](csstable) | <a href="csstable"><img src="csstable/firstpage.png" width="200"></a>
