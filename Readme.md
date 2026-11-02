@@ -7,7 +7,7 @@ This repository contains examples for the [speedata Publisher](https://github.co
 - [Introduction examples](#introduction-examples)
   - [Hello world](introduction/helloworld) · [Simple table](introduction/simpletable) · [ProcessNode](introduction/dataprocessing1) · [ForAll](introduction/dataprocessing2) · [Text markup sources](introduction/datasource) · [Mail merge](introduction/mailmerge) · [Table of contents](introduction/planets) · [Running sums](introduction/runningsum) · [Text overflow](introduction/textframe) · [Dictionary headings](introduction/dictionary)
 - [Examples from the manual](#examples-from-the-manual)
-  - [Simple table with automatic breaking](manual/simpletable) · [Controlling column widths](manual/columnwidths) · [Continuation head](manual/continuationhead) · [Manual table breaking](manual/manualtablebreak) · [Data sheet scaffold](manual/datasheet) · [Table of contents](manual/tableofcontents) · [Keyword index](manual/keywordindex)
+  - [Simple table with automatic breaking](manual/simpletable) · [Controlling column widths](manual/columnwidths) · [Continuation head](manual/continuationhead) · [Manual table breaking](manual/manualtablebreak) · [Data sheet scaffold](manual/datasheet) · [Icons from an icon font](manual/icons) · [Table of contents](manual/tableofcontents) · [Keyword index](manual/keywordindex)
 - [Technical examples](#technical-examples)
   - [Base64 images](technical/base64decode) · [Copy fitting](technical/fontshrinking) · [Rotate](technical/rotating) · [Wrap around objects](technical/wraparoundobjects) · [Image clipping](technical/images) · [CSV reader](technical/csvreader) · [JSON reader](technical/jsonreader) · [XLSX reader](technical/xlsxreader) · [Table splitting](technical/tablebuilding) · [Table rotation](technical/tablerotation) · [Single pass TOC](technical/singlepasstoc) · [Sorting data](technical/index) · [Mixed text alignment](technical/mixedtextalignment) · [ZUGFeRD invoices](technical/ZUGFeRD) · [Column widths: percent, stars, min, max, ?](technical/columnwidths) · [Tab stops](technical/tabstops) · [Table with CSS](technical/csstable)
 - [MetaPost examples](#metapost-examples)
@@ -59,6 +59,7 @@ Description  | Preview
 [Continuation head and continuation note](manual/continuationhead) | <a href="manual/continuationhead"><img src="manual/continuationhead/firstpage.png" width="200"></a>
 [Breaking complex tables manually](manual/manualtablebreak) | <a href="manual/manualtablebreak"><img src="manual/manualtablebreak/firstpage.png" width="200"></a>
 [Basic structure of a data sheet](manual/datasheet) | <a href="manual/datasheet"><img src="manual/datasheet/firstpage.png" width="200"></a>
+[Icons from an icon font](manual/icons) | <a href="manual/icons"><img src="manual/icons/firstpage.png" width="200"></a>
 [Table of contents](manual/tableofcontents) | <a href="manual/tableofcontents"><img src="manual/tableofcontents/firstpage.png" width="200"></a>
 [Keyword index](manual/keywordindex) | <a href="manual/keywordindex"><img src="manual/keywordindex/indexpage.png" width="200"></a>
 

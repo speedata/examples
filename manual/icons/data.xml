@@ -1,0 +1,11 @@
+<data company="Confixa">
+  <group name="Chipboard screws" code="CS" material="steel, zinc plated" use="indoor">
+    <description>For chipboard, softwood and hardwood. <i class="fa-solid fa-truck-fast"></i> Ships within 24 hours.</description>
+  </group>
+  <group name="Wall plugs" code="WP" material="nylon" use="outdoor">
+    <description>For concrete, brick and natural stone. <i class="fa-regular fa-circle-check"></i> Approved for facades.</description>
+  </group>
+  <group name="Wedge anchors" code="WA" material="steel, zinc plated" use="indoor">
+    <description>For heavy loads in concrete. <i class="fa-solid fa-triangle-exclamation"></i> Not for cracked concrete.</description>
+  </group>
+</data>

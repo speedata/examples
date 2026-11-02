@@ -1,0 +1,51 @@
+<Layout xmlns="urn:speedata.de:2009/publisher/en"
+  xmlns:sd="urn:speedata:2009/publisher/functions/en">
+
+  <Pageformat width="120mm" height="70mm"/>
+  <Margin left="10mm" right="10mm" top="10mm" bottom="10mm"/>
+
+  <DefineFontfamily name="head" fontsize="12" leading="14">
+    <Regular fontface="sans-bold"/>
+  </DefineFontfamily>
+  <DefineTextformat name="grouphead" margin-top="8pt" break-below="no"/>
+
+  <!-- Way 1: the icon font as a font family for the layout -->
+  <LoadFontfile name="fa-solid" filename="fa-solid-900.ttf"/>
+  <DefineFontfamily name="icons" fontsize="10" leading="12">
+    <Regular fontface="fa-solid"/>
+  </DefineFontfamily>
+
+  <!-- Way 2: the icon classes from the web shop -->
+  <Stylesheet>
+    @font-face { font-family: "FA"; font-weight: 400; src: url("fa-regular-400.ttf"); }
+    @font-face { font-family: "FA"; font-weight: 900; src: url("fa-solid-900.ttf"); }
+    .fa-solid, .fa-regular { font-family: "FA"; font-style: normal; }
+    .fa-solid { font-weight: 900; }
+    .fa-regular { font-weight: 400; }
+    .fa-truck-fast::before { content: "\f48b"; }
+    .fa-circle-check::before { content: "\f058"; }
+    .fa-triangle-exclamation::before { content: "\f071"; color: red; }
+  </Stylesheet>
+
+  <Record element="data">
+    <PlaceObject>
+      <Textblock>
+        <ForAll select="group">
+          <Paragraph fontfamily="head" textformat="grouphead">
+            <Value select="@name"/>
+          </Paragraph>
+          <Paragraph>
+            <Fontface fontfamily="icons">
+              <Value select="if (@use = 'outdoor') then '&#xf185;' else '&#xf015;'"/>
+            </Fontface>
+            <Value select="if (@use = 'outdoor') then ' Indoor and outdoor' else ' Indoor only'"/>
+            <Value select="concat(' · ', @material)"/>
+          </Paragraph>
+          <Paragraph>
+            <Value select="description"/>
+          </Paragraph>
+        </ForAll>
+      </Textblock>
+    </PlaceObject>
+  </Record>
+</Layout>
